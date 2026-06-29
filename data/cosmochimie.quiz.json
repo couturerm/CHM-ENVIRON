@@ -1,0 +1,102 @@
+{
+  "module": "cosmochimie",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mc",
+      "q": "Quel processus est responsable de la formation des éléments plus lourds que l'hydrogène et l'hélium dans l'univers ?",
+      "options": [
+        "La nucléosynthèse stellaire",
+        "La désintégration radioactive dans la croûte terrestre",
+        "La photosynthèse",
+        "L'altération chimique des roches"
+      ],
+      "answer": 0,
+      "fb": "Les éléments plus lourds que H et He sont produits par la nucléosynthèse (stellaire, explosive et primordiale pour les plus légers). La majeure partie des éléments lourds provient de la fusion dans les étoiles et des supernovae.",
+      "source": "manuel",
+      "verified": true,
+      "note": "Objectif : abondance des éléments / nucléosynthèse"
+    },
+    {
+      "id": "q2",
+      "type": "tf",
+      "q": "Selon la classification de Goldschmidt, les éléments sidérophiles ont une forte affinité pour les phases métalliques (le fer).",
+      "options": ["Vrai", "Faux"],
+      "answer": true,
+      "fb": "Exact. Goldschmidt distingue lithophiles (silicates/oxygène), sidérophiles (métal/fer), chalcophiles (sulfures) et atmophiles (phase gazeuse). Les sidérophiles se concentrent dans le noyau métallique.",
+      "source": "manuel",
+      "verified": true,
+      "note": "Objectif : séparation des éléments sur Terre (Goldschmidt)"
+    },
+    {
+      "id": "q3",
+      "type": "multi",
+      "q": "Parmi les notations suivantes, lesquelles servent à exprimer la composition isotopique ?",
+      "options": [
+        "Le ratio isotopique R",
+        "La notation delta (δ)",
+        "Le facteur de fractionnement (α)",
+        "Le pH"
+      ],
+      "answer": [0, 1, 2],
+      "fb": "La composition isotopique s'exprime par l'abondance, la différence relative de masse (%), le ratio R, la notation delta (δ) et le facteur de fractionnement (α). Le pH n'est pas une notation isotopique.",
+      "source": "manuel",
+      "verified": true,
+      "note": "Objectif : notations de la composition isotopique"
+    },
+    {
+      "id": "q4",
+      "type": "mc",
+      "q": "Le concept HSAB (acides et bases durs et mous) aide surtout à prédire :",
+      "options": [
+        "La stabilité préférentielle des associations entre cations et ligands/anions",
+        "La vitesse de la lumière dans l'eau",
+        "L'âge d'une étoile",
+        "La température de fusion du fer"
+      ],
+      "answer": 0,
+      "fb": "Le principe HSAB (Pearson) prédit que les acides durs s'associent préférentiellement aux bases dures et les acides mous aux bases molles, ce qui éclaire l'affinité chimique et la distribution des éléments.",
+      "source": "manuel",
+      "verified": true,
+      "note": "Objectif : affinité chimique HSAB"
+    },
+    {
+      "id": "q5",
+      "type": "figure",
+      "q": "La courbe montre l'abondance relative des éléments dans le système solaire en fonction du numéro atomique Z. Quel énoncé décrit le mieux le motif observé ?",
+      "figure": {
+        "data": [
+          {
+            "x": [1, 2, 6, 7, 8, 10, 12, 13, 14, 16, 20, 26, 28, 30],
+            "y": [2.79e10, 2.72e9, 1.01e7, 3.13e6, 2.38e7, 3.44e6, 1.07e6, 8.49e4, 1.0e6, 5.15e5, 6.11e4, 9.0e5, 4.93e4, 1.26e3],
+            "type": "scatter",
+            "mode": "lines+markers",
+            "name": "Abondance (Si = 1e6)",
+            "line": { "color": "#d2566c" },
+            "marker": { "size": 6 }
+          }
+        ],
+        "layout": {
+          "title": "Abondance des éléments (système solaire)",
+          "xaxis": { "title": "Numéro atomique Z" },
+          "yaxis": { "title": "Abondance relative (log)", "type": "log" },
+          "paper_bgcolor": "rgba(0,0,0,0)",
+          "plot_bgcolor": "rgba(0,0,0,0)",
+          "font": { "color": "#1a1a1a" },
+          "margin": { "t": 40, "r": 10, "b": 40, "l": 60 }
+        }
+      },
+      "options": [
+        "L'abondance décroît globalement avec Z, avec un pic local au fer (Z=26) et une alternance pair-impair (règle d'Oddo-Harkins)",
+        "L'abondance augmente régulièrement avec Z",
+        "Tous les éléments ont la même abondance",
+        "Seuls les éléments à Z impair sont abondants"
+      ],
+      "answer": 0,
+      "fb": "La décroissance générale avec Z, le pic au fer (le plus stable, nucléide le plus lié) et l'alternance pair-impair (Oddo-Harkins, les Z pairs plus abondants) sont les signatures classiques de la nucléosynthèse.",
+      "source": "manuel",
+      "verified": true,
+      "note": "Objectif : lecture de la courbe d'abondance ; type figure (Plotly)"
+    }
+  ]
+}
