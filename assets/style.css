@@ -116,6 +116,13 @@ h1.pt{font-size:27px;margin:2px 0 4px}
 .fb.bad{background:color-mix(in srgb,#d2566c 14%,var(--bg));border-left:4px solid #d2566c}
 .fb .v{font-weight:700;display:block;margin-bottom:3px}
 .result{text-align:center;padding:22px}.result .sc{font-size:38px;font-weight:700;color:var(--accent);font-family:Arial,Helvetica,sans-serif}
+/* Quiz v2 — all questions on one page; figure (Plotly) sits on a light panel */
+.qblock{padding:16px 0;border-top:1px solid var(--line)}
+.qblock:first-child{padding-top:6px;border-top:0}
+.qnum{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:700}
+.qblock .btn{font-size:13px;padding:8px 15px}
+.fb .ft{display:block}
+.qfig{background:#f4f1ea;border:1px solid var(--line);border-radius:8px;padding:8px;margin:8px 0 12px;min-height:300px}
 
 table.eval{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px}
 table.eval th,table.eval td{border:1px solid var(--line);padding:9px 12px;text-align:left}
