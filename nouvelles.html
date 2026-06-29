@@ -1,43 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-mode="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nouvelles · CHM-4152</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<div class="app">
-  <div class="content">
-    <main>
-      <div class="crumb">CHM-4152 · Chimie de l'environnement</div>
-      <h1>Nouvelles</h1>
-      <p class="lead">Annonces du cours, du plus récent au plus ancien. Les dates d'examen et les
-        changements de local sont épinglés en tête.</p>
-
-      <div class="panel">
-        <span class="badge accent">Épinglé</span>
-        <h3 style="margin-top:.5rem">Dates d'évaluation (provisoires, A26)</h3>
-        <p>Examen partiel&nbsp;1 (40&nbsp;%), capsule vidéo (20&nbsp;%) et examen partiel&nbsp;2
-          (40&nbsp;%). Les dates exactes et les locaux seront confirmés ici et sur le plan de cours.</p>
-        <p class="muted">Voir <a href="evaluations.html">Évaluations</a>.</p>
-      </div>
-
-      <article class="panel">
-        <div class="crumb">— · sept. 2026</div>
-        <h3>Début de session</h3>
-        <p>Le premier cours porte sur la <a href="modules/cosmochimie.html">cosmochimie</a>.
-          Consultez les diapositives et le quiz formatif dès leur mise en ligne.</p>
-      </article>
-
-      <hr>
-      <p class="muted" style="font-size:.85rem">Pour publier une nouvelle : éditer
-        <code>nouvelles.html</code> directement dans l'éditeur web de GitHub (ordinateur ou
-        téléphone), ajouter un bloc <code>&lt;article class="panel"&gt;</code> en haut de la liste,
-        puis valider (commit). GitHub Pages se reconstruit automatiquement.</p>
-    </main>
-  </div>
-</div>
-<script src="assets/app.js" defer></script>
+<body data-page="nouvelles" data-depth="0">
+  <main class="content">
+    <h1 class="pt">Nouvelles</h1>
+    <p class="lead">Annonces du cours, de la plus récente à la plus ancienne. Les changements de local et dates d'examen sont épinglés.</p>
+    <div class="news"><span class="pin">Épinglé</span><b> Examen partiel 1 : 7 octobre, 13h30, local PLT-2700.</b></div>
+    <div class="news"><div class="d">22 septembre 2026</div><b>Changement de local cette semaine</b><div>Mardi au VCH-2880.</div></div>
+    <div class="news"><div class="d">15 septembre 2026</div><b>Diapositives Cycle du carbone déposées</b></div>
+    <div class="news"><div class="d">2 septembre 2026</div><b>Bienvenue au cours</b><div>Le plan de cours et le premier module sont en ligne.</div></div>
+  </main>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

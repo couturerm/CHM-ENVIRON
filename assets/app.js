@@ -1,223 +1,124 @@
-/* ============================================================
-   CHM-ENVIRON — shared app shell
-   - Left nav defined ONCE here, injected into every page.
-   - Current-page highlight by filename.
-   - Client-side search over search-index.json.
-   - Mobile hamburger menu + light/dark toggle (persisted).
-   Pages include this file with <script src="assets/app.js" defer></script>
-   (module pages use ../assets/app.js). Path prefix is auto-detected.
-   ============================================================ */
+/* CHM-ENVIRON — shared chrome: topbar, sidebar, search, theme toggle, mobile menu, capsules.
+   Markup matches the approved mockup verbatim. Each page sets:
+     <body data-page="<id>" data-depth="0|1">  and contains a <main class="content">…</main> */
+
 (function () {
-  "use strict";
+  var depth = parseInt(document.body.getAttribute('data-depth') || '0', 10);
+  var P = depth ? '../' : '';
+  var current = document.body.getAttribute('data-page') || 'index';
 
-  /* ---- Path prefix: "" at repo root, "../" inside /modules/ ---- */
-  var INMOD = /\/modules\//.test(location.pathname);
-  var P = INMOD ? "../" : "";
+  var NAV = [
+    {t:'link', page:'index',                  href:'index.html',                     label:'Contenu et activités'},
+    {t:'link', page:'accueil',                href:'accueil.html',                   label:'Accueil'},
+    {t:'link', page:'nouvelles',              href:'nouvelles.html',                 label:'Nouvelles'},
+    {t:'link', page:'plan',                   href:'plan-de-cours.html',             label:'Plan de cours'},
+    {t:'group', label:'Biogéochimie'},
+    {t:'item', page:'cosmochimie',            href:'modules/cosmochimie.html',       label:'Cosmochimie'},
+    {t:'item', page:'isotopie',               href:'modules/isotopie.html',          label:'Isotopie'},
+    {t:'item', page:'cycle-carbone',          href:'modules/cycle-carbone.html',     label:'Cycle global du carbone'},
+    {t:'item', page:'limnologie',             href:'modules/limnologie.html',        label:'Limnologie'},
+    {t:'item', page:'travaux-terrain',        href:'modules/travaux-terrain.html',   label:'Travaux de terrain'},
+    {t:'group', label:'Eau, Atmosphère et Neige'},
+    {t:'item', page:'atmosphere',             href:'modules/atmosphere.html',        label:'Atmosphère'},
+    {t:'item', page:'neige',                  href:'modules/neige.html',             label:'Neige'},
+    {t:'item', page:'traitement-eau',         href:'modules/traitement-eau.html',    label:"Traitement de l'eau"},
+    {t:'group', label:'Contaminants'},
+    {t:'item', page:'nanoparticules',         href:'modules/nanoparticules.html',    label:'Nanoparticules'},
+    {t:'item', page:'contaminants-emergents', href:'modules/contaminants-emergents.html', label:'Contaminants émergents'},
+    {t:'item', page:'ecotoxicologie',         href:'modules/ecotoxicologie.html',    label:'Écotoxicologie'},
+    {t:'item', page:'pfas',                   href:'modules/pfas.html',              label:'Produits persistants (PFAS)'},
+    {t:'group', label:'Cours'},
+    {t:'item', page:'evaluations',            href:'evaluations.html',               label:'Évaluations'},
+    {t:'item', page:'mediagraphie',           href:'mediagraphie.html',              label:'Médiagraphie'}
+  ];
 
-  /* ---- Navigation model (single source of truth) ---- */
-  var NAV = {
-    top: [
-      { label: "Contenu et activités", href: "index.html" },
-      { label: "Accueil", href: "accueil.html" },
-      { label: "Nouvelles", href: "nouvelles.html" },
-      { label: "Plan de cours", href: "plan-de-cours.html" }
-    ],
-    groups: [
-      {
-        label: "Biogéochimie",
-        items: [
-          { label: "Cosmochimie", href: "modules/cosmochimie.html" },
-          { label: "Isotopie", href: "modules/isotopie.html" },
-          { label: "Cycle global du carbone", href: "modules/cycle-carbone.html" },
-          { label: "Limnologie", href: "modules/limnologie.html" },
-          { label: "Travaux de terrain", href: "modules/travaux-terrain.html" }
-        ]
-      },
-      {
-        label: "Eau, Atmosphère et Neige",
-        items: [
-          { label: "Atmosphère", href: "modules/atmosphere.html" },
-          { label: "Neige", href: "modules/neige.html" },
-          { label: "Traitement de l'eau", href: "modules/traitement-eau.html" }
-        ]
-      },
-      {
-        label: "Contaminants",
-        items: [
-          { label: "Nanoparticules", href: "modules/nanoparticules.html" },
-          { label: "Contaminants émergents", href: "modules/contaminants-emergents.html" },
-          { label: "Écotoxicologie", href: "modules/ecotoxicologie.html" },
-          { label: "Produits persistants (PFAS)", href: "modules/pfas.html" }
-        ]
-      }
-    ],
-    bottom: [
-      { label: "Évaluations", href: "evaluations.html" },
-      { label: "Médiagraphie", href: "mediagraphie.html" }
-    ]
+  // ---- topbar ----
+  var topbar = document.createElement('div');
+  topbar.className = 'topbar';
+  topbar.innerHTML =
+    '<button class="menubtn" id="menubtn">☰</button>' +
+    '<span class="tt">CHM-4152</span><span class="muted">Chimie de l\'environnement · Automne 2026</span>' +
+    '<span class="sp"></span>' +
+    '<div class="search"><input id="q" type="search" placeholder="Rechercher dans le cours…" autocomplete="off"><div class="results" id="results"></div></div>' +
+    '<button class="toggle" id="modeToggle">☀ Clair</button>';
+  document.body.insertBefore(topbar, document.body.firstChild);
+
+  // ---- sidebar ----
+  var nav = '<div class="brand"><div class="code">CHM-4152 · NRC 83001</div><div class="ttl">Chimie de l\'environnement</div></div>';
+  NAV.forEach(function (n) {
+    if (n.t === 'group') { nav += '<div class="navgroup">' + n.label + '</div>'; return; }
+    var cls = (n.t === 'link' ? 'navlink' : 'navitem') + (n.page === current ? ' active' : '');
+    nav += '<a class="' + cls + '" href="' + P + n.href + '">' + n.label + '</a>';
+  });
+  var side = document.createElement('aside');
+  side.className = 'side'; side.id = 'side'; side.innerHTML = nav;
+
+  var content = document.querySelector('.content');
+  var app = document.createElement('div'); app.className = 'app';
+  content.parentNode.insertBefore(app, content);
+  app.appendChild(side); app.appendChild(content);
+
+  // ---- mobile menu ----
+  document.getElementById('menubtn').onclick = function () { side.classList.toggle('open'); };
+
+  // ---- light / dark (persisted) ----
+  var html = document.documentElement, mt = document.getElementById('modeToggle');
+  try { var saved = localStorage.getItem('chm_mode'); if (saved) html.setAttribute('data-mode', saved); } catch (e) {}
+  function syncToggle() { mt.textContent = html.getAttribute('data-mode') === 'dark' ? '☀ Clair' : '☾ Sombre'; }
+  syncToggle();
+  mt.onclick = function () {
+    var d = html.getAttribute('data-mode') === 'dark';
+    html.setAttribute('data-mode', d ? 'light' : 'dark');
+    try { localStorage.setItem('chm_mode', d ? 'light' : 'dark'); } catch (e) {}
+    syncToggle();
   };
 
-  function base(href) {
-    var s = href.split("/");
-    return s[s.length - 1];
-  }
-  var CURRENT = base(location.pathname) || "index.html";
-
-  function navLink(item) {
-    var cur = base(item.href) === CURRENT ? ' class="current"' : "";
-    return '<a href="' + P + item.href + '"' + cur + ">" + item.label + "</a>";
-  }
-
-  function buildNav() {
-    var h = '<ul class="nav">';
-    NAV.top.forEach(function (it) { h += "<li>" + navLink(it) + "</li>"; });
-
-    NAV.groups.forEach(function (g, gi) {
-      // open the group that contains the current page
-      var hasCur = g.items.some(function (it) { return base(it.href) === CURRENT; });
-      h += '<li class="group' + (hasCur ? "" : " collapsed") +
-        '" data-g="' + gi + '">';
-      h += '<button class="group-label" type="button">' + g.label + "</button>";
-      h += '<ul class="sub">';
-      g.items.forEach(function (it) { h += "<li>" + navLink(it) + "</li>"; });
-      h += "</ul></li>";
+  // ---- capsule inset player ----
+  document.querySelectorAll('.cap[data-vp]').forEach(function (c) {
+    c.addEventListener('click', function (e) {
+      e.preventDefault();
+      var tt = document.getElementById('vt-' + c.dataset.vp);
+      if (tt) tt.textContent = c.dataset.title;
+      c.parentElement.querySelectorAll('.cap[data-vp]').forEach(function (x) { x.classList.remove('activecap'); });
+      c.classList.add('activecap');
     });
+  });
 
-    h += '<li><hr></li>';
-    NAV.bottom.forEach(function (it) { h += "<li>" + navLink(it) + "</li>"; });
-    h += "</ul>";
-    return h;
-  }
+  // ---- tabs (if a page uses them) ----
+  document.querySelectorAll('.tab').forEach(function (t) {
+    t.addEventListener('click', function () {
+      t.parentElement.querySelectorAll('.tab').forEach(function (x) { x.classList.remove('active'); });
+      t.classList.add('active');
+    });
+  });
 
-  /* ---- Theme ---- */
-  var THEME_KEY = "chm-theme";
-  function applyTheme(t) {
-    document.documentElement.setAttribute("data-theme", t);
-    var b = document.getElementById("themeBtn");
-    if (b) b.textContent = t === "light" ? "☾ Sombre" : "☀ Clair";
-  }
-  function initTheme() {
-    var saved = null;
-    try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
-    applyTheme(saved === "light" ? "light" : "dark");
-  }
-  function toggleTheme() {
-    var cur = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
-    var next = cur === "light" ? "dark" : "light";
-    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
-    applyTheme(next);
-  }
-
-  /* ---- Search ---- */
-  var INDEX = null, idxLoading = false;
-  function loadIndex(cb) {
-    if (INDEX) return cb(INDEX);
-    if (idxLoading) return;
-    idxLoading = true;
-    fetch(P + "search-index.json")
-      .then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (j) { INDEX = Array.isArray(j) ? j : (j.pages || []); cb(INDEX); })
-      .catch(function () { INDEX = []; cb(INDEX); });
-  }
-  function esc(s) { return s.replace(/[&<>"]/g, function (c) {
-    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function snippet(text, q) {
-    var i = text.toLowerCase().indexOf(q.toLowerCase());
-    if (i < 0) return esc(text.slice(0, 120)) + "…";
-    var start = Math.max(0, i - 40), end = Math.min(text.length, i + q.length + 80);
-    var seg = text.slice(start, end);
-    var re = new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
-    return (start > 0 ? "…" : "") + esc(seg).replace(re, "<mark>$1</mark>") +
-      (end < text.length ? "…" : "");
-  }
-  function runSearch(q, box) {
-    q = q.trim();
-    if (q.length < 2) { box.classList.remove("open"); box.innerHTML = ""; return; }
-    loadIndex(function (idx) {
-      var ql = q.toLowerCase();
-      var hits = idx.filter(function (p) {
-        return (p.title + " " + (p.text || "")).toLowerCase().indexOf(ql) >= 0;
-      }).slice(0, 12);
-      if (!hits.length) {
-        box.innerHTML = '<div class="r-empty">Aucun résultat pour « ' + esc(q) + " »</div>";
-      } else {
-        box.innerHTML = hits.map(function (p) {
-          return '<a href="' + P + p.page + '"><div class="r-title">' + esc(p.title) +
-            '</div><div class="r-snippet">' + snippet(p.text || "", q) + "</div></a>";
-        }).join("");
+  // ---- search over search-index.json ----
+  var qel = document.getElementById('q'), rel = document.getElementById('results');
+  var INDEX = [];
+  fetch(P + 'search-index.json').then(function (r) { return r.json(); })
+    .then(function (d) { INDEX = d; }).catch(function () {});
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+  qel.addEventListener('input', function () {
+    var raw = qel.value.trim();
+    if (raw.length < 2) { rel.classList.remove('show'); rel.innerHTML = ''; return; }
+    var q = norm(raw), hits = [];
+    INDEX.forEach(function (p) {
+      var hay = norm((p.title || '') + ' ' + (p.text || ''));
+      var i = hay.indexOf(q);
+      if (i >= 0) {
+        var base = (p.title || '') + ' — ' + (p.text || '');
+        var t = norm(base), j = t.indexOf(q), s = Math.max(0, j - 32);
+        var snip = (s > 0 ? '… ' : '') + base.slice(s, j + raw.length + 46) + ' …';
+        snip = esc(snip).replace(new RegExp('(' + raw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'i'), '<b style="color:var(--ink)">$1</b>');
+        hits.push({ url: p.url, title: p.title, snip: snip });
       }
-      box.classList.add("open");
     });
-  }
-
-  /* ---- Build the shell ---- */
-  function build() {
-    var app = document.querySelector(".app");
-    if (!app) return;
-
-    // Sidebar
-    var side = document.createElement("nav");
-    side.className = "sidebar";
-    side.innerHTML =
-      '<div class="brand"><span class="code">CHM-4152</span>' +
-      '<span class="name">Chimie de l\'environnement</span></div>' + buildNav();
-
-    // Backdrop for mobile
-    var backdrop = document.createElement("div");
-    backdrop.className = "backdrop";
-
-    app.insertBefore(backdrop, app.firstChild);
-    app.insertBefore(side, app.firstChild);
-
-    // Topbar (prepended into .content)
-    var content = app.querySelector(".content");
-    if (content) {
-      var bar = document.createElement("div");
-      bar.className = "topbar";
-      bar.innerHTML =
-        '<button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>' +
-        '<div class="search"><input id="searchInput" type="search" ' +
-        'placeholder="Rechercher dans le cours…" autocomplete="off">' +
-        '<div class="search-results" id="searchResults"></div></div>' +
-        '<div class="spacer"></div>' +
-        '<button class="theme-btn" id="themeBtn">☀ Clair</button>';
-      content.insertBefore(bar, content.firstChild);
-    }
-
-    // Group collapse toggles
-    side.querySelectorAll(".group-label").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        btn.parentNode.classList.toggle("collapsed");
-      });
-    });
-
-    // Mobile menu
-    var menuBtn = document.getElementById("menuBtn");
-    if (menuBtn) menuBtn.addEventListener("click", function () { app.classList.toggle("nav-open"); });
-    backdrop.addEventListener("click", function () { app.classList.remove("nav-open"); });
-
-    // Theme
-    var themeBtn = document.getElementById("themeBtn");
-    if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
-    applyTheme(document.documentElement.getAttribute("data-theme") || "dark");
-
-    // Search
-    var input = document.getElementById("searchInput");
-    var box = document.getElementById("searchResults");
-    if (input && box) {
-      input.addEventListener("input", function () { runSearch(input.value, box); });
-      input.addEventListener("focus", function () { if (input.value.trim().length >= 2) runSearch(input.value, box); });
-      document.addEventListener("click", function (e) {
-        if (!e.target.closest(".search")) box.classList.remove("open");
-      });
-      input.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") { box.classList.remove("open"); input.blur(); }
-      });
-    }
-  }
-
-  initTheme();                 // set theme before paint (data-theme already on <html> default)
-  if (document.readyState === "loading")
-    document.addEventListener("DOMContentLoaded", build);
-  else build();
+    if (!hits.length) { rel.innerHTML = '<div class="none">Aucun résultat pour « ' + esc(raw) + ' »</div>'; rel.classList.add('show'); return; }
+    rel.innerHTML = hits.map(function (h) {
+      return '<a class="ritem" href="' + P + h.url + '" style="display:block"><div class="rt">' + h.title + '</div><div class="rs">' + h.snip + '</div></a>';
+    }).join('');
+    rel.classList.add('show');
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.search')) rel.classList.remove('show'); });
 })();

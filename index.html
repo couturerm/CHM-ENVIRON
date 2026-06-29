@@ -1,69 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-mode="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contenu et activités · CHM-4152</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<div class="app">
-  <div class="content">
-    <main>
-      <div class="crumb">CHM-4152 · Chimie de l'environnement</div>
-      <h1>Contenu et activités</h1>
-      <p class="lead">Calendrier de la session, regroupé par bloc thématique. Chaque rangée
-        indique la personne responsable et la date; cliquez le titre pour ouvrir le module.</p>
-      <div class="note">Dates <strong>provisoires</strong> (session Automne 2026), sujettes à
-        la disponibilité des conférencier·ère·s invité·e·s. Le plan de cours officiel prévaut.</div>
-
-      <h2 class="block-title">Biogéochimie</h2>
-      <table class="sched">
-        <thead><tr><th>Module</th><th>Responsable</th><th class="date">Date</th></tr></thead>
-        <tbody>
-          <tr><td><a href="modules/cosmochimie.html">Cosmochimie</a></td><td>Raoul Couture</td><td class="date">2 sept. 2026</td></tr>
-          <tr><td><a href="modules/isotopie.html">Isotopie</a></td><td>Raoul Couture</td><td class="date">9 sept. 2026</td></tr>
-          <tr><td><a href="modules/cycle-carbone.html">Cycle global du carbone</a></td><td>Raoul Couture</td><td class="date">16 sept. 2026</td></tr>
-          <tr><td><a href="modules/limnologie.html">Limnologie</a></td><td>Raoul Couture</td><td class="date">23 sept. 2026</td></tr>
-          <tr><td><a href="modules/travaux-terrain.html">Travaux de terrain</a></td><td>Raoul Couture</td><td class="date">30 sept. 2026</td></tr>
-        </tbody>
-      </table>
-
-      <h2 class="block-title">Eau, Atmosphère et Neige</h2>
-      <table class="sched">
-        <thead><tr><th>Module</th><th>Responsable</th><th class="date">Date</th></tr></thead>
-        <tbody>
-          <tr><td><a href="modules/atmosphere.html">Atmosphère</a></td><td>Florent Dominé <span class="badge">invité</span></td><td class="date">14 oct. 2026</td></tr>
-          <tr><td><a href="modules/neige.html">Neige</a></td><td>Florent Dominé <span class="badge">invité</span></td><td class="date">21 oct. 2026</td></tr>
-          <tr><td><a href="modules/traitement-eau.html">Traitement de l'eau</a></td><td>Christine Beaulieu <span class="badge">invitée</span></td><td class="date">2 déc. 2026</td></tr>
-        </tbody>
-      </table>
-
-      <h2 class="block-title">Contaminants</h2>
-      <table class="sched">
-        <thead><tr><th>Module</th><th>Responsable</th><th class="date">Date</th></tr></thead>
-        <tbody>
-          <tr><td><a href="modules/nanoparticules.html">Nanoparticules</a></td><td>Julien Gigault <span class="badge">invité</span></td><td class="date">4 nov. 2026</td></tr>
-          <tr><td><a href="modules/contaminants-emergents.html">Contaminants émergents</a></td><td>Dominic Larivière <span class="badge">invité</span></td><td class="date">11 nov. 2026</td></tr>
-          <tr><td><a href="modules/ecotoxicologie.html">Écotoxicologie</a></td><td>Kristin Mueller <span class="badge">invitée</span></td><td class="date">18 nov. 2026</td></tr>
-          <tr><td><a href="modules/pfas.html">Produits persistants (PFAS)</a></td><td>Gabriel Munoz <span class="badge">invité</span></td><td class="date">25 nov. 2026</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Évaluations</h2>
-      <ul class="res">
-        <li><strong>Examen partiel 1</strong> — 40 % <span class="meta">· date à confirmer (A26)</span></li>
-        <li><strong>Capsule vidéo</strong> — 20 % <span class="meta">· remise en fin de session</span></li>
-        <li><strong>Examen partiel 2</strong> — 40 % <span class="meta">· période d'examens (déc. 2026)</span></li>
-      </ul>
-      <p class="muted">Détails complets : <a href="evaluations.html">Évaluations</a> ·
-        <a href="plan-de-cours.html">Plan de cours</a>.</p>
-
-      <p class="muted" style="margin-top:2rem;font-size:.82rem">Seul le module <strong>Cosmochimie</strong>
-        est publié pour l'instant; les autres liens pointent vers des pages à construire (un module par chat).</p>
-    </main>
-  </div>
-</div>
-<script src="assets/app.js" defer></script>
+<body data-page="index" data-depth="0">
+  <main class="content">
+    <h1 class="pt">Contenu et activités</h1>
+    <p class="lead">Calendrier des séances par bloc thématique. Les dates des conférences invitées peuvent varier selon la disponibilité des conférencières et conférenciers.</p>
+    <table class="eval sched">
+      <tr><th>Module</th><th>Présentateur</th><th>Date</th></tr>
+      <tr><th colspan="3">Biogéochimie</th></tr>
+      <tr><td><a href="modules/cosmochimie.html">Cosmochimie</a><div class="sd">Nucléosynthèse, abondance des éléments, différenciation planétaire.</div></td><td>Raoul Couture</td><td>2 sept. 2026</td></tr>
+      <tr><td><a href="modules/isotopie.html">Isotopie</a><div class="sd">Isotopes stables, notation delta, fractionnement, traçage des sources.</div></td><td>Raoul Couture</td><td>9 sept. 2026</td></tr>
+      <tr><td><a href="modules/cycle-carbone.html">Cycle global du carbone</a><div class="sd">Le carbone de la photosynthèse à l'enfouissement tectonique.</div></td><td>Raoul Couture</td><td>16 sept. 2026</td></tr>
+      <tr><td><a href="modules/limnologie.html">Limnologie</a><div class="sd">Physicochimie des lacs sous l'influence du climat.</div></td><td>Raoul Couture</td><td>23 sept. 2026</td></tr>
+      <tr><td><a href="modules/travaux-terrain.html">Travaux de terrain</a><div class="sd">Prélèvement et mesure in-situ; séries temporelles.</div></td><td>Raoul Couture</td><td>30 sept. 2026</td></tr>
+      <tr><th colspan="3">Eau, Atmosphère et Neige</th></tr>
+      <tr><td><a href="modules/atmosphere.html">Atmosphère</a><div class="sd">Photochimie atmosphérique; ozone; radicaux; gaz traces.</div></td><td>Florent Dominé</td><td>14 oct. 2026</td></tr>
+      <tr><td><a href="modules/neige.html">Neige</a><div class="sd">Chimie de la neige; vecteur de polluants; carottes de glace et climats passés.</div></td><td>Florent Dominé</td><td>21 oct. 2026</td></tr>
+      <tr><td><a href="modules/traitement-eau.html">Traitement de l'eau</a><div class="sd">Traitement de l'eau potable; qualité microbiologique.</div></td><td>Christine Beaulieu</td><td>2 déc. 2026</td></tr>
+      <tr><th colspan="3">Contaminants</th></tr>
+      <tr><td><a href="modules/nanoparticules.html">Nanoparticules</a><div class="sd">Implications de la taille; les plastiques.</div></td><td>Julien Gigault</td><td>4 nov. 2026</td></tr>
+      <tr><td><a href="modules/contaminants-emergents.html">Contaminants émergents</a><div class="sd">Devenir et impacts des contaminants organiques.</div></td><td>Dominic Larivière</td><td>11 nov. 2026</td></tr>
+      <tr><td><a href="modules/ecotoxicologie.html">Écotoxicologie</a><div class="sd">Des espèces chimiques jusqu'à l'effet sur les organismes.</div></td><td>Kristin Mueller</td><td>18 nov. 2026</td></tr>
+      <tr><td><a href="modules/pfas.html">Produits persistants (PFAS)</a><div class="sd">Devenir des substances per- et polyfluoroalkylées.</div></td><td>Gabriel Munoz</td><td>25 nov. 2026</td></tr>
+    </table>
+    <p class="lead" style="margin-top:18px;font-size:13px">Pour l'instant, seuls les modules Cosmochimie et Isotopie sont publiés; les autres seront ajoutés un par un.</p>
+  </main>
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

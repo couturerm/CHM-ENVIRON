@@ -1,0 +1,45 @@
+{
+  "module": "isotopie",
+  "questions": [
+    {
+      "id": "i1",
+      "type": "mc",
+      "q": "La notation delta (δ) d'un isotope exprime :",
+      "options": [
+        "La concentration absolue de l'isotope lourd",
+        "La masse atomique moyenne de l'élément",
+        "L'écart relatif du rapport isotopique par rapport à un standard, en ‰",
+        "Le temps de demi-vie de l'isotope"
+      ],
+      "answer": 2,
+      "fb": "δ = [(R_échantillon / R_standard) − 1] × 1000 ‰, où R est le rapport isotopique (ex. ¹³C/¹²C). Un δ positif indique un enrichissement en isotope lourd par rapport au standard (VPDB, VSMOW).",
+      "source": "ia",
+      "verified": false
+    },
+    {
+      "id": "i2",
+      "type": "tf",
+      "q": "Le fractionnement cinétique est associé à des réactions unidirectionnelles où l'isotope léger réagit plus vite.",
+      "options": ["Vrai", "Faux"],
+      "answer": 0,
+      "fb": "Vrai. Hors équilibre (évaporation, diffusion, photosynthèse), l'isotope léger réagit plus vite et enrichit le produit. Le fractionnement à l'équilibre dépend de la température et concerne des réactions réversibles.",
+      "source": "ia",
+      "verified": false
+    },
+    {
+      "id": "i3",
+      "type": "mc",
+      "q": "Pourquoi les isotopes légers fractionnent-ils davantage que les isotopes lourds ?",
+      "options": [
+        "Parce que la différence de masse relative entre isotopes est plus grande pour les éléments légers",
+        "Parce qu'ils sont plus rares dans la nature",
+        "Parce qu'ils sont radioactifs",
+        "Parce qu'ils ont une charge nucléaire plus élevée"
+      ],
+      "answer": 0,
+      "fb": "Le fractionnement dépend de la différence de masse relative. Entre ¹H et ²H elle est de ~100 %, alors qu'entre ³⁸Ar et ⁴⁰Ar elle n'est que de ~5 %. Les éléments légers (H, C, N, O, S) montrent donc les plus grands effets.",
+      "source": "ia",
+      "verified": false
+    }
+  ]
+}
