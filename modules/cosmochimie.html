@@ -12,90 +12,107 @@
     <h1 class="pt">Cosmochimie</h1>
     <span class="mblock">Biogéochimie</span><span class="mdate">2 sept. 2026</span>
 
-    <div class="objcard">
-      <h3>Objectifs du module</h3>
-      <ul>
-        <li>Expliquer l'abondance des éléments dans l'univers à la suite de la nucléosynthèse stellaire</li>
-        <li>Expliquer la séparation des éléments sur Terre par leur densité et leur réactivité (classification de Goldschmidt, concept HSAB)</li>
-        <li>Distinguer les grandes catégories géochimiques (lithophile, sidérophile, chalcophile, atmophile)</li>
-        <li>Relier l'abondance cosmique des éléments à la composition planétaire</li>
-      </ul>
-    </div>
-
     <div class="person">
       <div class="avatar">RC</div>
       <div><div class="role">Responsable du module</div><div class="nm">Raoul Couture</div><div class="aff">Département de chimie · Université Laval</div></div>
     </div>
 
-    <div class="slidecard" data-pdf="../medias/cosmochimie.pdf">
-      <h3>Diapositives — feuilleter sur le site</h3>
-      <div class="toolbar">
-        <button id="prev">‹</button><button id="next">›</button>
-        <span class="pageind">Page <input id="pageNum" type="text" value="1"> / <span id="pageCount">?</span></span>
-        <button id="zoomOut">−</button><button id="zoomIn">+</button>
-        <button id="fs">⛶ Agrandir</button>
-        <a id="dl" download style="margin-left:auto;font-size:13px">⬇ Télécharger</a>
-      </div>
-      <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
+    <div class="subnav">
+      <a href="#m-obj">Objectifs et notions</a>
+      <a href="#m-act">Activités d'apprentissage</a>
+      <a href="#m-mat">Matériel supplémentaire</a>
     </div>
 
-    <div class="grid">
-      <div>
-        <div class="card"><h3>Outils et médias</h3><div class="bd">
-          <div class="res"><span class="ic">▷</span><div><a href="#">12656_Big_Bang_1080</a><div class="meta">Vidéo · embarquée</div></div></div>
-          <div class="res"><span class="ic">↗</span><div><a href="#">NASA : Global Transport of Smoke</a></div></div>
-          <div class="res"><span class="ic">↗</span><div><a href="#">Neil deGrasse Tyson : We can't terraform Mars</a></div></div>
-        </div></div>
-        <div class="card" style="margin-top:16px"><h3>Lectures supplémentaires</h3><div class="bd">
-          <div class="res"><span class="ic">▦</span><div><a href="#">Abondances et classification HSAB</a><div class="meta">PDF</div></div></div>
-          <div class="res"><span class="ic">▦</span><div><a href="#">History of the Universe — Timeline</a><div class="meta">PDF</div></div></div>
-          <div class="res"><span class="ic">↗</span><div><a href="#">Sanjana Curtis : The r-process</a></div></div>
-        </div></div>
-      </div>
-      <div>
-        <div class="card"><h3>Capsules vidéo</h3><div class="bd">
-          <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-cosmo">Rappels</div><div class="vnote">vidéo à venir</div></div>
-          <div class="cap activecap" data-vp="cosmo" data-title="Rappels"><div class="thumb">▷</div><div><a href="#">Rappels</a><div class="dur">5:59</div></div></div>
-          <div class="cap" data-vp="cosmo" data-title="Origine des éléments"><div class="thumb">▷</div><div><a href="#">Origine des éléments</a><div class="dur">20:40</div></div></div>
-          <div class="cap" data-vp="cosmo" data-title="Différenciation"><div class="thumb">▷</div><div><a href="#">Différenciation</a><div class="dur">9:42</div></div></div>
-          <div class="cap" data-vp="cosmo" data-title="Distribution"><div class="thumb">▷</div><div><a href="#">Distribution</a><div class="dur">22:08</div></div></div>
-        </div></div>
-        <div class="card biblio" style="margin-top:16px"><h3>Bibliographie</h3><div class="bd">
-          <div class="ref"><a href="#">Cosmochemistry</a> — McSween &amp; Huss<em>Cambridge, 2010</em></div>
-          <div class="ref"><a href="#">Putirka et al. (2021) — Rocky Exoplanets</a></div>
-          <div class="ref"><a href="#">Phosphine in the clouds of Venus</a> — Greaves et al.<em>Nature Astronomy, 2020</em></div>
-        </div></div>
+    <div class="plansec" id="m-obj">
+      <h2>Objectifs et notions</h2>
+      <div class="objcard">
+        <h3>Objectifs du module</h3>
+        <ul>
+          <li>Expliquer l'abondance des éléments dans l'univers à la suite de la nucléosynthèse stellaire</li>
+          <li>Expliquer la séparation des éléments sur Terre par leur densité et leur réactivité (classification de Goldschmidt, concept HSAB)</li>
+          <li>Distinguer les grandes catégories géochimiques (lithophile, sidérophile, chalcophile, atmophile)</li>
+          <li>Relier l'abondance cosmique des éléments à la composition planétaire</li>
+        </ul>
       </div>
     </div>
 
-    <div class="quiz" data-quiz="../data/cosmochimie.quiz.json">
-      <div class="quizhead"><h3>Quiz formatif · Cosmochimie</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
-      <div class="quizbody">
-        <div class="qbar"><span id="qc">Question…</span><div class="prog"><i id="qp"></i></div><span id="qs">Score : 0</span></div>
-        <div id="qhost"></div>
+    <div class="plansec" id="m-act">
+      <h2>Activités d'apprentissage</h2>
+
+      <div class="slidecard" data-pdf="../medias/cosmochimie.pdf">
+        <h3>Diapositives — feuilleter sur le site</h3>
+        <div class="toolbar">
+          <button id="prev">‹</button><button id="next">›</button>
+          <span class="pageind">Page <input id="pageNum" type="text" value="1"> / <span id="pageCount">?</span></span>
+          <button id="zoomOut">−</button><button id="zoomIn">+</button>
+          <button id="fs">⛶ Agrandir</button>
+          <a id="dl" download style="margin-left:auto;font-size:13px">⬇ Télécharger</a>
+        </div>
+        <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
+      </div>
+
+      <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
+        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-cosmo">Rappels</div><div class="vnote">vidéo à venir</div></div>
+        <div class="cap activecap" data-vp="cosmo" data-title="Rappels"><div class="thumb">▷</div><div><a href="#">Rappels</a><div class="dur">5:59</div></div></div>
+        <div class="cap" data-vp="cosmo" data-title="Origine des éléments"><div class="thumb">▷</div><div><a href="#">Origine des éléments</a><div class="dur">20:40</div></div></div>
+        <div class="cap" data-vp="cosmo" data-title="Différenciation"><div class="thumb">▷</div><div><a href="#">Différenciation</a><div class="dur">9:42</div></div></div>
+        <div class="cap" data-vp="cosmo" data-title="Distribution"><div class="thumb">▷</div><div><a href="#">Distribution</a><div class="dur">22:08</div></div></div>
+      </div></div>
+
+      <div class="quiz" data-quiz="../data/cosmochimie.quiz.json">
+        <div class="quizhead"><h3>Quiz formatif · Cosmochimie</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
+        <div class="quizbody">
+          <div class="qbar"><span id="qc">Question…</span><div class="prog"><i id="qp"></i></div><span id="qs">Score : 0</span></div>
+          <div id="qhost"></div>
+        </div>
       </div>
     </div>
 
-    <div class="kwcloud">
-      <h3>Enrichissement : mots-clés et concepts</h3>
-      <div class="kwlist">
-        <a href="https://fr.wikipedia.org/wiki/Nucléosynthèse_stellaire" target="_blank" rel="noopener">nucléosynthèse stellaire</a>
-        <a href="https://fr.wikipedia.org/wiki/Fusion_nucléaire" target="_blank" rel="noopener">fusion nucléaire</a>
-        <a href="https://fr.wikipedia.org/wiki/Abondance_des_éléments_chimiques" target="_blank" rel="noopener">abondance des éléments</a>
-        <a href="https://fr.wikipedia.org/wiki/Élément_chimique" target="_blank" rel="noopener">élément chimique</a>
-        <a href="https://fr.wikipedia.org/wiki/Classification_g%C3%A9ochimique_des_%C3%A9l%C3%A9ments" target="_blank" rel="noopener">classification de Goldschmidt</a>
-        <a href="https://fr.wikipedia.org/wiki/Principe_HSAB" target="_blank" rel="noopener">théorie HSAB</a>
-        <a href="https://fr.wikipedia.org/wiki/Isotope" target="_blank" rel="noopener">isotope</a>
-        <a href="https://fr.wikipedia.org/wiki/Archéen" target="_blank" rel="noopener">archéen</a>
-        <a href="https://fr.wikipedia.org/wiki/Croûte_terrestre" target="_blank" rel="noopener">croûte terrestre</a>
-        <a href="https://fr.wikipedia.org/wiki/Atmosphère_terrestre" target="_blank" rel="noopener">atmosphère terrestre</a>
-        <a href="https://fr.wikipedia.org/wiki/Oxygène" target="_blank" rel="noopener">oxygène</a>
-        <a href="https://fr.wikipedia.org/wiki/Densité" target="_blank" rel="noopener">densité</a>
-        <a href="https://fr.wikipedia.org/wiki/Planète" target="_blank" rel="noopener">planète</a>
-        <a href="https://fr.wikipedia.org/wiki/Particule_élémentaire" target="_blank" rel="noopener">particule élémentaire</a>
-        <a href="https://fr.wikipedia.org/wiki/Énergie_de_liaison_nucléaire" target="_blank" rel="noopener">énergie de liaison nucléaire</a>
+    <div class="plansec" id="m-mat">
+      <h2>Matériel supplémentaire</h2>
+      <div class="grid">
+        <div>
+          <div class="card"><h3>Outils et médias</h3><div class="bd">
+            <div class="res"><span class="ic">▷</span><div><a href="#">12656_Big_Bang_1080</a><div class="meta">Vidéo · embarquée</div></div></div>
+            <div class="res"><span class="ic">↗</span><div><a href="#">NASA : Global Transport of Smoke</a></div></div>
+            <div class="res"><span class="ic">↗</span><div><a href="#">Neil deGrasse Tyson : We can't terraform Mars</a></div></div>
+          </div></div>
+          <div class="card" style="margin-top:16px"><h3>Lectures supplémentaires</h3><div class="bd">
+            <div class="res"><span class="ic">▦</span><div><a href="#">Abondances et classification HSAB</a><div class="meta">PDF</div></div></div>
+            <div class="res"><span class="ic">▦</span><div><a href="#">History of the Universe — Timeline</a><div class="meta">PDF</div></div></div>
+            <div class="res"><span class="ic">↗</span><div><a href="#">Sanjana Curtis : The r-process</a></div></div>
+          </div></div>
+        </div>
+        <div>
+          <div class="card biblio"><h3>Bibliographie</h3><div class="bd">
+            <div class="ref"><a href="#">Cosmochemistry</a> — McSween &amp; Huss<em>Cambridge, 2010</em></div>
+            <div class="ref"><a href="#">Putirka et al. (2021) — Rocky Exoplanets</a></div>
+            <div class="ref"><a href="#">Phosphine in the clouds of Venus</a> — Greaves et al.<em>Nature Astronomy, 2020</em></div>
+          </div></div>
+        </div>
       </div>
-      <div class="src">Termes extraits des diapositives; chaque lien mène à l'article Wikipédia. Texte réel, indexé par la recherche. Liste et liens révisables.</div>
+
+      <div class="kwcloud">
+        <h3>Enrichissement : mots-clés et concepts</h3>
+        <div class="kwlist">
+          <a href="https://fr.wikipedia.org/wiki/Nucléosynthèse_stellaire" target="_blank" rel="noopener">nucléosynthèse stellaire</a>
+          <a href="https://fr.wikipedia.org/wiki/Fusion_nucléaire" target="_blank" rel="noopener">fusion nucléaire</a>
+          <a href="https://fr.wikipedia.org/wiki/Abondance_des_éléments_chimiques" target="_blank" rel="noopener">abondance des éléments</a>
+          <a href="https://fr.wikipedia.org/wiki/Élément_chimique" target="_blank" rel="noopener">élément chimique</a>
+          <a href="https://fr.wikipedia.org/wiki/Classification_g%C3%A9ochimique_des_%C3%A9l%C3%A9ments" target="_blank" rel="noopener">classification de Goldschmidt</a>
+          <a href="https://fr.wikipedia.org/wiki/Principe_HSAB" target="_blank" rel="noopener">théorie HSAB</a>
+          <a href="https://fr.wikipedia.org/wiki/Isotope" target="_blank" rel="noopener">isotope</a>
+          <a href="https://fr.wikipedia.org/wiki/Archéen" target="_blank" rel="noopener">archéen</a>
+          <a href="https://fr.wikipedia.org/wiki/Croûte_terrestre" target="_blank" rel="noopener">croûte terrestre</a>
+          <a href="https://fr.wikipedia.org/wiki/Atmosphère_terrestre" target="_blank" rel="noopener">atmosphère terrestre</a>
+          <a href="https://fr.wikipedia.org/wiki/Oxygène" target="_blank" rel="noopener">oxygène</a>
+          <a href="https://fr.wikipedia.org/wiki/Densité" target="_blank" rel="noopener">densité</a>
+          <a href="https://fr.wikipedia.org/wiki/Planète" target="_blank" rel="noopener">planète</a>
+          <a href="https://fr.wikipedia.org/wiki/Particule_élémentaire" target="_blank" rel="noopener">particule élémentaire</a>
+          <a href="https://fr.wikipedia.org/wiki/Énergie_de_liaison_nucléaire" target="_blank" rel="noopener">énergie de liaison nucléaire</a>
+        </div>
+        <div class="src">Termes extraits des diapositives; chaque lien mène à l'article Wikipédia. Texte réel, indexé par la recherche. Liste et liens révisables.</div>
+      </div>
     </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
