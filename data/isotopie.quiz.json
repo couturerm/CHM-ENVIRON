@@ -2,44 +2,120 @@
   "module": "isotopie",
   "questions": [
     {
-      "id": "i1",
-      "type": "mc",
-      "q": "La notation delta (δ) d'un isotope exprime :",
+      "id": "iso1",
+      "type": "tf",
+      "q": "Les ratios des isotopes stables du Pb sont des traceurs des sources de contaminations",
       "options": [
-        "La concentration absolue de l'isotope lourd",
-        "La masse atomique moyenne de l'élément",
-        "L'écart relatif du rapport isotopique par rapport à un standard, en ‰",
-        "Le temps de demi-vie de l'isotope"
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 0,
+      "fb": "Les isotopes stables du Pb sont des traceurs classiques des sources de contamination industrielle puisque le ratio témoigne de la source géologique du Pb utilisé.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "iso2",
+      "type": "tf",
+      "q": "Dans le cycle hydrologique, la distillation de Rayleigh réduit progressivement le fractionnement isotopique entre la vapeur d’eau résiduelle et les précipitations.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux : la distillation de Rayleigh amplifie le fractionnement, elle ne le réduit pas. À mesure que les masses d’air se déplacent (équateur→pôles, littoral→intérieur, gain d’altitude), la vapeur se condense et les précipitations, enrichies en isotopes lourds (¹⁸O, ²H), sont retirées du système de façon continue et unidirectionnelle. La vapeur résiduelle s’appauvrit donc de plus en plus en isotopes lourds et les δ¹⁸O/δ²H des précipitations successives deviennent de plus en plus négatifs. Cet appauvrissement progressif (effet de Rayleigh) explique les gradients latitudinal et altitudinal des isotopes de l’eau ainsi que la droite météorique mondiale.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "iso3",
+      "type": "mc",
+      "q": "Lequel de ces éléments démontrera le moins de fractionnement isotopique ?",
+      "options": [
+        "Hydrogène (1H,2H)",
+        "Carbone (,13C)",
+        "Nickel (60Ni, 61Ni)",
+        "Mercure (200Hg, 201Hg)"
+      ],
+      "answer": 3,
+      "fb": "Le mercure est l’élément le plus lourd de la liste (²⁰⁰Hg/²⁰¹Hg) : sa différence de masse relative (Δm/m) entre isotopes est la plus faible, d’où le fractionnement isotopique minimal. Le fractionnement dépendant de la masse diminue quand la masse atomique augmente.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "iso4",
+      "type": "mc",
+      "q": "Complétez: La teneur en 15N _______ par rapport à celle en 14N avec le niveau trophique.",
+      "options": [
+        "Augmentera",
+        "Diminuera",
+        "Se maintiendra",
+        "Doublera"
+      ],
+      "answer": 0,
+      "fb": "Le δ¹⁵N s’enrichit d’environ +3 à +4 ‰ à chaque niveau trophique. Lors du métabolisme des protéines (transamination et désamination), l’azote léger ¹⁴N est excrété préférentiellement (urée, ammoniac) car les liaisons impliquant ¹⁴N se rompent un peu plus vite — un fractionnement cinétique. Les tissus du consommateur se trouvent donc enrichis en ¹⁵N par rapport à son alimentation, et cet enrichissement se cumule le long de la chaîne alimentaire. Le δ¹⁵N sert ainsi d’indicateur de la position trophique d’un organisme.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "iso5",
+      "type": "mc",
+      "q": "Le terme δ18O se définit comme :",
+      "options": [
+        "Ratio isotopique 18O/16O",
+        "Ratio isotopique 16O/18O",
+        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × 1 000",
+        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × \t10 000"
       ],
       "answer": 2,
-      "fb": "δ = [(R_échantillon / R_standard) − 1] × 1000 ‰, où R est le rapport isotopique (ex. ¹³C/¹²C). Un δ positif indique un enrichissement en isotope lourd par rapport au standard (VPDB, VSMOW).",
-      "source": "ia",
-      "verified": false
+      "fb": "δ¹⁸O = ([R_échantillon − R_réf] / R_réf) × 1000, avec R = ¹⁸O/¹⁶O. La valeur, exprimée en ‰ (pour mille), mesure l’écart relatif de la composition isotopique de l’échantillon par rapport à un standard de référence (p. ex. VSMOW pour l’eau, VPDB pour les carbonates).",
+      "source": "examen 2024",
+      "verified": true
     },
     {
-      "id": "i2",
-      "type": "tf",
-      "q": "Le fractionnement cinétique est associé à des réactions unidirectionnelles où l'isotope léger réagit plus vite.",
-      "options": ["Vrai", "Faux"],
-      "answer": 0,
-      "fb": "Vrai. Hors équilibre (évaporation, diffusion, photosynthèse), l'isotope léger réagit plus vite et enrichit le produit. Le fractionnement à l'équilibre dépend de la température et concerne des réactions réversibles.",
-      "source": "ia",
-      "verified": false
-    },
-    {
-      "id": "i3",
+      "id": "iso9",
       "type": "mc",
-      "q": "Pourquoi les isotopes légers fractionnent-ils davantage que les isotopes lourds ?",
+      "q": "Lequel de ces processus produit un fractionnement isotopique principalement cinétique (hors équilibre) ?",
       "options": [
-        "Parce que la différence de masse relative entre isotopes est plus grande pour les éléments légers",
-        "Parce qu'ils sont plus rares dans la nature",
-        "Parce qu'ils sont radioactifs",
-        "Parce qu'ils ont une charge nucléaire plus élevée"
+        "L’échange isotopique entre l’eau et un carbonate à l’équilibre",
+        "L’évaporation rapide et la diffusion de la vapeur d’eau",
+        "Le partage d’un élément entre deux minéraux coexistants à l’équilibre",
+        "La condensation lente et réversible"
       ],
-      "answer": 0,
-      "fb": "Le fractionnement dépend de la différence de masse relative. Entre ¹H et ²H elle est de ~100 %, alors qu'entre ³⁸Ar et ⁴⁰Ar elle n'est que de ~5 %. Les éléments légers (H, C, N, O, S) montrent donc les plus grands effets.",
-      "source": "ia",
-      "verified": false
+      "answer": 1,
+      "fb": "Le fractionnement cinétique résulte de réactions rapides et unidirectionnelles (évaporation, diffusion, catalyse enzymatique) où l’isotope léger réagit ou diffuse plus vite. À l’équilibre, le fractionnement est fixé par la thermodynamique et est réversible.",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "iso10",
+      "type": "mc",
+      "q": "Le facteur de fractionnement α entre deux phases :",
+      "options": [
+        "Vaut 1 lorsque le fractionnement est maximal",
+        "S’approche de 1 lorsque le fractionnement est faible",
+        "Est toujours très supérieur à 1",
+        "Ne dépend pas de la température"
+      ],
+      "answer": 1,
+      "fb": "α = R_A / R_B ; plus α s’éloigne de 1, plus le fractionnement est marqué, et α → 1 signifie peu de fractionnement. À l’équilibre, α dépend fortement de la température (le fractionnement diminue quand T augmente).",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "iso11",
+      "type": "mc",
+      "q": "Une eau très appauvrie en isotopes lourds (¹⁸O, ²H) présente un δ¹⁸O :",
+      "options": [
+        "Positif et élevé",
+        "Négatif",
+        "Nul par définition",
+        "Toujours égal à celui du standard"
+      ],
+      "answer": 1,
+      "fb": "L’appauvrissement en isotope lourd donne R_échantillon < R_réf, donc δ < 0. Les précipitations de haute latitude ou altitude, très appauvries par effet Rayleigh, montrent des δ¹⁸O fortement négatifs.",
+      "source": "nouvel exercice",
+      "verified": true
     }
   ]
 }

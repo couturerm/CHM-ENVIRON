@@ -2,101 +2,175 @@
   "module": "cosmochimie",
   "questions": [
     {
-      "id": "q1",
-      "type": "mc",
-      "q": "Quel processus est responsable de la formation des éléments plus lourds que l'hydrogène et l'hélium dans l'univers ?",
-      "options": [
-        "La nucléosynthèse stellaire",
-        "La désintégration radioactive dans la croûte terrestre",
-        "La photosynthèse",
-        "L'altération chimique des roches"
-      ],
-      "answer": 0,
-      "fb": "Les éléments plus lourds que H et He sont produits par la nucléosynthèse (stellaire, explosive et primordiale pour les plus légers). La majeure partie des éléments lourds provient de la fusion dans les étoiles et des supernovae.",
-      "source": "manuel",
-      "verified": true,
-      "note": "Objectif : abondance des éléments / nucléosynthèse"
-    },
-    {
-      "id": "q2",
+      "id": "cos1",
       "type": "tf",
-      "q": "Selon la classification de Goldschmidt, les éléments sidérophiles ont une forte affinité pour les phases métalliques (le fer).",
-      "options": ["Vrai", "Faux"],
-      "answer": true,
-      "fb": "Exact. Goldschmidt distingue lithophiles (silicates/oxygène), sidérophiles (métal/fer), chalcophiles (sulfures) et atmophiles (phase gazeuse). Les sidérophiles se concentrent dans le noyau métallique.",
-      "source": "manuel",
-      "verified": true,
-      "note": "Objectif : séparation des éléments sur Terre (Goldschmidt)"
+      "q": "L’Uranium est produit dans les étoiles par fissions d’isotopes lourds.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. L’uranium et les éléments plus lourds que le fer se forment par capture neutronique (processus r et s), lors des supernovae et fusions d’étoiles à neutrons, non par fission. La fusion stellaire s’arrête au ⁵⁶Fe, au-delà elle devient endothermique.",
+      "source": "examen 2024",
+      "verified": true
     },
     {
-      "id": "q3",
+      "id": "cos2",
+      "type": "tf",
+      "q": "L’apparition de la respiration anaérobique précède celle de la photosynthèse.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. La photosynthèse (anoxygénique) est apparue très tôt dans l’histoire de la vie ; les voies de respiration exploitant les produits de la photosynthèse se sont développées ensuite.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cos3",
       "type": "multi",
-      "q": "Parmi les notations suivantes, lesquelles servent à exprimer la composition isotopique ?",
+      "q": "Pourquoi les éléments lourds sont-ils plus rares que les éléments légers dans le système solaire ?",
       "options": [
-        "Le ratio isotopique R",
-        "La notation delta (δ)",
-        "Le facteur de fractionnement (α)",
-        "Le pH"
+        "Parce que notre étoile est jeune et n’a pas encore amorcé la nucléosynthèse",
+        "Parce que la fusion d’atomes de 56Fe est endothermique",
+        "Parce que la nucléosynthèse s’appuie sur des éléments avec des masses paires",
+        "Parce que la nucléosynthèse explosive est plus rare que la nucléosynthèse stellaire"
       ],
-      "answer": [0, 1, 2],
-      "fb": "La composition isotopique s'exprime par l'abondance, la différence relative de masse (%), le ratio R, la notation delta (δ) et le facteur de fractionnement (α). Le pH n'est pas une notation isotopique.",
-      "source": "manuel",
-      "verified": true,
-      "note": "Objectif : notations de la composition isotopique"
+      "answer": [
+        1,
+        3
+      ],
+      "fb": "Les éléments légers dominent car la nucléosynthèse stellaire s’arrête au fer (la fusion de ⁵⁶Fe est endothermique) ; les éléments plus lourds ne se forment que lors d’évènements explosifs plus rares (supernovae, processus r), d’où leur faible abondance.",
+      "source": "examen 2024",
+      "verified": true
     },
     {
-      "id": "q4",
+      "id": "cos4",
+      "type": "multi",
+      "q": "Comment expliquer la distribution des éléments sur la terre lors de la formation de la planète ?",
+      "options": [
+        "L’effondrement gravitationnel du disque protoplanétaire éloigne les éléments légers vers l’extérieur",
+        "La séparation des éléments en fonction de leur densité",
+        "Le refroidissement de la planète provoque le fractionnement des éléments",
+        "L’oxydation massive des espèces réduites"
+      ],
+      "answer": [
+        1,
+        2
+      ],
+      "fb": "Lors de la formation de la planète, les éléments se sont distribués selon leur densité (différenciation : noyau métallique dense, manteau silicaté, croûte légère), et le refroidissement progressif a provoqué la condensation et le fractionnement séquentiels des éléments selon leur volatilité.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cos5",
+      "type": "multi",
+      "q": "L’astrochimie s’intéresse aux marqueurs de la vie sur les exoplanètes. Parmi les paires de composés suivantes, lesquelles sont susceptibles d’être des marqueurs d’activité biologique ?",
+      "options": [
+        "Sulfures et Sulfates",
+        "Dioxyde de carbone et méthane",
+        "Hydrogène et Eau",
+        "Phosphine et Amines"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "fb": "Les marqueurs biologiques reposent sur des déséquilibres redox atmosphériques : couples normalement incompatibles (sulfures/sulfates, CO₂/méthane) ou molécules très réactives à courte durée de vie (phosphine, amines), signes d’une production biologique continue. H₂/eau ne constitue pas un tel déséquilibre.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cos6",
       "type": "mc",
-      "q": "Le concept HSAB (acides et bases durs et mous) aide surtout à prédire :",
+      "q": "Pour quel élément le ratio demande biologique/ réserve planétaire est-il le plus élevé ?",
       "options": [
-        "La stabilité préférentielle des associations entre cations et ligands/anions",
-        "La vitesse de la lumière dans l'eau",
-        "L'âge d'une étoile",
-        "La température de fusion du fer"
+        "Le sélénium",
+        "Le phosphore",
+        "L’azote",
+        "Le soufre"
       ],
-      "answer": 0,
-      "fb": "Le principe HSAB (Pearson) prédit que les acides durs s'associent préférentiellement aux bases dures et les acides mous aux bases molles, ce qui éclaire l'affinité chimique et la distribution des éléments.",
-      "source": "manuel",
-      "verified": true,
-      "note": "Objectif : affinité chimique HSAB"
+      "answer": 1,
+      "fb": "Le phosphore a le ratio demande biologique/réserve le plus élevé : essentiel à la vie (ADN, ATP, membranes) mais peu abondant et peu mobile géochimiquement (piégé dans les apatites), ce qui en fait le nutriment limitant ultime à l’échelle géologique.",
+      "source": "examen 2024",
+      "verified": true
     },
     {
-      "id": "q5",
-      "type": "figure",
-      "q": "La courbe montre l'abondance relative des éléments dans le système solaire en fonction du numéro atomique Z. Quel énoncé décrit le mieux le motif observé ?",
-      "figure": {
-        "data": [
-          {
-            "x": [1, 2, 6, 7, 8, 10, 12, 13, 14, 16, 20, 26, 28, 30],
-            "y": [2.79e10, 2.72e9, 1.01e7, 3.13e6, 2.38e7, 3.44e6, 1.07e6, 8.49e4, 1.0e6, 5.15e5, 6.11e4, 9.0e5, 4.93e4, 1.26e3],
-            "type": "scatter",
-            "mode": "lines+markers",
-            "name": "Abondance (Si = 1e6)",
-            "line": { "color": "#d2566c" },
-            "marker": { "size": 6 }
-          }
-        ],
-        "layout": {
-          "title": "Abondance des éléments (système solaire)",
-          "xaxis": { "title": "Numéro atomique Z" },
-          "yaxis": { "title": "Abondance relative (log)", "type": "log" },
-          "paper_bgcolor": "rgba(0,0,0,0)",
-          "plot_bgcolor": "rgba(0,0,0,0)",
-          "font": { "color": "#1a1a1a" },
-          "margin": { "t": 40, "r": 10, "b": 40, "l": 60 }
-        }
-      },
+      "id": "cos9",
+      "type": "mc",
+      "q": "Selon la classification de Goldschmidt, dans quel réservoir terrestre les éléments sidérophiles se concentrent-ils préférentiellement ?",
       "options": [
-        "L'abondance décroît globalement avec Z, avec un pic local au fer (Z=26) et une alternance pair-impair (règle d'Oddo-Harkins)",
-        "L'abondance augmente régulièrement avec Z",
-        "Tous les éléments ont la même abondance",
-        "Seuls les éléments à Z impair sont abondants"
+        "L’atmosphère et l’hydrosphère",
+        "La croûte et le manteau silicatés",
+        "Le noyau métallique (et les météorites de fer)",
+        "Les sulfures et minéraux chalcophiles"
+      ],
+      "answer": 2,
+      "fb": "Les éléments sidérophiles ont une affinité pour le fer métallique et se concentrent dans le noyau (et les météorites de fer). Rappels : lithophiles → silicates (croûte/manteau), chalcophiles → sulfures, atmophiles → phase gazeuse.",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "cos10",
+      "type": "mc",
+      "q": "Selon le principe HSAB (acides-bases durs et mous), un cation « dur » (petit, fortement chargé, peu polarisable) forme des liaisons préférentiellement avec :",
+      "options": [
+        "Des ligands « durs » comme O et F",
+        "Des ligands « mous » comme S et I",
+        "Les gros anions très polarisables",
+        "Indifféremment tous les ligands"
       ],
       "answer": 0,
-      "fb": "La décroissance générale avec Z, le pic au fer (le plus stable, nucléide le plus lié) et l'alternance pair-impair (Oddo-Harkins, les Z pairs plus abondants) sont les signatures classiques de la nucléosynthèse.",
-      "source": "manuel",
-      "verified": true,
-      "note": "Objectif : lecture de la courbe d'abondance ; type figure (Plotly)"
+      "fb": "Dur se lie à dur (O, F, N) par des interactions à caractère ionique (charge localisée) ; mou se lie à mou (S, I, Se) par des interactions plus covalentes. Cela explique des affinités géochimiques comme Ca²⁺–O (lithophile) contre Hg²⁺–S (chalcophile).",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "cos11",
+      "type": "mc",
+      "q": "Pourquoi la nucléosynthèse stellaire par fusion ne produit-elle pas d’éléments plus lourds que le fer ?",
+      "options": [
+        "Parce que le fer est trop rare dans les étoiles",
+        "Parce que ⁵⁶Fe possède l’énergie de liaison par nucléon la plus élevée : au-delà, la fusion devient endothermique",
+        "Parce que les étoiles refroidissent avant d’atteindre ces éléments",
+        "Parce que le fer bloque la capture de neutrons"
+      ],
+      "answer": 1,
+      "fb": "⁵⁶Fe se situe au sommet de la courbe d’énergie de liaison par nucléon : fusionner au-delà consomme de l’énergie au lieu d’en libérer. Les éléments plus lourds nécessitent la capture neutronique (processus r et s) lors d’évènements explosifs.",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "cos12",
+      "type": "mc",
+      "q": "Le processus r (capture neutronique rapide), responsable d’une grande partie des éléments lourds, se produit surtout lors de :",
+      "options": [
+        "La combustion de l’hydrogène dans les étoiles ordinaires",
+        "Évènements explosifs : supernovae et fusions d’étoiles à neutrons",
+        "La fission spontanée dans la croûte terrestre",
+        "La nucléosynthèse primordiale du Big Bang"
+      ],
+      "answer": 1,
+      "fb": "Le processus r exige un flux neutronique intense et bref, fourni par les supernovae et les fusions d’étoiles à neutrons. Le processus s (capture lente) opère plutôt dans les étoiles évoluées (branche asymptotique des géantes, AGB).",
+      "source": "nouvel exercice",
+      "verified": true
+    },
+    {
+      "id": "cos13",
+      "type": "mc",
+      "q": "Pourquoi le lithium, le béryllium et le bore sont-ils anormalement rares comparés à leurs voisins du tableau périodique ?",
+      "options": [
+        "Parce qu’ils sont détruits dans les intérieurs stellaires et mal produits par la nucléosynthèse (ils proviennent surtout de la spallation par rayons cosmiques)",
+        "Parce qu’ils s’échappent dans l’espace en raison de leur légèreté",
+        "Parce qu’ils sont trop denses pour s’accumuler",
+        "Parce qu’ils forment surtout des gaz volatils"
+      ],
+      "answer": 0,
+      "fb": "Li, Be et B sont contournés par les principales chaînes de fusion et détruits à relativement basse température dans les étoiles. Ils proviennent surtout de la spallation (rayons cosmiques fragmentant des noyaux plus lourds), d’où leur faible abondance.",
+      "source": "nouvel exercice",
+      "verified": true
     }
   ]
 }
