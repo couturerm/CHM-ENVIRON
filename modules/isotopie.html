@@ -11,76 +11,95 @@
     <h1 class="pt">Isotopie</h1>
     <span class="mblock">Biogéochimie</span><span class="mdate">9 sept. 2026</span>
 
-    <div class="objcard">
-      <h3>Objectifs du module</h3>
-      <ul>
-        <li>Définir les notations de composition isotopique (abondance, différence relative de masse, ratio R, notation delta, facteur de fractionnement)</li>
-        <li>Expliquer la différence entre fractionnements à l'équilibre et cinétique</li>
-        <li>Reconnaître des exemples biologiques et physicochimiques des deux types de fractionnement</li>
-        <li>Connaître les raisons du fractionnement des isotopes légers et lourds</li>
-        <li>Utiliser une signature isotopique pour discuter des sources de contamination</li>
-      </ul>
-    </div>
-
     <div class="person">
       <div><div class="role">Responsable du module</div><div class="nm">Raoul Couture</div><div class="aff">Professeur · Département de chimie · Université Laval</div></div>
     </div>
 
-    <div class="slidecard" data-pdf="../medias/isotopie.pdf">
-      <h3>Diapositives — feuilleter sur le site</h3>
-      <div class="toolbar">
-        <button id="prev">‹</button><button id="next">›</button>
-        <span class="pageind">Page <input id="pageNum" type="text" value="1"> / <span id="pageCount">?</span></span>
-        <button id="zoomOut">−</button><button id="zoomIn">+</button>
-        <button id="fs">⛶ Agrandir</button>
-        <a id="dl" download style="margin-left:auto;font-size:13px">⬇ Télécharger</a>
-      </div>
-      <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
+    <div class="subnav">
+      <a href="#m-obj">Objectifs et notions</a>
+      <a href="#m-act">Activités d'apprentissage</a>
+      <a href="#m-mat">Matériel supplémentaire</a>
     </div>
 
-    <div class="grid">
-      <div>
-        <div class="card"><h3>Information supplémentaire</h3><div class="bd">
-          <div class="res"><span class="ic">▦</span><div><a href="#">ratio.xlsx</a><div class="meta">Calcul de ratios isotopiques · à venir</div></div></div>
-          <div class="res"><span class="ic">▦</span><div><a href="#">RuBisCO : fractionnement C3 vs C4</a><div class="meta">PDF · à venir</div></div></div>
-        </div></div>
-      </div>
-      <div>
-        <div class="card"><h3>Capsules vidéo</h3><div class="bd">
-          <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-isot">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
-          <div class="cap activecap" data-vp="isot" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
-          <div class="cap" data-vp="isot" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
-          <div class="cap" data-vp="isot" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
-        </div></div>
-        <div class="card biblio" style="margin-top:16px"><h3>Bibliographie</h3><div class="bd">
-          <div class="ref"><a href="#">Bibliographie — isotopes légers</a></div>
-          <div class="ref"><a href="#">Bibliographie — isotopes lourds</a></div>
-        </div></div>
+    <div class="plansec" id="m-obj">
+      <h2>Objectifs et notions</h2>
+      <div class="objcard">
+        <h3>Objectifs du module</h3>
+        <ul>
+          <li>Définir les notations de composition isotopique (abondance, différence relative de masse, ratio R, notation delta, facteur de fractionnement)</li>
+          <li>Expliquer la différence entre fractionnements à l'équilibre et cinétique</li>
+          <li>Reconnaître des exemples biologiques et physicochimiques des deux types de fractionnement</li>
+          <li>Connaître les raisons du fractionnement des isotopes légers et lourds</li>
+          <li>Utiliser une signature isotopique pour discuter des sources de contamination</li>
+        </ul>
       </div>
     </div>
 
-    <div class="quiz" data-quiz="../data/isotopie.quiz.json">
-      <div class="quizhead"><h3>Auto-évaluation · Isotopie</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
-      <div class="quizbody">
-        <div class="qbar"><span id="qc">Question…</span><div class="prog"><i id="qp"></i></div><span id="qs">Score : 0</span></div>
-        <div id="qhost"></div>
+    <div class="plansec" id="m-act">
+      <h2>Activités d'apprentissage</h2>
+
+      <div class="slidecard" data-pdf="../medias/isotopie.pdf">
+        <h3>Diapositives — feuilleter sur le site</h3>
+        <div class="toolbar">
+          <button id="prev">‹</button><button id="next">›</button>
+          <span class="pageind">Page <input id="pageNum" type="text" value="1"> / <span id="pageCount">?</span></span>
+          <button id="zoomOut">−</button><button id="zoomIn">+</button>
+          <button id="fs">⛶ Agrandir</button>
+          <a id="dl" download style="margin-left:auto;font-size:13px">⬇ Télécharger</a>
+        </div>
+        <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
+      </div>
+
+      <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
+        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-isot">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
+        <div class="cap activecap" data-vp="isot" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
+        <div class="cap" data-vp="isot" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
+        <div class="cap" data-vp="isot" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
+      </div></div>
+
+      <div class="quiz" data-quiz="../data/isotopie.quiz.json">
+        <div class="quizhead"><h3>Auto-évaluation · Isotopie</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
+        <div class="quizbody">
+          <div class="qbar"><span id="qc">Question…</span><div class="prog"><i id="qp"></i></div><span id="qs">Score : 0</span></div>
+          <div id="qhost"></div>
+        </div>
       </div>
     </div>
 
-    <div class="kwcloud">
-      <h3>Enrichissement : mots-clés et concepts</h3>
-      <div class="kwlist">
-        <a href="https://fr.wikipedia.org/wiki/Isotope" target="_blank" rel="noopener">isotope</a>
-        <a href="https://fr.wikipedia.org/wiki/Fractionnement_isotopique" target="_blank" rel="noopener">fractionnement isotopique</a>
-        <a href="https://fr.wikipedia.org/w/index.php?search=isotopes%20stables" target="_blank" rel="noopener">isotopes stables</a>
-        <a href="https://fr.wikipedia.org/wiki/Spectrométrie_de_masse" target="_blank" rel="noopener">spectrométrie de masse</a>
-        <a href="https://fr.wikipedia.org/wiki/Deutérium" target="_blank" rel="noopener">deutérium</a>
-        <a href="https://fr.wikipedia.org/wiki/Carbone_13" target="_blank" rel="noopener">carbone 13</a>
-        <a href="https://fr.wikipedia.org/wiki/Oxygène_18" target="_blank" rel="noopener">oxygène 18</a>
-        <a href="https://fr.wikipedia.org/w/index.php?search=notation%20delta%20isotopique" target="_blank" rel="noopener">notation delta</a>
-        <a href="https://fr.wikipedia.org/wiki/Rubisco" target="_blank" rel="noopener">RuBisCO (C3/C4)</a>
+    <div class="plansec" id="m-mat">
+      <h2>Matériel supplémentaire</h2>
+      <div class="grid">
+        <div>
+          <div class="card"><h3>Information supplémentaire</h3><div class="bd">
+            <div class="res"><span class="ic">▦</span><div><a href="#">ratio.xlsx</a><div class="meta">Calcul de ratios isotopiques · à venir</div></div></div>
+            <div class="res"><span class="ic">▦</span><div><a href="#">RuBisCO : fractionnement C3 vs C4</a><div class="meta">PDF · à venir</div></div></div>
+          </div></div>
+        </div>
+        <div>
+          <div class="card biblio"><h3>Bibliographie</h3><div class="bd">
+            <div class="ref"><span>Bibliographie — isotopes légers</span><em>à compléter</em></div>
+            <div class="ref"><span>Bibliographie — isotopes lourds</span><em>à compléter</em></div>
+          </div></div>
+        </div>
       </div>
-      <div class="src">Termes extraits des diapositives; chaque lien mène à l'article Wikipédia. Texte réel, indexé par la recherche. Liste et liens révisables.</div>
+
+      <div class="kwcloud">
+        <h3>Enrichissement : mots-clés et concepts</h3>
+        <div class="kwlist">
+          <a href="https://fr.wikipedia.org/wiki/Isotope" target="_blank" rel="noopener">isotope</a>
+          <a href="https://fr.wikipedia.org/wiki/Isotope_stable" target="_blank" rel="noopener">isotope stable</a>
+          <a href="https://fr.wikipedia.org/wiki/Fractionnement_isotopique" target="_blank" rel="noopener">fractionnement isotopique</a>
+          <a href="https://fr.wikipedia.org/wiki/Isotopologue" target="_blank" rel="noopener">isotopologue</a>
+          <a href="https://fr.wikipedia.org/wiki/Effet_isotopique_cin%C3%A9tique" target="_blank" rel="noopener">effet isotopique cinétique</a>
+          <a href="https://fr.wikipedia.org/wiki/Spectrom%C3%A9trie_de_masse" target="_blank" rel="noopener">spectrométrie de masse</a>
+          <a href="https://fr.wikipedia.org/wiki/Oxyg%C3%A8ne_18" target="_blank" rel="noopener">oxygène 18</a>
+          <a href="https://fr.wikipedia.org/wiki/Azote_15" target="_blank" rel="noopener">azote 15</a>
+          <a href="https://fr.wikipedia.org/wiki/Carbone_13" target="_blank" rel="noopener">carbone 13</a>
+          <a href="https://fr.wikipedia.org/wiki/Deut%C3%A9rium" target="_blank" rel="noopener">deutérium</a>
+          <a href="https://fr.wikipedia.org/wiki/G%C3%A9ochimie_isotopique" target="_blank" rel="noopener">géochimie isotopique</a>
+        </div>
+        <div class="src">Termes extraits des diapositives; chaque lien mène à l'article Wikipédia. Texte réel, indexé par la recherche. Liste et liens révisables.</div>
+      </div>
     </div>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
