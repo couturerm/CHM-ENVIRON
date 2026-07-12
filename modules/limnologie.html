@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Limnologie · CHM-4152</title>
 <link rel="stylesheet" href="../assets/style.css">
+<style>
+    .miniplayer{display:flex;flex-direction:column;gap:10px}
+    .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:8px;overflow:hidden;background:#000}
+    .capstage>iframe,.capstage>#ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .caplist{max-height:220px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:8px}
+    .capitem{display:flex;gap:8px;align-items:center;padding:6px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
+    .capitem:last-child{border-bottom:0}
+    .capitem:hover{background:rgba(0,0,0,.04)}
+    .capitem.active{background:rgba(20,85,155,.12)}
+    .capitem img{width:72px;height:40px;object-fit:cover;border-radius:4px;flex:0 0 auto;background:#111}
+    .capitem .cnum{font-weight:700;color:#14559b}
+    .capitem .ctitle{font-size:13px;line-height:1.25}
+  </style>
 </head>
 <body data-page="limnologie" data-depth="1">
   <main class="content">
@@ -49,27 +62,11 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
-      <style>
-        .capsplayer{display:grid;grid-template-columns:1fr;gap:14px}
-        @media(min-width:760px){.capsplayer{grid-template-columns:1.7fr 1fr}}
-        .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
-        .capstage>iframe,.capstage>#ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0}
-        .caplist{max-height:430px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:10px}
-        .capitem{display:flex;gap:10px;align-items:center;padding:8px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
-        .capitem:last-child{border-bottom:0}
-        .capitem:hover{background:rgba(0,0,0,.04)}
-        .capitem.active{background:rgba(20,85,155,.12)}
-        .capitem img{width:96px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:#111}
-        .capitem .cnum{font-weight:700;color:#14559b}
-        .capitem .ctitle{font-size:14px;line-height:1.25}
-        .capitem .cdur{font-size:12px;color:#667;margin-top:2px}
-      </style>
       <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
-        <div class="capsplayer">
-          <div class="capstage"><div id="ytplayer"></div></div>
-          <div class="caplist" id="caplist" aria-label="Liste des capsules"></div>
-        </div>
-        <div class="vnote" style="margin-top:8px">Playlist « Wetzel's Limnology ». Cliquer une capsule pour la lire.</div>
+        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-limno">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
+        <div class="cap activecap" data-vp="limno" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
+        <div class="cap" data-vp="limno" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
+        <div class="cap" data-vp="limno" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/limnologie.quiz.json">
@@ -86,7 +83,11 @@
       <div class="grid">
         <div>
           <div class="card"><h3>Information supplémentaire</h3><div class="bd">
-            <div class="res"><span class="ic">↗</span><div><a href="https://www.youtube.com/playlist?list=PLK9Ybop8w9wa0Te3_hIw0b7O8b0zMjnH8" target="_blank" rel="noopener">Wetzel's Limnology — série de capsules vidéo (playlist)</a><div class="meta">YouTube · d'après Wetzel, Limnology</div></div></div>
+            <div class="miniplayer">
+              <div class="capstage"><div id="ytplayer"></div></div>
+              <div class="caplist" id="caplist" aria-label="Liste des vidéos"></div>
+            </div>
+            <div class="vnote" style="margin-top:8px">Playlist « Wetzel's Limnology ». Cliquer une vidéo pour la lire. <a href="https://www.youtube.com/playlist?list=PLK9Ybop8w9wa0Te3_hIw0b7O8b0zMjnH8" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
           </div></div>
         </div>
         <div>
@@ -128,24 +129,40 @@
   <script>
   (function(){
     var PLAYLIST='PLK9Ybop8w9wa0Te3_hIw0b7O8b0zMjnH8';
-    var META=[];
     var player, ids=[];
+    function esc(s){return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
     window.onYouTubeIframeAPIReady=function(){
       player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',playerVars:{listType:'playlist',list:PLAYLIST,rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
     };
     function build(){
       try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
       var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
-      var n=Math.max(ids.length,META.length);
-      for(var i=0;i<n;i++){
-        var id=ids[i], m=META[i]||['','Capsule '+(i+1),''];
+      for(var i=0;i<ids.length;i++){
+        var id=ids[i];
         var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',i);
-        var thumb=id?('https://i.ytimg.com/vi/'+id+'/mqdefault.jpg'):'';
-        el.innerHTML='<img loading="lazy" src="'+thumb+'" alt="">'+'<div><div class="ctitle"><span class="cnum">'+m[0]+'</span> '+m[1]+'</div>'+(m[2]?'<div class="cdur">'+m[2]+'</div>':'')+'</div>';
+        el.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'+
+                     '<div class="ctitle"><span class="cnum">'+(i+1)+'</span> Capsule '+(i+1)+'</div>';
         el.addEventListener('click',function(){var k=+this.getAttribute('data-i');try{player.playVideoAt(k);}catch(e){}});
         host.appendChild(el);
+        fetchTitle(i,id);
       }
       sync();
+    }
+    function fetchTitle(i,id){
+      if(!id) return;
+      var cb='__ytoe_'+i+'_'+Math.floor(Math.random()*1e6);
+      var sc=document.createElement('script');
+      window[cb]=function(data){
+        try{
+          var el=document.querySelector('#caplist .capitem[data-i="'+i+'"] .ctitle');
+          if(el && data && data.title) el.innerHTML='<span class="cnum">'+(i+1)+'</span> '+esc(data.title);
+        }catch(e){}
+        try{delete window[cb];}catch(e){window[cb]=undefined;}
+        if(sc.parentNode) sc.parentNode.removeChild(sc);
+      };
+      sc.onerror=function(){try{delete window[cb];}catch(e){} if(sc.parentNode) sc.parentNode.removeChild(sc);};
+      sc.src='https://www.youtube.com/oembed?url=https%3A%2F%2Fyoutu.be%2F'+id+'&format=json&callback='+cb;
+      document.head.appendChild(sc);
     }
     function sync(){
       var idx=0; try{idx=player.getPlaylistIndex();}catch(e){}
