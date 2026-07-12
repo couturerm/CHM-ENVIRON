@@ -95,8 +95,8 @@ h1.pt::after{content:"";display:block;width:56px;height:3px;border-radius:2px;ba
 .toolbar button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:6px 11px;cursor:pointer;font-size:13px;font-weight:600}
 .toolbar button:hover{border-color:var(--accent)}.toolbar button:disabled{opacity:.4;cursor:default}
 .pageind{font-size:13px;color:var(--muted)}.pageind input{width:38px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:3px;text-align:center}
-.stage{display:flex;justify-content:center;padding:16px;background:var(--stage);max-height:70vh;overflow:auto}
-.stage canvas{box-shadow:0 6px 24px rgba(0,0,0,.45);border-radius:4px;max-width:100%;height:auto}
+.stage{display:flex;justify-content:center;align-items:center;padding:16px;background:var(--stage);max-height:70vh;overflow:auto}
+.stage canvas{box-shadow:0 6px 24px rgba(0,0,0,.45);border-radius:4px;max-width:100%;max-height:calc(70vh - 34px);width:auto;height:auto}
 
 /* Quiz */
 .quiz{margin-top:20px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
