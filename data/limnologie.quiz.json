@@ -82,7 +82,7 @@
       ],
       "answer": 2,
       "fb": "Respiration. La stratification thermique isole l’hypolimnion : coupé de l’atmosphère (aucune réaération) et situé sous la zone photique (aucune photosynthèse), il ne reçoit plus d’O₂. La respiration hétérotrophe (bactéries dégradant la matière organique qui sédimente depuis l’épilimnion productif) épuise alors l’oxygène résiduel jusqu’à l’anoxie. La méthanogenèse n’est qu’une conséquence tardive, une fois O₂, NO₃⁻, Mn, Fe puis SO₄²⁻ successivement réduits (séquence des accepteurs d’électrons). Photosynthèse et autotrophie produisent de l’O₂ (effet inverse) ; l’atténuation désigne l’extinction de la lumière.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -102,7 +102,7 @@
         2
       ],
       "fb": "Trois processus atténuent la lumière dans l’eau : la réflexion à l’interface air-eau (une part du rayonnement incident est renvoyée, selon l’angle solaire et l’état de la surface), l’absorption (par l’eau elle-même, la matière organique dissoute colorée/CDOM et les pigments du phytoplancton) et la diffusion par les particules en suspension, qui redistribue les photons sans les détruire. Ensemble ils déterminent le coefficient d’atténuation Kd, donc la profondeur de la zone photique. Convection et sédimentation sont des processus de transport, sans effet optique direct. Distracteurs à valider.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -116,8 +116,8 @@
         "moins énergétiques et moins abondants"
       ],
       "answer": 1,
-      "fb": "Moins énergétiques et plus abondants. L’énergie d’un photon vaut E = hν = hc/λ : plus la longueur d’onde est grande, plus l’énergie par photon est faible, donc le visible (400-700 nm) est moins énergétique que l’UV (<400 nm). Côté abondance, le spectre solaire au sol est déjà dominé par le visible, et l’écart se creuse sous l’eau car l’UV est fortement absorbé par la CDOM dès les premiers centimètres. La photosynthèse exploite ainsi un rayonnement abondant et suffisamment énergétique, sans les dommages de l’UV. Reformulé depuis un appariement MonPortail.",
-      "source": "MonPortail (quiz Lacs)",
+      "fb": "Moins énergétiques et plus abondants. L’énergie d’un photon vaut E = hν = hc/λ : plus la longueur d’onde est grande, plus l’énergie par photon est faible, donc le visible (400-700 nm) est moins énergétique que l’UV (<400 nm). Côté abondance, le spectre solaire au sol est déjà dominé par le visible, et l’écart se creuse sous l’eau car l’UV est fortement absorbé par la CDOM dès les premiers centimètres. La photosynthèse exploite ainsi un rayonnement abondant et suffisamment énergétique, sans les dommages de l’UV.",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -132,7 +132,7 @@
       ],
       "answer": 0,
       "fb": "L’épuisement des nutriments. Dans l’épilimnion éclairé, la production primaire assimile rapidement l’azote et le phosphore biodisponibles. La stratification estivale bloque la remontée des nutriments régénérés dans l’hypolimnion : la couche de surface s’appauvrit et la croissance devient limitée par N ou P (souvent le phosphore en eau douce), non par la lumière. Le brassage d’automne rétablit l’approvisionnement, d’où les floraisons de fin de saison. Distracteurs à valider.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -147,7 +147,7 @@
       ],
       "answer": 0,
       "fb": "La forte irradiance. L’épilimnion est la couche de surface, incluse dans la zone photique : il reçoit plus de 1 % de la lumière incidente, seuil permettant une photosynthèse nette et donc l’activité autotrophe. La température plus élevée y contribue secondairement (cinétique enzymatique), mais c’est l’accès à la lumière qui est déterminant ; les nutriments y sont au contraire souvent limitants (voir lim8). Distracteurs à valider.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -162,7 +162,7 @@
       ],
       "answer": 0,
       "fb": "Le brassage (mélange complet). Un lac dimictique connaît deux brassages par an, au printemps et à l’automne : la colonne atteint alors une densité quasi uniforme (l’eau tend vers 4 °C, sa densité maximale), la stratification s’efface et le vent homogénéise toute la profondeur, réoxygénant le fond et ramenant les nutriments en surface. Entre ces épisodes s’installent la stratification directe estivale (épilimnion chaud sur hypolimnion froid) et la stratification inverse hivernale (eau à 0 °C sous la glace, ~4 °C au fond). Distracteurs à valider.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     },
     {
@@ -182,7 +182,7 @@
         2
       ],
       "fb": "Trois propriétés anormales de l’eau structurent les lacs. (1) Densité maximale à 4 °C : la glace, moins dense, flotte et isole la colonne, et la convergence vers 4 °C déclenche les brassages. (2) Forte chaleur spécifique : l’eau se réchauffe et se refroidit lentement, ce qui tamponne les variations thermiques et modère le climat régional. (3) Absorption sélective : l’eau absorbe fortement l’UV et l’IR mais transmet le visible, d’où la protection des cellules contre l’UV, l’absorption de chaleur en surface et la pénétration du rayonnement photosynthétique. Distracteurs à valider.",
-      "source": "MonPortail (quiz Lacs)",
+      "source": "quiz Lacs",
       "verified": true
     }
   ]
