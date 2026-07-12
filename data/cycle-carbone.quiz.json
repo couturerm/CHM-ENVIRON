@@ -100,6 +100,75 @@
       "fb": "Réponse : la biomasse y est dégradée plus rapidement. Le stock de carbone d’un sol dépend de l’équilibre entre l’apport de litière et la vitesse de décomposition. Sous les tropiques, la chaleur et l’humidité accélèrent l’activité microbienne : la matière organique se minéralise vite et s’accumule peu. En forêt boréale, le froid ralentit la décomposition, et le carbone s’accumule sur de longues périodes (horizons organiques épais, tourbe, pergélisol). L’érosion (option 0) redistribue le carbone sans expliquer l’écart de stock ; les forêts tropicales matures sont globalement proches de la neutralité, pas des sources nettes (option 2) ; le nombre de récoltes ne s’applique pas aux sols forestiers (option 3).",
       "source": "examen 2024",
       "verified": true
+    },
+    {
+      "id": "cyc10",
+      "type": "tf",
+      "q": "La capacité planétaire de séquestration du carbone change peu d’une année à l’autre en raison du temps de réponse des grands réservoirs.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. Même si les grands réservoirs (océan profond, lithosphère) ont de longs temps de réponse, la capacité de séquestration varie sensiblement d’une année à l’autre. La variabilité climatique, en particulier ENSO (El Niño / La Niña), module la température, la circulation océanique et la productivité, donc l’intensité des puits terrestres et océaniques.",
+      "source": "MonPortail",
+      "verified": true
+    },
+    {
+      "id": "cyc11",
+      "type": "tf",
+      "q": "La lignine est le sous-réservoir terrestre avec le plus long temps de résidence.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. La lignine est récalcitrante, mais c’est l’humus (substances humiques), produit de l’humification, qui constitue le pool de matière organique du sol le plus stable et le plus âgé, donc au temps de résidence le plus long.",
+      "source": "MonPortail",
+      "verified": true
+    },
+    {
+      "id": "cyc12",
+      "type": "mc",
+      "q": "Laquelle de ces substances organiques a le temps de résidence le plus court dans le sol ?",
+      "options": [
+        "Sucres simples (biomasse fraîche)",
+        "Cellulose",
+        "Lignine",
+        "Substances humiques (humus)"
+      ],
+      "answer": 0,
+      "fb": "Réponse : sucres simples. Le temps de résidence croît (la réactivité décroît) des sucres facilement métabolisés vers la cellulose, puis la lignine récalcitrante, et enfin l’humus, pool le plus stable et le plus âgé de la matière organique du sol.",
+      "source": "MonPortail",
+      "verified": true
+    },
+    {
+      "id": "cyc13",
+      "type": "tf",
+      "q": "Les cycles exogènes répondent plus rapidement aux perturbations anthropiques.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 0,
+      "fb": "Vrai. Les cycles exogènes (atmosphère, biosphère, sols, océan de surface) reposent sur de petits réservoirs traversés par de grands flux, donc à temps de résidence courts ; un petit réservoir à renouvellement rapide est plus facilement et plus vite perturbé. Les cycles endogènes (lithosphère, manteau) opèrent sur des millions d’années.",
+      "source": "MonPortail",
+      "verified": true
+    },
+    {
+      "id": "cyc14",
+      "type": "mc",
+      "q": "Sur terre, quel processus est responsable du plus grand flux de carbone sur une base annuelle ?",
+      "options": [
+        "La photosynthèse (production primaire brute)",
+        "La combustion des énergies fossiles",
+        "La météorisation des silicates",
+        "L’enfouissement sédimentaire"
+      ],
+      "answer": 0,
+      "fb": "Réponse : la photosynthèse. La production primaire brute terrestre (~120 Gt C/an) domine les flux annuels, presque compensée par la respiration. Les émissions fossiles (~10 Gt C/an), la météorisation et l’enfouissement sédimentaire sont des flux bien plus faibles.",
+      "source": "MonPortail",
+      "verified": true
     }
   ]
 }
