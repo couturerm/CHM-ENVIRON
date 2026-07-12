@@ -1,0 +1,13 @@
+# Fichiers supersédés — remplacés par banque-questions.html. Ne jamais committer.
+banque-questions.md
+data/banque.quiz.json
+data/banque.overrides.json
+
+# Secrets / jetons
+git_token.txt
+*.token
+
+# Système
+.DS_Store
+Thumbs.db
+*.tmp
