@@ -129,6 +129,7 @@
   <script>
   (function(){
     var PLAYLIST='PLK9Ybop8w9wa0Te3_hIw0b7O8b0zMjnH8';
+    var META=["Water", "Lakes & Rivers", "Global Water Cycle", "Light & Color", "Heat & Mixing", "Water movement", "Oxygen", "Salinity", "Dissolved inorganic carbon", "Nitrogen", "Phosphorus", "Algae", "Zooplankton", "Benthic animals", "Fish", "Plants", "Ponds", "Sediment", "Wetlands", "Paleo", "Microbes", "Harmful blooms"];
     var player, ids=[];
     function esc(s){return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
     window.onYouTubeIframeAPIReady=function(){
@@ -137,32 +138,17 @@
     function build(){
       try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
       var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
-      for(var i=0;i<ids.length;i++){
-        var id=ids[i];
+      var n=Math.max(ids.length,META.length);
+      for(var i=0;i<n;i++){
+        var id=ids[i]||'';
+        var title=META[i]||('Capsule '+(i+1));
         var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',i);
-        el.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'+
-                     '<div class="ctitle"><span class="cnum">'+(i+1)+'</span> Capsule '+(i+1)+'</div>';
+        var thumb=id?('<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'):'';
+        el.innerHTML=thumb+'<div class="ctitle"><span class="cnum">'+(i+1)+'</span> '+esc(title)+'</div>';
         el.addEventListener('click',function(){var k=+this.getAttribute('data-i');try{player.playVideoAt(k);}catch(e){}});
         host.appendChild(el);
-        fetchTitle(i,id);
       }
       sync();
-    }
-    function fetchTitle(i,id){
-      if(!id) return;
-      var cb='__ytoe_'+i+'_'+Math.floor(Math.random()*1e6);
-      var sc=document.createElement('script');
-      window[cb]=function(data){
-        try{
-          var el=document.querySelector('#caplist .capitem[data-i="'+i+'"] .ctitle');
-          if(el && data && data.title) el.innerHTML='<span class="cnum">'+(i+1)+'</span> '+esc(data.title);
-        }catch(e){}
-        try{delete window[cb];}catch(e){window[cb]=undefined;}
-        if(sc.parentNode) sc.parentNode.removeChild(sc);
-      };
-      sc.onerror=function(){try{delete window[cb];}catch(e){} if(sc.parentNode) sc.parentNode.removeChild(sc);};
-      sc.src='https://www.youtube.com/oembed?url=https%3A%2F%2Fyoutu.be%2F'+id+'&format=json&callback='+cb;
-      document.head.appendChild(sc);
     }
     function sync(){
       var idx=0; try{idx=player.getPlaylistIndex();}catch(e){}
