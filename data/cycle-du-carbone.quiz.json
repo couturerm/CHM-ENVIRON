@@ -1,0 +1,105 @@
+{
+  "module": "cycle-du-carbone",
+  "questions": [
+    {
+      "id": "cyc1",
+      "type": "tf",
+      "q": "Les évènements climatiques extrêmes peuvent modifier l’absorption du CO₂ par l’océan.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 0,
+      "fb": "Vrai. La solubilité du CO₂ diminue quand l’eau se réchauffe (dépendance en température de la loi de Henry) : des eaux de surface plus chaudes captent moins de CO₂. La variabilité climatique (El Niño) perturbe aussi la température, la circulation et l’upwelling équatorial, ce qui déplace l’équilibre puits/source de carbone de l’océan à l’échelle régionale.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc2",
+      "type": "tf",
+      "q": "Parmi les grands réservoirs du cycle global du carbone, la biomasse marine (plancton) présente le temps de résidence le plus court, soit le renouvellement le plus rapide.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 0,
+      "fb": "Vrai. Le phytoplancton est un très petit réservoir (~3 Gt C) traversé par des flux énormes (production primaire ~50 Gt C/an), d’où un temps de résidence de l’ordre de quelques semaines — le renouvellement le plus rapide des grands réservoirs. À comparer : océan profond (siècles à millénaires), sols (décennies à siècles), atmosphère (~quelques années), réservoir géologique/fossile (millions d’années).",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc3",
+      "type": "mc",
+      "q": "Globalement, quel est le pourcentage (%) approximatif du CO2(g) fixé par la photosynthèse qui est ultimement retourné vers l’atmosphère ?",
+      "options": [
+        "< 5%",
+        "25%",
+        "50%",
+        "> 95 %"
+      ],
+      "answer": 3,
+      "fb": "Réponse : >95 %. La photosynthèse fixe environ 120 Gt C/an sur les continents, mais la respiration (autotrophe et hétérotrophe) et la décomposition en réémettent presque autant. Seule une fraction infime (<0,1 % du flux fixé) échappe au recyclage par enfouissement à long terme (carbone organique sédimentaire, précurseur des combustibles fossiles). Le cycle biologique du carbone est donc quasi bouclé ; les options <5 %, 25 % et 50 % sous-estiment largement le recyclage.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc4",
+      "type": "mc",
+      "q": "Globalement, quelle est la proportion approximative du CO2(g) fixé par la formation des carbonates biogéniques (CaCO₃) qui atteint le sédiment marin pour y être séquestré ?",
+      "options": [
+        "< 5%",
+        "25%",
+        "50%",
+        "> 95 %"
+      ],
+      "answer": 0,
+      "fb": "Réponse : <5 % (proportion la plus faible parmi les options). Les carbonates biogéniques (CaCO₃ : coccolithophores, foraminifères, ptéropodes) formés en surface se redissolvent en grande partie dans la colonne d’eau, surtout sous la profondeur de compensation des carbonates (CCD), ou sont reminéralisés. Seule une faible fraction atteint le sédiment et y est préservée à long terme ; c’est l’efficacité limitée de la pompe biologique de carbonate. Les options 25 %, 50 % et >95 % surestiment nettement la séquestration. (Note : la valeur précise de préservation varie selon les études ; à confronter au deck.)",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc5",
+      "type": "mc",
+      "q": "Laquelle ou lesquelles de ces affirmations sont vraies en ce qui a trait à l’effet de l’augmentation du taux de dioxyde de carbone sur le pH des océans?",
+      "options": [
+        "La valeur du pH augmente en raison de la dissolution du calcaire",
+        "La valeur du pH diminue en raison d’une plus grande dissolution du CO2(g) dans l’eau",
+        "Le dioxyde de carbone dans l’atmosphère entraine une hausse de la température des \nocéans ce qui a une incidence sur la valeur de la constante de dissociation de l’eau (Ke)"
+      ],
+      "answer": 1,
+      "fb": "L’augmentation du CO₂ atmosphérique accroît sa dissolution dans l’eau de mer : CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. La libération d’ions H⁺ fait baisser le pH : c’est l’acidification des océans. (A est faux : la dissolution du calcaire tamponne mais ne fait pas monter le pH ici ; C décrit un effet thermique réel sur Ke, mais secondaire et distinct du mécanisme principal.)",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc6",
+      "type": "mc",
+      "q": "Quels processus de météorisations consomment du CO2 de l’atmosphère ?",
+      "options": [
+        "Aluminosilicates et Pyrite",
+        "Aluminosilicates et Calcite",
+        "Calcite et Respiration",
+        "Biomineralisation et Pyrite"
+      ],
+      "answer": 1,
+      "fb": "Réponse : aluminosilicates et calcite. La météorisation (altération chimique) des silicates et des carbonates consomme du CO₂ atmosphérique. Silicates (aluminosilicates) : CaSiO₃ + 2 CO₂ + H₂O → Ca²⁺ + 2 HCO₃⁻ + SiO₂ ; c’est un puits net de CO₂ à l’échelle géologique. Carbonates (calcite) : CaCO₃ + CO₂ + H₂O → Ca²⁺ + 2 HCO₃⁻, qui consomme du CO₂ à l’altération (la reprécipitation océanique en réémet environ la moitié, d’où un bilan à long terme quasi neutre). À l’inverse, l’oxydation de la pyrite (FeS₂) produit de l’acide sulfurique qui attaque les carbonates et libère du CO₂ (source), et la respiration émet du CO₂ ; la biominéralisation forme des carbonates mais n’est pas un processus d’altération. Cela écarte les options 0, 2 et 3.",
+      "source": "examen 2024",
+      "verified": true
+    },
+    {
+      "id": "cyc7",
+      "type": "mc",
+      "q": "Pourquoi les sols tropicaux stockent-ils moins de C que les sols de la forêt boréale ?",
+      "options": [
+        "Parce qu’ils sont érodés par les pluies abondantes",
+        "Parce que la biomasse y est dégradée plus rapidement",
+        "Parce que les forêts tropicales sont des sources nettes de CO2(g)",
+        "Parce que le climat permet les récoltes deux fois par année"
+      ],
+      "answer": 1,
+      "fb": "Réponse : la biomasse y est dégradée plus rapidement. Le stock de carbone d’un sol dépend de l’équilibre entre l’apport de litière et la vitesse de décomposition. Sous les tropiques, la chaleur et l’humidité accélèrent l’activité microbienne : la matière organique se minéralise vite et s’accumule peu. En forêt boréale, le froid ralentit la décomposition, et le carbone s’accumule sur de longues périodes (horizons organiques épais, tourbe, pergélisol). L’érosion (option 0) redistribue le carbone sans expliquer l’écart de stock ; les forêts tropicales matures sont globalement proches de la neutralité, pas des sources nettes (option 2) ; le nombre de récoltes ne s’applique pas aux sols forestiers (option 3).",
+      "source": "examen 2024",
+      "verified": true
+    }
+  ]
+}
