@@ -6,12 +6,12 @@
       "type": "mc",
       "q": "Sur le terrain, la limite entre la phase « dissoute » et la phase « particulaire » est fixée par :",
       "options": [
+        "Centrifugation prolongée à haute vitesse",
+        "La conductivité",
         "Filtration (typiquement à 0,2 µm)",
-        "Centrifugation à haute vitesse",
-        "La couleur de l'eau",
-        "La conductivité"
+        "La couleur de l'eau"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "Distinction opérationnelle, pas physique. En réalité il existe un continuum de tailles; la coupure à 0,2 µm est une convention de filtration.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -21,12 +21,12 @@
       "type": "mc",
       "q": "Pour préserver un échantillon d'eau destiné à l'analyse des métaux traces, on :",
       "options": [
-        "L'acidifie avec HNO₃ ultrapur",
         "Ajoute de l'acétate de zinc",
-        "Le congèle dans l'azote liquide",
-        "Brûle le flacon à 450 °C"
+        "L'acidifie avec HNO₃ ultrapur",
+        "Brûle le flacon à 450 °C",
+        "Le congèle dans l'azote liquide"
       ],
-      "answer": 0,
+      "answer": 1,
       "fb": "L'acidification (HNO₃ µ-pure) garde les métaux en solution et prévient l'adsorption sur les parois ou la précipitation (p. ex. oxydation Fe²⁺ → Fe(OH)₃). On évite le contact avec le métal; le diagramme de Pourbaix illustre l'effet d'un pH bas.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -36,12 +36,12 @@
       "type": "mc",
       "q": "Comment préserver sur le terrain des espèces réduites sensibles à l'oxydation ?",
       "options": [
-        "Congélation immédiate dans l'azote liquide",
         "Acidification à l'HNO₃",
-        "Exposition à l'air pour les stabiliser",
-        "Chauffage"
+        "Chauffage",
+        "Exposition prolongée à l'air pour les stabiliser",
+        "Congélation immédiate dans l'azote liquide"
       ],
-      "answer": 0,
+      "answer": 3,
       "fb": "Les espèces réduites (sulfures, Fe²⁺) s'oxydent au contact de l'air. On les fige (azote liquide) ou on les traite par un réactif adapté (acétate de zinc pour les sulfures, après purge au N₂). Le découpage de carottes en boîte à gants prévient aussi l'oxydation.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -51,12 +51,12 @@
       "type": "mc",
       "q": "Pourquoi de faibles concentrations mesurées peuvent-elles masquer un flux élevé d'un élément ?",
       "options": [
-        "Un fort gradient ou une forte demande biologique peut transporter ou consommer rapidement l'élément malgré une concentration basse",
-        "La concentration est toujours proportionnelle au flux",
-        "Le flux ne dépend que du volume",
-        "Une faible concentration signifie toujours un faible flux"
+        "La concentration mesurée reflète toujours directement l'intensité du flux au point et au moment du prélèvement",
+        "Le flux ne dépend que du volume d'eau échantillonné",
+        "Un flux élevé peut naître d'un fort gradient ou d'une forte demande biologique, à faible concentration",
+        "Une faible concentration implique nécessairement un faible flux net"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "Concentration = mol/volume; flux = quantité transportée par unité de temps. Un fort gradient (transport diffusif) ou une production/consommation active peut produire un flux élevé même à faible concentration.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -66,15 +66,15 @@
       "type": "multi",
       "q": "Parmi les outils suivants, lesquels servent à échantillonner ou mesurer l'eau interstitielle des sédiments ?",
       "options": [
-        "Dialyseur (peeper)",
-        "DGT (diffusion sur gel)",
         "Rhizon",
-        "Bouteille Van Dorn"
+        "Bouteille Van Dorn",
+        "DGT (diffusion sur gel)",
+        "Dialyseur (peeper)"
       ],
       "answer": [
         0,
-        1,
-        2
+        2,
+        3
       ],
       "fb": "Dialyseurs, DGT et Rhizon (filtration in situ à 0,2 µm) échantillonnent l'eau interstitielle; les microélectrodes et optodes la mesurent in situ. La bouteille Van Dorn sert à la colonne d'eau.",
       "source": "deck Terrain A2024",
@@ -85,12 +85,12 @@
       "type": "mc",
       "q": "Pour prélever l'eau à une profondeur précise dans la colonne d'eau d'un lac, on utilise :",
       "options": [
-        "Une bouteille Van Dorn ou Kemmerer",
         "Un carottier à gravité",
-        "Un dialyseur",
-        "Une boîte à gants"
+        "Une bouteille Van Dorn ou Kemmerer",
+        "Une boîte à gants anoxique de laboratoire",
+        "Un dialyseur"
       ],
-      "answer": 0,
+      "answer": 1,
       "fb": "Les bouteilles Van Dorn (horizontale) et Kemmerer (verticale) se ferment à la profondeur voulue pour prélever un volume d'eau discret. Le carottier sert aux sédiments, le dialyseur à l'eau interstitielle.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -100,14 +100,14 @@
       "type": "multi",
       "q": "Sélectionnez les énoncés exacts sur la mesure de l'oxygène dissous (DO) :",
       "options": [
-        "L'optode (extinction de luminescence) est robuste et idéale pour les séries temporelles",
-        "La microélectrode offre une résolution spatiale micrométrique mais est fragile",
         "L'optode offre une meilleure résolution spatiale que la microélectrode",
-        "L'électrode réduit l'O₂ à une cathode"
+        "L'optode (extinction de luminescence) est robuste et idéale pour les séries temporelles",
+        "L'électrode réduit l'O₂ à une cathode",
+        "La microélectrode offre une résolution spatiale micrométrique mais est fragile"
       ],
       "answer": [
-        0,
         1,
+        2,
         3
       ],
       "fb": "Optode : extinction de luminescence après collision avec O₂; robuste, idéale pour les séries temporelles, mais faible résolution spatiale et sensible à la turbidité. Électrode (type Clark) : réduction de l'O₂ à une cathode vs une anode Ag/AgCl; résolution micrométrique mais fragile et durée de vie limitée. L'optode n'a pas une meilleure résolution spatiale.",
@@ -119,12 +119,12 @@
       "type": "mc",
       "q": "Dans une série temporelle d'oxygène dissous en eau de surface, le cycle journalier montre un maximum en fin d'après-midi et un minimum le matin. Ceci reflète :",
       "options": [
-        "La photosynthèse (production, le jour) et la respiration (consommation, la nuit)",
-        "Uniquement la température",
-        "L'acidification",
-        "La marée"
+        "Le réchauffement de l'eau par le rayonnement solaire en journée et son refroidissement nocturne",
+        "Le cycle des marées et le brassage par le vent",
+        "L'acidification progressive de l'eau au fil de la journée",
+        "La photosynthèse le jour (production) et la respiration la nuit (consommation)"
       ],
-      "answer": 0,
+      "answer": 3,
       "fb": "Le jour, la photosynthèse (P) produit de l'O₂ → maximum l'après-midi. La nuit, seule la respiration (R) agit et consomme l'O₂ → minimum le matin. Le suivi haute fréquence (optodes) capte ces cycles P/R journaliers.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -149,12 +149,12 @@
       "type": "mc",
       "q": "Dans les sédiments et sols saturés, l'apparition de forts gradients verticaux redox s'explique par :",
       "options": [
-        "La consommation séquentielle des accepteurs d'électrons couplée à l'oxydation de la matière organique",
-        "L'absence de micro-organismes",
-        "Un mélange homogène de l'eau",
-        "La seule diffusion de l'oxygène"
+        "La stratification thermique qui isole les couches et empêche tout mélange vertical de la colonne d'eau",
+        "La réduction séquentielle des accepteurs d'électrons en oxydant le carbone organique",
+        "L'absence d'activité microbienne dans les sédiments profonds",
+        "Un apport homogène d'oxygène par diffusion depuis la surface"
       ],
-      "answer": 0,
+      "answer": 1,
       "fb": "En descendant, l'O₂ s'épuise puis les micro-organismes utilisent successivement d'autres accepteurs d'électrons (NO₃⁻, oxydes de Fe/Mn, SO₄²⁻…) en oxydant le carbone organique. Cette succession crée les zones réactives et les forts gradients verticaux (Borch et al. 2010).",
       "source": "deck Terrain A2024",
       "verified": true
@@ -177,14 +177,14 @@
       "type": "multi",
       "q": "Pour capturer la variabilité temporelle haute fréquence d'un cours d'eau, quelles approches sont adaptées ?",
       "options": [
-        "Autoéchantillonneurs (ISCO)",
-        "Capteurs ou sondes en continu (mouillage multiparamètre)",
         "Une seule sortie annuelle",
-        "Une grille d'échantillonnage spatiale"
+        "Autoéchantillonneurs (ISCO)",
+        "Une grille d'échantillonnage spatiale",
+        "Capteurs ou sondes en continu (mouillage multiparamètre)"
       ],
       "answer": [
-        0,
-        1
+        1,
+        3
       ],
       "fb": "La haute fréquence temporelle s'obtient par autoéchantillonneurs (ISCO) et capteurs/sondes en continu (mouillages, stations automatisées). Une sortie unique ou une grille spatiale ne renseignent pas sur la dynamique temporelle rapide.",
       "source": "deck Terrain A2024",
