@@ -6,13 +6,13 @@
       "type": "mc",
       "q": "Quel est le nom de la masse d’eau en équilibre avec l’atmosphère dans un lac ?",
       "options": [
-        "Intrant",
         "Épilimnion",
+        "Intrant",
         "Exutoire",
         "Hypolimnion",
         "Méromictique"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Épilimnion : couche de surface chaude et brassée par le vent, en échange gazeux avec l’atmosphère. À distinguer de l’hypolimnion, couche profonde isolée sous la thermocline (échanges atmosphériques coupés). Intrant et exutoire désignent des flux d’eau, non des masses d’eau stratifiées ; méromictique qualifie un lac qui ne se mélange jamais complètement.",
       "source": "examen 2024",
       "verified": true
@@ -23,12 +23,12 @@
       "q": "Qu’est-ce que la thermocline d’un lac ?",
       "options": [
         "La zone avec la température de l’eau la plus chaude",
-        "La zone de fort réchauffement",
         "La zone de fort gradient de température",
+        "La zone de fort réchauffement",
         "La zone de fort gradient de densité",
         "La zone de forte énergie cinétique"
       ],
-      "answer": 2,
+      "answer": 1,
       "fb": "Thermocline : plan où le gradient vertical de température est maximal, situé dans le métalimnion entre l’épilimnion chaud et l’hypolimnion froid. À ne pas confondre avec la pycnocline (gradient de densité) : les deux coïncident presque dans un lac car la densité dépend surtout de la température, mais la thermocline se définit par la température.",
       "source": "examen 2024",
       "verified": true
@@ -59,12 +59,12 @@
       "q": "Qu’est-ce que la zone photique ?",
       "options": [
         "La gamme de longueur d’onde permettant la photosynthèse de 400 à 700 nm",
-        "Le volume d’eau où l’on retrouve au delà de 1% des photons incidents",
         "L’interface qui reçoit 100% des photons incidents",
+        "Le volume d’eau où l’on retrouve au delà de 1% des photons incidents",
         "Le volume d’eau où a lieu l’activité photosynthétique",
         "Les latitudes où l’irradiance permet la photosynthèse"
       ],
-      "answer": 1,
+      "answer": 2,
       "fb": "Zone photique (ou euphotique) : couche de surface recevant plus de 1 % de l’éclairement incident, seuil sous lequel la photosynthèse nette devient négligeable ; sa profondeur dépend de la transparence de l’eau. La plage 400-700 nm est le rayonnement photosynthétiquement actif (PAR), une gamme spectrale et non un volume.",
       "source": "examen 2024",
       "verified": true
@@ -76,11 +76,11 @@
       "options": [
         "Méthanogenèse",
         "Atténuation",
-        "Respiration",
         "Photosynthèse",
+        "Respiration",
         "Autotrophie"
       ],
-      "answer": 2,
+      "answer": 3,
       "fb": "Respiration. La stratification thermique isole l’hypolimnion : coupé de l’atmosphère (aucune réaération) et situé sous la zone photique (aucune photosynthèse), il ne reçoit plus d’O₂. La respiration hétérotrophe (bactéries dégradant la matière organique qui sédimente depuis l’épilimnion productif) épuise alors l’oxygène résiduel jusqu’à l’anoxie. La méthanogenèse n’est qu’une conséquence tardive, une fois O₂, NO₃⁻, Mn, Fe puis SO₄²⁻ successivement réduits (séquence des accepteurs d’électrons). Photosynthèse et autotrophie produisent de l’O₂ (effet inverse) ; l’atténuation désigne l’extinction de la lumière.",
       "source": "quiz Lacs",
       "verified": true
@@ -110,12 +110,12 @@
       "type": "mc",
       "q": "Comparés aux photons de l’ultraviolet, les photons du visible actifs pour la photosynthèse (PAR) sont :",
       "options": [
-        "plus énergétiques et moins abondants",
         "moins énergétiques et plus abondants",
+        "plus énergétiques et moins abondants",
         "plus énergétiques et plus abondants",
         "moins énergétiques et moins abondants"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Moins énergétiques et plus abondants. L’énergie d’un photon vaut E = hν = hc/λ : plus la longueur d’onde est grande, plus l’énergie par photon est faible, donc le visible (400-700 nm) est moins énergétique que l’UV (<400 nm). Côté abondance, le spectre solaire au sol est déjà dominé par le visible, et l’écart se creuse sous l’eau car l’UV est fortement absorbé par la CDOM dès les premiers centimètres. La photosynthèse exploite ainsi un rayonnement abondant et suffisamment énergétique, sans les dommages de l’UV.",
       "source": "quiz Lacs",
       "verified": true
@@ -125,12 +125,12 @@
       "type": "mc",
       "q": "Quel facteur limite la productivité biologique dans l’épilimnion d’un lac stratifié en été ?",
       "options": [
-        "L’épuisement des nutriments",
         "Le manque de lumière",
+        "L’épuisement des nutriments",
         "Une température trop élevée",
         "Un excès d’oxygène dissous"
       ],
-      "answer": 0,
+      "answer": 1,
       "fb": "L’épuisement des nutriments. Dans l’épilimnion éclairé, la production primaire assimile rapidement l’azote et le phosphore biodisponibles. La stratification estivale bloque la remontée des nutriments régénérés dans l’hypolimnion : la couche de surface s’appauvrit et la croissance devient limitée par N ou P (souvent le phosphore en eau douce), non par la lumière. Le brassage d’automne rétablit l’approvisionnement, d’où les floraisons de fin de saison. Distracteurs à valider.",
       "source": "quiz Lacs",
       "verified": true
@@ -140,12 +140,12 @@
       "type": "mc",
       "q": "Quelle propriété de l’épilimnion explique qu’il soit le siège d’une forte activité autotrophe ?",
       "options": [
-        "Une forte irradiance (accès à la lumière)",
         "Une température basse et stable",
         "Une concentration élevée en nutriments",
+        "Une forte irradiance (accès à la lumière)",
         "L’absence d’oxygène"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "La forte irradiance. L’épilimnion est la couche de surface, incluse dans la zone photique : il reçoit plus de 1 % de la lumière incidente, seuil permettant une photosynthèse nette et donc l’activité autotrophe. La température plus élevée y contribue secondairement (cinétique enzymatique), mais c’est l’accès à la lumière qui est déterminant ; les nutriments y sont au contraire souvent limitants (voir lim8). Distracteurs à valider.",
       "source": "quiz Lacs",
       "verified": true
@@ -155,12 +155,12 @@
       "type": "mc",
       "q": "Quel phénomène se produit deux fois par année dans un lac dimictique ?",
       "options": [
-        "Le brassage complet de la colonne d’eau",
         "La stratification thermique estivale",
         "Une floraison de cyanobactéries",
-        "L’anoxie de l’hypolimnion"
+        "L’anoxie de l’hypolimnion",
+        "Le brassage complet de la colonne d’eau"
       ],
-      "answer": 0,
+      "answer": 3,
       "fb": "Le brassage (mélange complet). Un lac dimictique connaît deux brassages par an, au printemps et à l’automne : la colonne atteint alors une densité quasi uniforme (l’eau tend vers 4 °C, sa densité maximale), la stratification s’efface et le vent homogénéise toute la profondeur, réoxygénant le fond et ramenant les nutriments en surface. Entre ces épisodes s’installent la stratification directe estivale (épilimnion chaud sur hypolimnion froid) et la stratification inverse hivernale (eau à 0 °C sous la glace, ~4 °C au fond). Distracteurs à valider.",
       "source": "quiz Lacs",
       "verified": true

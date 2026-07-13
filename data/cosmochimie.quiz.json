@@ -87,12 +87,12 @@
       "type": "mc",
       "q": "Pour quel élément le ratio demande biologique/ réserve planétaire est-il le plus élevé ?",
       "options": [
-        "Le sélénium",
         "Le phosphore",
+        "Le sélénium",
         "L’azote",
         "Le soufre"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Le phosphore a le ratio demande biologique/réserve le plus élevé : essentiel à la vie (ADN, ATP, membranes) mais peu abondant et peu mobile géochimiquement (piégé dans les apatites), ce qui en fait le nutriment limitant ultime à l’échelle géologique.",
       "source": "examen 2024",
       "verified": true
@@ -103,11 +103,11 @@
       "q": "Selon la classification de Goldschmidt, dans quel réservoir terrestre les éléments sidérophiles se concentrent-ils préférentiellement ?",
       "options": [
         "L’atmosphère et l’hydrosphère",
-        "La croûte et le manteau silicatés",
         "Le noyau métallique (et les météorites de fer)",
+        "La croûte et le manteau silicatés",
         "Les sulfures et minéraux chalcophiles"
       ],
-      "answer": 2,
+      "answer": 1,
       "fb": "Les éléments sidérophiles ont une affinité pour le fer métallique et se concentrent dans le noyau (et les météorites de fer). Rappels : lithophiles → silicates (croûte/manteau), chalcophiles → sulfures, atmophiles → phase gazeuse.",
       "source": "nouvel exercice",
       "verified": true
@@ -117,12 +117,12 @@
       "type": "mc",
       "q": "Selon le principe HSAB (acides-bases durs et mous), un cation « dur » (petit, fortement chargé, peu polarisable) forme des liaisons préférentiellement avec :",
       "options": [
-        "Des ligands « durs » comme O et F",
         "Des ligands « mous » comme S et I",
         "Les gros anions très polarisables",
+        "Des ligands « durs » comme O et F",
         "Indifféremment tous les ligands"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "Dur se lie à dur (O, F, N) par des interactions à caractère ionique (charge localisée) ; mou se lie à mou (S, I, Se) par des interactions plus covalentes. Cela explique des affinités géochimiques comme Ca²⁺–O (lithophile) contre Hg²⁺–S (chalcophile).",
       "source": "nouvel exercice",
       "verified": true
@@ -133,11 +133,11 @@
       "q": "Pourquoi la nucléosynthèse stellaire par fusion ne produit-elle pas d’éléments plus lourds que le fer ?",
       "options": [
         "Parce que le fer est trop rare dans les étoiles",
-        "Parce que ⁵⁶Fe possède l’énergie de liaison par nucléon la plus élevée : au-delà, la fusion devient endothermique",
         "Parce que les étoiles refroidissent avant d’atteindre ces éléments",
-        "Parce que le fer bloque la capture de neutrons"
+        "Parce que le fer bloque la capture de neutrons",
+        "Parce que ⁵⁶Fe possède l’énergie de liaison par nucléon la plus élevée : au-delà, la fusion devient endothermique"
       ],
-      "answer": 1,
+      "answer": 3,
       "fb": "⁵⁶Fe se situe au sommet de la courbe d’énergie de liaison par nucléon : fusionner au-delà consomme de l’énergie au lieu d’en libérer. Les éléments plus lourds nécessitent la capture neutronique (processus r et s) lors d’évènements explosifs.",
       "source": "nouvel exercice",
       "verified": true
@@ -147,12 +147,12 @@
       "type": "mc",
       "q": "Le processus r (capture neutronique rapide), responsable d’une grande partie des éléments lourds, se produit surtout lors de :",
       "options": [
-        "La combustion de l’hydrogène dans les étoiles ordinaires",
         "Évènements explosifs : supernovae et fusions d’étoiles à neutrons",
+        "La combustion de l’hydrogène dans les étoiles ordinaires",
         "La fission spontanée dans la croûte terrestre",
         "La nucléosynthèse primordiale du Big Bang"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Le processus r exige un flux neutronique intense et bref, fourni par les supernovae et les fusions d’étoiles à neutrons. Le processus s (capture lente) opère plutôt dans les étoiles évoluées (branche asymptotique des géantes, AGB).",
       "source": "nouvel exercice",
       "verified": true
@@ -162,12 +162,12 @@
       "type": "mc",
       "q": "Pourquoi le lithium, le béryllium et le bore sont-ils anormalement rares comparés à leurs voisins du tableau périodique ?",
       "options": [
-        "Parce qu’ils sont détruits dans les intérieurs stellaires et mal produits par la nucléosynthèse (ils proviennent surtout de la spallation par rayons cosmiques)",
         "Parce qu’ils s’échappent dans l’espace en raison de leur légèreté",
+        "Parce qu’ils sont détruits dans les intérieurs stellaires et mal produits par la nucléosynthèse (ils proviennent surtout de la spallation par rayons cosmiques)",
         "Parce qu’ils sont trop denses pour s’accumuler",
         "Parce qu’ils forment surtout des gaz volatils"
       ],
-      "answer": 0,
+      "answer": 1,
       "fb": "Li, Be et B sont contournés par les principales chaînes de fusion et détruits à relativement basse température dans les étoiles. Ils proviennent surtout de la spallation (rayons cosmiques fragmentant des noyaux plus lourds), d’où leur faible abondance.",
       "source": "nouvel exercice",
       "verified": true

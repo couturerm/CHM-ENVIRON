@@ -6,12 +6,12 @@
       "type": "mc",
       "q": "Sur le terrain, la limite entre la phase « dissoute » et la phase « particulaire » est fixée par :",
       "options": [
+        "Filtration (typiquement à 0,2 µm)",
         "Centrifugation prolongée à haute vitesse",
         "La conductivité",
-        "Filtration (typiquement à 0,2 µm)",
         "La couleur de l'eau"
       ],
-      "answer": 2,
+      "answer": 0,
       "fb": "Distinction opérationnelle, pas physique. En réalité il existe un continuum de tailles; la coupure à 0,2 µm est une convention de filtration.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -38,10 +38,10 @@
       "options": [
         "Acidification à l'HNO₃",
         "Chauffage",
-        "Exposition prolongée à l'air pour les stabiliser",
-        "Congélation immédiate dans l'azote liquide"
+        "Congélation immédiate dans l'azote liquide",
+        "Exposition prolongée à l'air pour les stabiliser"
       ],
-      "answer": 3,
+      "answer": 2,
       "fb": "Les espèces réduites (sulfures, Fe²⁺) s'oxydent au contact de l'air. On les fige (azote liquide) ou on les traite par un réactif adapté (acétate de zinc pour les sulfures, après purge au N₂). Le découpage de carottes en boîte à gants prévient aussi l'oxydation.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -53,10 +53,10 @@
       "options": [
         "La concentration mesurée reflète toujours directement l'intensité du flux au point et au moment du prélèvement",
         "Le flux ne dépend que du volume d'eau échantillonné",
-        "Un flux élevé peut naître d'un fort gradient ou d'une forte demande biologique, à faible concentration",
-        "Une faible concentration implique nécessairement un faible flux net"
+        "Une faible concentration implique nécessairement un faible flux net",
+        "Un flux élevé peut naître d'un fort gradient ou d'une forte demande biologique, à faible concentration"
       ],
-      "answer": 2,
+      "answer": 3,
       "fb": "Concentration = mol/volume; flux = quantité transportée par unité de temps. Un fort gradient (transport diffusif) ou une production/consommation active peut produire un flux élevé même à faible concentration.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -85,12 +85,12 @@
       "type": "mc",
       "q": "Pour prélever l'eau à une profondeur précise dans la colonne d'eau d'un lac, on utilise :",
       "options": [
-        "Un carottier à gravité",
         "Une bouteille Van Dorn ou Kemmerer",
+        "Un carottier à gravité",
         "Une boîte à gants anoxique de laboratoire",
         "Un dialyseur"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Les bouteilles Van Dorn (horizontale) et Kemmerer (verticale) se ferment à la profondeur voulue pour prélever un volume d'eau discret. Le carottier sert aux sédiments, le dialyseur à l'eau interstitielle.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -120,11 +120,11 @@
       "q": "Dans une série temporelle d'oxygène dissous en eau de surface, le cycle journalier montre un maximum en fin d'après-midi et un minimum le matin. Ceci reflète :",
       "options": [
         "Le réchauffement de l'eau par le rayonnement solaire en journée et son refroidissement nocturne",
+        "La photosynthèse le jour (production) et la respiration la nuit (consommation)",
         "Le cycle des marées et le brassage par le vent",
-        "L'acidification progressive de l'eau au fil de la journée",
-        "La photosynthèse le jour (production) et la respiration la nuit (consommation)"
+        "L'acidification progressive de l'eau au fil de la journée"
       ],
-      "answer": 3,
+      "answer": 1,
       "fb": "Le jour, la photosynthèse (P) produit de l'O₂ → maximum l'après-midi. La nuit, seule la respiration (R) agit et consomme l'O₂ → minimum le matin. Le suivi haute fréquence (optodes) capte ces cycles P/R journaliers.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -134,12 +134,12 @@
       "type": "mc",
       "q": "Le carottage des sédiments lacustres permet de reconstituer une chronologie. Quels isotopes servent couramment à dater les couches récentes ?",
       "options": [
-        "²¹⁰Pb et ¹³⁷Cs",
         "¹⁴C et ⁴⁰K",
         "²³⁵U et ²³⁸U",
+        "²¹⁰Pb et ¹³⁷Cs",
         "³H seulement"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "Le ²¹⁰Pb (demi-vie ~22 ans) date les ~150 dernières années; le ¹³⁷Cs marque les retombées nucléaires (pic 1963). On mesure aussi le contenu en eau, C/N, Fe/Mn/Al/S.",
       "source": "deck Terrain A2024",
       "verified": true
@@ -150,11 +150,11 @@
       "q": "Dans les sédiments et sols saturés, l'apparition de forts gradients verticaux redox s'explique par :",
       "options": [
         "La stratification thermique qui isole les couches et empêche tout mélange vertical de la colonne d'eau",
-        "La réduction séquentielle des accepteurs d'électrons en oxydant le carbone organique",
         "L'absence d'activité microbienne dans les sédiments profonds",
-        "Un apport homogène d'oxygène par diffusion depuis la surface"
+        "Un apport homogène d'oxygène par diffusion depuis la surface",
+        "La réduction séquentielle des accepteurs d'électrons en oxydant le carbone organique"
       ],
-      "answer": 1,
+      "answer": 3,
       "fb": "En descendant, l'O₂ s'épuise puis les micro-organismes utilisent successivement d'autres accepteurs d'électrons (NO₃⁻, oxydes de Fe/Mn, SO₄²⁻…) en oxydant le carbone organique. Cette succession crée les zones réactives et les forts gradients verticaux (Borch et al. 2010).",
       "source": "deck Terrain A2024",
       "verified": true

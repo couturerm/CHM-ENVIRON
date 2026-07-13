@@ -33,11 +33,11 @@
       "q": "Lequel de ces éléments démontrera le moins de fractionnement isotopique ?",
       "options": [
         "Hydrogène (1H,2H)",
+        "Mercure (200Hg, 201Hg)",
         "Carbone (,13C)",
-        "Nickel (60Ni, 61Ni)",
-        "Mercure (200Hg, 201Hg)"
+        "Nickel (60Ni, 61Ni)"
       ],
-      "answer": 3,
+      "answer": 1,
       "fb": "Le mercure est l’élément le plus lourd de la liste (²⁰⁰Hg/²⁰¹Hg) : sa différence de masse relative (Δm/m) entre isotopes est la plus faible, d’où le fractionnement isotopique minimal. Le fractionnement dépendant de la masse diminue quand la masse atomique augmente.",
       "source": "examen 2024",
       "verified": true
@@ -47,12 +47,12 @@
       "type": "mc",
       "q": "Complétez: La teneur en 15N _______ par rapport à celle en 14N avec le niveau trophique.",
       "options": [
-        "Augmentera",
         "Diminuera",
         "Se maintiendra",
+        "Augmentera",
         "Doublera"
       ],
-      "answer": 0,
+      "answer": 2,
       "fb": "Le δ¹⁵N s’enrichit d’environ +3 à +4 ‰ à chaque niveau trophique. Lors du métabolisme des protéines (transamination et désamination), l’azote léger ¹⁴N est excrété préférentiellement (urée, ammoniac) car les liaisons impliquant ¹⁴N se rompent un peu plus vite — un fractionnement cinétique. Les tissus du consommateur se trouvent donc enrichis en ¹⁵N par rapport à son alimentation, et cet enrichissement se cumule le long de la chaîne alimentaire. Le δ¹⁵N sert ainsi d’indicateur de la position trophique d’un organisme.",
       "source": "examen 2024",
       "verified": true
@@ -64,10 +64,10 @@
       "options": [
         "Ratio isotopique 18O/16O",
         "Ratio isotopique 16O/18O",
-        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × 1 000",
-        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × \t10 000"
+        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × \t10 000",
+        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × 1 000"
       ],
-      "answer": 2,
+      "answer": 3,
       "fb": "δ¹⁸O = ([R_échantillon − R_réf] / R_réf) × 1000, avec R = ¹⁸O/¹⁶O. La valeur, exprimée en ‰ (pour mille), mesure l’écart relatif de la composition isotopique de l’échantillon par rapport à un standard de référence (p. ex. VSMOW pour l’eau, VPDB pour les carbonates).",
       "source": "examen 2024",
       "verified": true
@@ -77,12 +77,12 @@
       "type": "mc",
       "q": "Lequel de ces processus produit un fractionnement isotopique principalement cinétique (hors équilibre) ?",
       "options": [
-        "L’échange isotopique entre l’eau et un carbonate à l’équilibre",
         "L’évaporation rapide et la diffusion de la vapeur d’eau",
+        "L’échange isotopique entre l’eau et un carbonate à l’équilibre",
         "Le partage d’un élément entre deux minéraux coexistants à l’équilibre",
         "La condensation lente et réversible"
       ],
-      "answer": 1,
+      "answer": 0,
       "fb": "Le fractionnement cinétique résulte de réactions rapides et unidirectionnelles (évaporation, diffusion, catalyse enzymatique) où l’isotope léger réagit ou diffuse plus vite. À l’équilibre, le fractionnement est fixé par la thermodynamique et est réversible.",
       "source": "nouvel exercice",
       "verified": true
@@ -108,11 +108,11 @@
       "q": "Une eau très appauvrie en isotopes lourds (¹⁸O, ²H) présente un δ¹⁸O :",
       "options": [
         "Positif et élevé",
-        "Négatif",
         "Nul par définition",
+        "Négatif",
         "Toujours égal à celui du standard"
       ],
-      "answer": 1,
+      "answer": 2,
       "fb": "L’appauvrissement en isotope lourd donne R_échantillon < R_réf, donc δ < 0. Les précipitations de haute latitude ou altitude, très appauvries par effet Rayleigh, montrent des δ¹⁸O fortement négatifs.",
       "source": "nouvel exercice",
       "verified": true

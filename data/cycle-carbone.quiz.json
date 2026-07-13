@@ -63,10 +63,10 @@
       "q": "Laquelle ou lesquelles de ces affirmations sont vraies en ce qui a trait à l’effet de l’augmentation du taux de dioxyde de carbone sur le pH des océans?",
       "options": [
         "La valeur du pH augmente en raison de la dissolution du calcaire",
-        "La valeur du pH diminue en raison d’une plus grande dissolution du CO2(g) dans l’eau",
-        "Le dioxyde de carbone dans l’atmosphère entraine une hausse de la température des \nocéans ce qui a une incidence sur la valeur de la constante de dissociation de l’eau (Ke)"
+        "Le dioxyde de carbone dans l’atmosphère entraine une hausse de la température des \nocéans ce qui a une incidence sur la valeur de la constante de dissociation de l’eau (Ke)",
+        "La valeur du pH diminue en raison d’une plus grande dissolution du CO2(g) dans l’eau"
       ],
-      "answer": 1,
+      "answer": 2,
       "fb": "L’augmentation du CO₂ atmosphérique accroît sa dissolution dans l’eau de mer : CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. La libération d’ions H⁺ fait baisser le pH : c’est l’acidification des océans. (A est faux : la dissolution du calcaire tamponne mais ne fait pas monter le pH ici ; C décrit un effet thermique réel sur Ke, mais secondaire et distinct du mécanisme principal.)",
       "source": "examen 2024",
       "verified": true
@@ -77,11 +77,11 @@
       "q": "Quels processus de météorisations consomment du CO2 de l’atmosphère ?",
       "options": [
         "Aluminosilicates et Pyrite",
-        "Aluminosilicates et Calcite",
         "Calcite et Respiration",
+        "Aluminosilicates et Calcite",
         "Biomineralisation et Pyrite"
       ],
-      "answer": 1,
+      "answer": 2,
       "fb": "Réponse : aluminosilicates et calcite. La météorisation (altération chimique) des silicates et des carbonates consomme du CO₂ atmosphérique. Silicates (aluminosilicates) : CaSiO₃ + 2 CO₂ + H₂O → Ca²⁺ + 2 HCO₃⁻ + SiO₂ ; c’est un puits net de CO₂ à l’échelle géologique. Carbonates (calcite) : CaCO₃ + CO₂ + H₂O → Ca²⁺ + 2 HCO₃⁻, qui consomme du CO₂ à l’altération (la reprécipitation océanique en réémet environ la moitié, d’où un bilan à long terme quasi neutre). À l’inverse, l’oxydation de la pyrite (FeS₂) produit de l’acide sulfurique qui attaque les carbonates et libère du CO₂ (source), et la respiration émet du CO₂ ; la biominéralisation forme des carbonates mais n’est pas un processus d’altération. Cela écarte les options 0, 2 et 3.",
       "source": "examen 2024",
       "verified": true
@@ -132,12 +132,12 @@
       "type": "mc",
       "q": "Laquelle de ces substances organiques a le temps de résidence le plus court dans le sol ?",
       "options": [
-        "Sucres simples (biomasse fraîche)",
         "Cellulose",
         "Lignine",
-        "Substances humiques (humus)"
+        "Substances humiques (humus)",
+        "Sucres simples (biomasse fraîche)"
       ],
-      "answer": 0,
+      "answer": 3,
       "fb": "Réponse : sucres simples. Le temps de résidence croît (la réactivité décroît) des sucres facilement métabolisés vers la cellulose, puis la lignine récalcitrante, et enfin l’humus, pool le plus stable et le plus âgé de la matière organique du sol.",
       "source": "quiz du cours",
       "verified": true
