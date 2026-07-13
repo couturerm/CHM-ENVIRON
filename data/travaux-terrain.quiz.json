@@ -140,7 +140,7 @@
         "³H seulement"
       ],
       "answer": 0,
-      "fb": "Le ²¹⁰Pb (demi-vie ~22 ans) date les ~150 dernières années; le ¹³⁷Cs marque les retombées nucléaires (pic 1963). On mesure aussi le contenu en eau, C/N, Fe/Mn/Al/S. (Demi-vies : valeurs standard à valider.)",
+      "fb": "Le ²¹⁰Pb (demi-vie ~22 ans) date les ~150 dernières années; le ¹³⁷Cs marque les retombées nucléaires (pic 1963). On mesure aussi le contenu en eau, C/N, Fe/Mn/Al/S.",
       "source": "deck Terrain A2024",
       "verified": true
     },
@@ -168,7 +168,7 @@
         "Faux"
       ],
       "answer": 1,
-      "fb": "Faux. On échantillonne à la fois pour mieux comprendre le milieu naturel (processus biogéochimiques) et pour caractériser l'impact humain. Les deux motivations sont complémentaires (messages à retenir #1 et #2 du deck).",
+      "fb": "Faux. On échantillonne à la fois pour mieux comprendre le milieu naturel (processus biogéochimiques) et pour caractériser l'impact humain. Les deux motivations sont complémentaires.",
       "source": "deck Terrain A2024",
       "verified": true
     },
