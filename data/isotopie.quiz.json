@@ -116,6 +116,21 @@
       "fb": "L’appauvrissement en isotope lourd donne R_échantillon < R_réf, donc δ < 0. Les précipitations de haute latitude ou altitude, très appauvries par effet Rayleigh, montrent des δ¹⁸O fortement négatifs.",
       "source": "nouvel exercice",
       "verified": true
+    },
+    {
+      "id": "iso12",
+      "type": "mc",
+      "q": "Pourquoi les rapports d'isotopes stables du plomb permettent-ils de remonter aux sources de pollution ?",
+      "options": [
+        "Parce que les isotopes du plomb sont radioactifs et se désintègrent en quelques années",
+        "Parce que leur rapport reflète la source géologique du minerai",
+        "Parce que le plomb se fractionne fortement selon la température de l'eau et de l'air",
+        "Parce que la concentration mesurée du plomb identifie à elle seule sa source"
+      ],
+      "answer": 1,
+      "fb": "Les isotopes stables lourds comme le Pb ne subissent qu'un fractionnement négligeable lors des processus environnementaux : leur rapport isotopique reflète surtout la source géologique du minerai (âge du gisement, via la désintégration U/Th → Pb). Cette signature quasi conservative, indépendante de la concentration, permet de discriminer les sources (essence, industrie, minerais).",
+      "source": "nouvel exercice",
+      "verified": true
     }
   ]
 }
