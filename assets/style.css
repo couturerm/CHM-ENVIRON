@@ -171,3 +171,17 @@ table.sched td .sd{font-size:12.5px;color:var(--muted);margin-top:3px}
 .biblio .ref{padding:9px 0;border-bottom:1px dashed var(--line)}.biblio .ref:last-child{border-bottom:0}
 .biblio em{color:var(--muted);font-style:italic;font-size:12.5px;display:block;margin-top:3px}
 .placeholder{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:34px;text-align:center;color:var(--muted);margin-top:20px}
+
+
+/* --- calendrier (index.html) --- */
+#calview{margin:18px 0 0}
+#calview .tab{user-select:none}
+table.sched .cnt{font-weight:400;font-size:12px;color:var(--muted);font-family:inherit;text-transform:none;letter-spacing:0}
+table.sched td.wdate{white-space:nowrap}
+.blocpill{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.3px;
+  color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent);border-radius:14px;padding:1px 8px;vertical-align:1px}
+
+/* --- barre latérale : lien direct vers le plan de cours PDF --- */
+.navpdf{display:block;margin:8px 14px 4px;padding:8px 12px;border-radius:8px;font-size:13.5px;font-weight:700;
+  color:#fff;background:var(--accent);text-align:center}
+.navpdf:hover{text-decoration:none;opacity:.92}

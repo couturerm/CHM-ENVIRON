@@ -1,0 +1,23 @@
+{
+  "_note": "Source unique du calendrier. Les evaluations (dates, ponderations, criteres) vivent dans BRIO, pas ici.",
+  "session": "Automne 2026",
+  "blocs": [
+    { "id": "biogeo",       "label": "Biogéochimie" },
+    { "id": "eau-atmo",     "label": "Eau, Atmosphère et Neige" },
+    { "id": "contaminants", "label": "Contaminants" }
+  ],
+  "seances": [
+    { "slug": "cosmochimie",            "label": "Cosmochimie",                 "bloc": "biogeo",       "date": null,         "libelle": "En autonomie", "presentateur": "Raoul Couture",      "desc": "Nucléosynthèse, abondance des éléments, différenciation planétaire." },
+    { "slug": "isotopie",               "label": "Isotopie",                    "bloc": "biogeo",       "date": "2026-09-08", "presentateur": "Raoul Couture",      "desc": "Isotopes stables, notation delta, fractionnement, traçage des sources." },
+    { "slug": "cycle-carbone",          "label": "Cycle global du carbone",     "bloc": "biogeo",       "date": "2026-09-15", "presentateur": "Raoul Couture",      "desc": "Le parcours du carbone depuis la photosynthèse jusqu'à son enfouissement par l'activité tectonique. La science des changements climatiques." },
+    { "slug": "limnologie",             "label": "Limnologie",                  "bloc": "biogeo",       "date": "2026-09-22", "presentateur": "Raoul Couture",      "desc": "Physicochimie des lacs sous l'influence du climat. Devenir de la lumière dans la colonne d'eau. Photosynthèse et respiration. Types de lacs." },
+    { "slug": "travaux-terrain",        "label": "Travaux de terrain",          "bloc": "biogeo",       "date": "2026-09-29", "presentateur": "Raoul Couture",      "desc": "Stratégie de prélèvement et de mesure in situ. Préservation des échantillons. Interprétation des profils et des séries temporelles." },
+    { "slug": "atmosphere",             "label": "Atmosphère",                  "bloc": "eau-atmo",     "date": "2026-10-06", "presentateur": "Florent Dominé",     "desc": "La chimie qui a lieu dans l'atmosphère sous l'influence de la photochimie. Concept de temps de résidence." },
+    { "slug": "neige",                  "label": "Neige",                       "bloc": "eau-atmo",     "date": "2026-10-13", "presentateur": "Florent Dominé",     "desc": "Chimie de la neige. Reconstructions du climat et des environnements passés." },
+    { "slug": "contaminants-emergents", "label": "Contaminants émergents",      "bloc": "contaminants", "date": "2026-11-03", "presentateur": "Dominic Larivière",  "desc": "Devenir et impacts environnementaux des contaminants organiques." },
+    { "slug": "traitement-eau",         "label": "Traitement de l'eau",         "bloc": "eau-atmo",     "date": "2026-11-10", "presentateur": "Christine Beaulieu", "desc": "Prélèvement, transport et enjeux liés au traitement de l'eau potable. Qualité microbiologique de l'eau." },
+    { "slug": "pfas",                   "label": "Produits persistants (PFAS)", "bloc": "contaminants", "date": "2026-11-17", "presentateur": "Gabriel Munoz",      "desc": "Devenir des substances per- et polyfluoroalkylées (PFAS)." },
+    { "slug": "ecotoxicologie",         "label": "Écotoxicologie",              "bloc": "contaminants", "date": "2026-11-24", "presentateur": "Océane Hourtané",    "desc": "Des espèces chimiques jusqu'à l'effet sur les organismes vivants." },
+    { "slug": "nanoparticules",         "label": "Nanoparticules",              "bloc": "contaminants", "date": "2026-12-01", "presentateur": "Julien Gigault",     "desc": "Implications de la taille pour le devenir des contaminants. Les plastiques." }
+  ]
+}

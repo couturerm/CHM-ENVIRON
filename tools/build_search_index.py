@@ -29,8 +29,7 @@ INDEX = os.path.join(REPO, "search-index.json")
 
 # Page order the site expects (nav order); anything found but unlisted is appended.
 PAGE_ORDER = [
-    "index.html", "accueil.html", "nouvelles.html", "plan-de-cours.html",
-    "evaluations.html", "mediagraphie.html",
+    "index.html", "accueil.html", "mediagraphie.html",
 ]
 
 # Tags whose *content* is not visible course text and must be dropped whole.
@@ -84,6 +83,23 @@ def pdftotext(pdf_path: str) -> str:
         return ""
 
 
+def calendrier_text() -> str:
+    """Texte plat du calendrier (rendu en JS, donc invisible au strip de tags)."""
+    path = os.path.join(REPO, "data", "calendrier.json")
+    if not os.path.exists(path):
+        return ""
+    try:
+        data = json.load(open(path, encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        sys.stderr.write(f"WARN: calendrier.json illisible: {e}\n")
+        return ""
+    bits = [b.get("label", "") for b in data.get("blocs", [])]
+    for s in data.get("seances", []):
+        bits += [s.get("label", ""), s.get("presentateur", ""),
+                 s.get("desc", ""), s.get("date") or s.get("libelle", "")]
+    return WS.sub(" ", " ".join(x for x in bits if x)).strip()
+
+
 def collect_pages():
     pages = []
     for name in PAGE_ORDER:
@@ -111,6 +127,11 @@ def build():
         raw = open(fpath, encoding="utf-8").read()
         title = page_title(raw, os.path.splitext(name)[0])
         text = visible_text(raw)
+
+        # index.html rend son calendrier en JS : replier data/calendrier.json
+        # pour que les noms de modules restent trouvables par la recherche.
+        if name == "index.html":
+            text = f"{text} {calendrier_text()}"
 
         # Fold in the module's deck text so slide-only terms are searchable.
         m = DATA_PDF.search(raw)

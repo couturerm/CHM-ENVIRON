@@ -10,8 +10,7 @@
   var NAV = [
     {t:'link', page:'index',                  href:'index.html',                     label:'Contenu et activités'},
     {t:'link', page:'accueil',                href:'accueil.html',                   label:'Accueil'},
-    {t:'link', page:'nouvelles',              href:'nouvelles.html',                 label:'Nouvelles'},
-    {t:'link', page:'plan',                   href:'plan-de-cours.html',             label:'Plan de cours'},
+    {t:'pdf',  page:'plan',                   href:'medias/plan-de-cours-chm-4152.pdf', label:'Plan de cours (PDF)'},
     {t:'group', label:'Biogéochimie'},
     {t:'item', page:'cosmochimie',            href:'modules/cosmochimie.html',       label:'Cosmochimie'},
     {t:'item', page:'isotopie',               href:'modules/isotopie.html',          label:'Isotopie'},
@@ -28,7 +27,6 @@
     {t:'item', page:'ecotoxicologie',         href:'modules/ecotoxicologie.html',    label:'Écotoxicologie'},
     {t:'item', page:'pfas',                   href:'modules/pfas.html',              label:'Produits persistants (PFAS)'},
     {t:'group', label:'Cours'},
-    {t:'item', page:'evaluations',            href:'evaluations.html',               label:'Évaluations'},
     {t:'item', page:'mediagraphie',           href:'mediagraphie.html',              label:'Médiagraphie'}
   ];
 
@@ -47,6 +45,11 @@
   var nav = '<div class="brand"><div class="code">CHM-4152 · NRC 83001</div><div class="ttl">Chimie de l\'environnement</div></div>';
   NAV.forEach(function (n) {
     if (n.t === 'group') { nav += '<div class="navgroup">' + n.label + '</div>'; return; }
+    if (n.t === 'pdf') {
+      nav += '<a class="navpdf" href="' + P + n.href + '" target="_blank" rel="noopener">' +
+             '<span>\uD83D\uDCC4 ' + n.label + '</span></a>';
+      return;
+    }
     var cls = (n.t === 'link' ? 'navlink' : 'navitem') + (n.page === current ? ' active' : '');
     nav += '<a class="' + cls + '" href="' + P + n.href + '">' + n.label + '</a>';
   });
