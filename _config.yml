@@ -1,0 +1,19 @@
+# GitHub Pages / Jekyll — CHM-4152
+#
+# Ce dépôt est un site statique pur : Jekyll ne sert qu'à contrôler CE QUI EST PUBLIÉ.
+# Les dossiers préfixés par « _ » ne sont jamais publiés par Jekyll ; `exclude` les
+# verrouille explicitement, au cas où ce comportement changerait.
+#
+# _authoring/ = outils d'auteur (banque de questions avec clés de correction et
+# rétroactions). Versionné dans git, ouvert localement dans le navigateur,
+# JAMAIS servi aux étudiants.
+
+exclude:
+  - _authoring/
+  - banque-examen/
+  - tools/
+  - "*.md"
+  - .vscode/
+
+# Aucun traitement Liquid/Markdown attendu : le site est en HTML brut.
+plugins: []

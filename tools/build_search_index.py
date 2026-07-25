@@ -28,6 +28,10 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INDEX = os.path.join(REPO, "search-index.json")
 
 # Page order the site expects (nav order); anything found but unlisted is appended.
+# Jamais indexé, même si le fichier réapparaît à la racine : outils d'auteur
+# (clés de correction, rétroactions, questions non validées). Voir _config.yml.
+NEVER_INDEX = {"banque-questions.html"}
+
 PAGE_ORDER = [
     "index.html", "accueil.html",
 ]
@@ -108,7 +112,7 @@ def collect_pages():
             pages.append(("", name))
     # any other top-level html not in PAGE_ORDER
     for name in sorted(os.listdir(REPO)):
-        if name.endswith(".html") and name not in PAGE_ORDER:
+        if name.endswith(".html") and name not in PAGE_ORDER and name not in NEVER_INDEX:
             pages.append(("", name))
     # module pages, alphabetical
     mod_dir = os.path.join(REPO, "modules")
