@@ -1,7 +1,7 @@
 /* CHM-ENVIRON — calendrier des séances.
    Source unique : data/calendrier.json. Deux vues d'une même donnée :
-     · « Par date »  — ordre chronologique, plat
-     · « Par bloc »  — regroupé par bloc thématique
+     · « Par bloc » — regroupé par bloc thématique (vue par défaut)
+     · « Par date » — ordre chronologique, plat
    Le choix de vue est mémorisé (localStorage). Aucune donnée d'évaluation ici : voir BRIO. */
 
 (function () {
@@ -64,8 +64,8 @@
     mount.innerHTML = '<table class="eval sched">' + head + body + '</table>';
   }
 
-  var MODE = 'date';
-  try { MODE = localStorage.getItem('chm_cal_view') || 'date'; } catch (e) {}
+  var MODE = 'bloc';
+  try { MODE = localStorage.getItem('chm_cal_view2') || 'bloc'; } catch (e) {}
 
   fetch(P + 'data/calendrier.json')
     .then(function (r) { return r.json(); })
@@ -73,7 +73,7 @@
       var tabs = document.querySelectorAll('#calview .tab');
       function apply(m) {
         MODE = m;
-        try { localStorage.setItem('chm_cal_view', m); } catch (e) {}
+        try { localStorage.setItem('chm_cal_view2', m); } catch (e) {}
         tabs.forEach(function (t) { t.classList.toggle('active', t.dataset.view === m); });
         render(data, m);
       }

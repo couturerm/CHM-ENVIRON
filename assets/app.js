@@ -10,7 +10,6 @@
   var NAV = [
     {t:'link', page:'index',                  href:'index.html',                     label:'Contenu et activités'},
     {t:'link', page:'accueil',                href:'accueil.html',                   label:'Accueil'},
-    {t:'pdf',  page:'plan',                   href:'medias/plan-de-cours-chm-4152.pdf', label:'Plan de cours (PDF)'},
     {t:'group', label:'Biogéochimie'},
     {t:'item', page:'cosmochimie',            href:'modules/cosmochimie.html',       label:'Cosmochimie'},
     {t:'item', page:'isotopie',               href:'modules/isotopie.html',          label:'Isotopie'},
@@ -26,8 +25,7 @@
     {t:'item', page:'contaminants-emergents', href:'modules/contaminants-emergents.html', label:'Contaminants émergents'},
     {t:'item', page:'ecotoxicologie',         href:'modules/ecotoxicologie.html',    label:'Écotoxicologie'},
     {t:'item', page:'pfas',                   href:'modules/pfas.html',              label:'Produits persistants (PFAS)'},
-    {t:'group', label:'Cours'},
-    {t:'item', page:'mediagraphie',           href:'mediagraphie.html',              label:'Médiagraphie'}
+    {t:'pdf',  page:'plan',                   href:'medias/plan-de-cours-chm-4152.pdf', label:'Plan de cours (PDF)'}
   ];
 
   // ---- topbar ----

@@ -29,7 +29,7 @@ INDEX = os.path.join(REPO, "search-index.json")
 
 # Page order the site expects (nav order); anything found but unlisted is appended.
 PAGE_ORDER = [
-    "index.html", "accueil.html", "mediagraphie.html",
+    "index.html", "accueil.html",
 ]
 
 # Tags whose *content* is not visible course text and must be dropped whole.
