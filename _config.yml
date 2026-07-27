@@ -4,9 +4,10 @@
 # Les dossiers préfixés par « _ » ne sont jamais publiés par Jekyll ; `exclude` les
 # verrouille explicitement, au cas où ce comportement changerait.
 #
-# _authoring/ = outils d'auteur (banque de questions avec clés de correction et
-# rétroactions). Versionné dans git, ouvert localement dans le navigateur,
-# JAMAIS servi aux étudiants.
+# La banque de questions ne vit plus dans le dépôt : elle est sur le disque du
+# professeur (hors git). Le dépôt ne contient que les quiz formatifs consommés
+# par les pages de module (data/*.quiz.json). Les entrées ci-dessous restent
+# comme filet de sécurité si un dossier d'auteur réapparaissait localement.
 
 exclude:
   - _authoring/

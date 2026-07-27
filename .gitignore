@@ -1,5 +1,4 @@
 # Fichiers supersédés — remplacés par banque-questions.html. Ne jamais committer.
-banque-questions.md
 data/banque.quiz.json
 data/banque.overrides.json
 
@@ -13,4 +12,11 @@ Thumbs.db
 *.tmp
 
 # Réserve d'examen/atelier — ne jamais publier
+
+# Banques de questions — vivent sur le disque, JAMAIS dans le dépôt.
+# Le dépôt ne contient que les quiz formatifs des pages de module (data/*.quiz.json).
+banque-questions.html
+banque-questions.md
+_authoring/
 banque-examen/
+*.quiz-source.*
