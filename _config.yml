@@ -12,6 +12,7 @@
 exclude:
   - _authoring/
   - banque-examen/
+  - banque-questions/
   - tools/
   - "*.md"
   - .vscode/
