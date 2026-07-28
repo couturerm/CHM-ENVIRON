@@ -131,6 +131,51 @@
       "fb": "Les isotopes stables lourds comme le Pb ne subissent qu'un fractionnement négligeable lors des processus environnementaux : leur rapport isotopique reflète surtout la source géologique du minerai (âge du gisement, via la désintégration U/Th → Pb). Cette signature quasi conservative, indépendante de la concentration, permet de discriminer les sources (essence, industrie, minerais).",
       "source": "nouvel exercice",
       "verified": true
+    },
+    {
+      "id": "iso13",
+      "type": "mc",
+      "q": "Selon le cours, à quoi servent respectivement les isotopes radioactifs et les isotopes stables ?",
+      "options": [
+        "Les deux familles servent uniquement à la datation absolue",
+        "Les radioactifs tracent les sources; les stables donnent l’âge des dépôts",
+        "Les deux familles servent uniquement au traçage des sources de contamination",
+        "Les radioactifs donnent l’âge; les stables, les sources et les processus"
+      ],
+      "answer": 3,
+      "fb": "Les isotopes issus de la désintégration radioactive servent à la datation (²¹⁰Pb, ¹⁴C, U/Th, Sm/Nd, Pb/Pb). Les isotopes stables servent à trois usages: identifier l’origine, le transfert et le mélange des contaminants; reconstituer des températures comme paléothermomètres (océan, atmosphère, cristallisation); et élucider les mécanismes de mobilité des éléments en géochimie. Les deux familles sont donc complémentaires et non interchangeables.",
+      "source": "deck 2026 (d7)",
+      "verified": true
+    },
+    {
+      "id": "iso14",
+      "type": "mc",
+      "q": "Le δ⁵⁶Fe du sang humain diffère de façon mesurable entre les hommes et les femmes. Que faut-il en conclure ?",
+      "options": [
+        "Que le fer sanguin provient de sources géologiques distinctes selon le sexe",
+        "Que la mesure du δ⁵⁶Fe manque de reproductibilité entre laboratoires",
+        "Que même un élément lourd peut être fractionné par le métabolisme",
+        "Que le fer se désintègre différemment selon l’organisme considéré"
+      ],
+      "answer": 2,
+      "fb": "La règle « isotopes légers pour les processus, isotopes lourds pour les sources » est une tendance, pas un absolu. La différence relative de masse du couple ⁵⁶Fe/⁵⁴Fe n’est que de 3,7 %, contre 8,3 % pour le carbone, 12,5 % pour l’oxygène et 100 % pour le deutérium; le fractionnement est donc faible, mais la précision des spectromètres modernes (MC-ICP-MS) le rend mesurable. L’absorption, le transport et l’excrétion du fer par l’organisme suffisent à créer un écart détectable entre tissus et entre individus, ce qui ouvre des applications comme l’identification de restes humains à partir des isotopes du fer osseux.",
+      "source": "deck 2026 (d44, d12)",
+      "verified": true
+    },
+    {
+      "id": "iso15",
+      "type": "mc",
+      "q": "Pourquoi le δ¹³C permet-il de détecter l’ajout de sucre de canne dans du sirop d’érable ?",
+      "options": [
+        "La canne est une plante C4, isotopiquement plus lourde que l’érable, qui est une plante C3",
+        "Le sucre de canne contient du ¹⁴C, absent du sirop d’érable",
+        "Le climat chaud de la canne enrichit ses sucres en ¹³C de façon détectable",
+        "Le raffinage du sucre de canne détruit toute signature isotopique"
+      ],
+      "answer": 0,
+      "fb": "La canne à sucre suit la voie C4, dont la PEP carboxylase discrimine peu contre le ¹³C: sa signature est lourde (environ -11 à -15 ‰). L’érable suit la voie C3, dont la RuBisCO discrimine fortement: sa signature est légère (environ -24 à -30 ‰). Ajouter du sucre de canne déplace donc le mélange vers des valeurs moins négatives, ce qui se détecte et se quantifie par bilan de masse. Deux limites à connaître: le sucre de betterave, plante en C3 comme l’érable, échappe à cette méthode; et le δ¹³C de l’atmosphère diminue continuellement à cause de la combustion des carbones fossiles, ce qui oblige à réactualiser les valeurs de référence.",
+      "source": "deck 2026 (d38-39)",
+      "verified": true
     }
   ]
 }
