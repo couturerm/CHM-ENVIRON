@@ -171,6 +171,21 @@
       "fb": "Li, Be et B sont contournés par les principales chaînes de fusion et détruits à relativement basse température dans les étoiles. Ils proviennent surtout de la spallation (rayons cosmiques fragmentant des noyaux plus lourds), d’où leur faible abondance.",
       "source": "nouvel exercice",
       "verified": true
+    },
+    {
+      "id": "cos14",
+      "type": "mc",
+      "q": "L’expérience de Stanley Miller (1952) produit des acides aminés à partir d’une atmosphère primitive simulée. Pourtant elle ne suffit pas à expliquer l’origine de la vie. Quel obstacle subsiste ?",
+      "options": [
+        "Les acides aminés obtenus se dégradent trop vite pour s’accumuler",
+        "L’expérience exige des températures incompatibles avec la Terre primitive",
+        "L’ARN est synthétisé par des protéines, alors que les protéines sont encodées par l’ARN",
+        "Les briques obtenues sont exclusivement minérales, et non organiques"
+      ],
+      "answer": 2,
+      "fb": "L’expérience de Miller montre que les « briques de base » (acides aminés) se forment sans enzyme dans des conditions géologiquement plausibles. L’obstacle restant est circulaire : l’ARN est synthétisé par des protéines, mais les protéines sont encodées par l’ARN, de sorte qu’aucune des deux ne peut précéder l’autre. L’hypothèse du « RNA-world » lève l’impasse : l’ARN, à la fois porteur d’information et catalyseur (ribozyme), catalyse les réactions nécessaires à sa propre fabrication. À noter aussi que les acides aminés de Miller sont racémiques, alors que le vivant n’utilise que les formes L.",
+      "source": "deck 2026 (d46)",
+      "verified": true
     }
   ]
 }
