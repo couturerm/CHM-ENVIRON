@@ -64,7 +64,7 @@
       "options": [
         "Ratio isotopique 18O/16O",
         "Ratio isotopique 16O/18O",
-        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × \t10 000",
+        "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × 10 000",
         "([Ratio isotopique 18O/16O - Ratio isotopique 18O/16O Réf.]/ Ratio isotopique 18O/16O Réf.) × 1 000"
       ],
       "answer": 3,
