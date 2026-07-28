@@ -184,6 +184,21 @@
       "fb": "Trois propriétés anormales de l’eau structurent les lacs. (1) Densité maximale à 4 °C : la glace, moins dense, flotte et isole la colonne, et la convergence vers 4 °C déclenche les brassages. (2) Forte chaleur spécifique : l’eau se réchauffe et se refroidit lentement, ce qui tamponne les variations thermiques et modère le climat régional. (3) Absorption sélective : l’eau absorbe fortement l’UV et l’IR mais transmet le visible, d’où la protection des cellules contre l’UV, l’absorption de chaleur en surface et la pénétration du rayonnement photosynthétique. Distracteurs à valider.",
       "source": "quiz Lacs",
       "verified": true
+    },
+    {
+      "id": "lim12",
+      "type": "mc",
+      "q": "Dans le lac Mahoney (Colombie-Britannique), des bactéries photoautotrophes pourpres réalisent la réaction CO₂ + 2 H₂S → CH₂O + 2 S⁰ + H₂O. En quoi leur photosynthèse diffère-t-elle de celle des cyanobactéries ?",
+      "options": [
+        "Elles se passent de lumière et tirent leur énergie du soufre seul",
+        "Elles utilisent le sulfure comme donneur d’électrons et ne produisent pas d’oxygène",
+        "Elles produisent davantage d’oxygène par photon absorbé que les cyanobactéries",
+        "Elles fixent l’azote atmosphérique au lieu du carbone inorganique"
+      ],
+      "answer": 1,
+      "fb": "Toute photosynthèse exige un donneur d’électrons. Les cyanobactéries et les plantes utilisent l’eau, dont l’oxydation libère O₂ : c’est la photosynthèse oxygénique. Les bactéries sulfureuses pourpres utilisent plutôt le sulfure (H₂S), dont l’oxydation produit du soufre élémentaire S⁰ et aucun oxygène : c’est la photosynthèse anoxygénique. Elles se logent donc à l’interface étroite où lumière et sulfure coexistent, typiquement dans un lac méromictique dont les eaux profondes restent anoxiques. Ce métabolisme est plus ancien que la photosynthèse oxygénique, ce qui éclaire aussi la cosmochimie : tant que l’eau n’a pas été utilisée comme donneur d’électrons, la Terre ne pouvait pas accumuler d’oxygène.",
+      "source": "deck 2026 (d63)",
+      "verified": true
     }
   ]
 }
