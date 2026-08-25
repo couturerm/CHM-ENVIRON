@@ -1,8 +1,11 @@
 /* CHM-ENVIRON — calendrier des séances.
    Source unique : data/calendrier.json. Deux vues d'une même donnée :
-     · « Par bloc » — regroupé par bloc thématique (vue par défaut)
+     · « Par bloc » — regroupé par bloc thématique (vue par défaut), avec la description du bloc
      · « Par date » — ordre chronologique, plat
-   Le choix de vue est mémorisé (localStorage). Aucune donnée d'évaluation ici : voir BRIO. */
+   Le choix de vue est mémorisé (localStorage). Un module `ouvert:false` est affiché sans lien
+   (« à venir ») jusqu'à l'enregistrement de sa capsule. Les lignes sans `slug` (premier cours,
+   semaine de lecture, examen, remise) sont des repères de calendrier, sans page.
+   Aucune donnée d'évaluation ici : voir BRIO. */
 
 (function () {
   var mount = document.getElementById('cal');
@@ -16,20 +19,30 @@
   function fdate(iso) {
     if (!iso) return null;
     var p = iso.split('-');
-    return parseInt(p[2], 10) + ' ' + MOIS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+    var d = parseInt(p[2], 10);
+    return (d === 1 ? '1er' : d) + ' ' + MOIS[parseInt(p[1], 10) - 1] + ' ' + p[0];
   }
   function esc(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
+  function byDate(a, c) { return (a.date || '0').localeCompare(c.date || '0'); }
 
   function rows(list, showBloc, blocLabel) {
     return list.map(function (s) {
       var when = s.date ? fdate(s.date) : '<span class="muted">' + esc(s.libelle || 'Date à venir') + '</span>';
-      var tag = showBloc ? '<span class="blocpill">' + esc(blocLabel(s.bloc)) + '</span>' : '';
-      return '<tr>' +
-        '<td><a href="' + P + 'modules/' + esc(s.slug) + '.html">' + esc(s.label) + '</a>' + tag +
-          '<div class="sd">' + esc(s.desc) + '</div></td>' +
+      var tag = (showBloc && s.bloc) ? '<span class="blocpill">' + esc(blocLabel(s.bloc)) + '</span>' : '';
+      var title;
+      if (!s.slug) {
+        title = '<span class="evt">' + esc(s.label) + '</span>';
+      } else if (s.ouvert === false) {
+        title = '<span class="closedmod">' + esc(s.label) + '</span><span class="soon">à venir</span>';
+      } else {
+        title = '<a href="' + P + 'modules/' + esc(s.slug) + '.html">' + esc(s.label) + '</a>';
+      }
+      return '<tr' + (s.slug ? '' : ' class="evtrow"') + '>' +
+        '<td>' + title + tag +
+          (s.desc ? '<div class="sd">' + esc(s.desc) + '</div>' : '') + '</td>' +
         '<td>' + esc(s.presentateur) + '</td>' +
         '<td class="wdate">' + when + '</td>' +
         '</tr>';
@@ -46,17 +59,20 @@
 
     if (mode === 'bloc') {
       body = data.blocs.map(function (b) {
-        var list = data.seances.filter(function (s) { return s.bloc === b.id; });
+        var list = data.seances.filter(function (s) { return s.bloc === b.id; }).slice().sort(byDate);
         if (!list.length) return '';
-        list.sort(function (a, c) { return (a.date || '0').localeCompare(c.date || '0'); });
         var n = list.filter(function (s) { return s.date; }).length;
         return '<tr><th colspan="3">' + esc(b.label) +
                ' <span class="cnt">' + n + ' séance' + (n > 1 ? 's' : '') + '</span></th></tr>' +
+               (b.desc ? '<tr class="blocdesc"><td colspan="3">' + esc(b.desc) + '</td></tr>' : '') +
                rows(list, false, blocLabel);
       }).join('');
+      var autres = data.seances.filter(function (s) { return !s.bloc; }).slice().sort(byDate);
+      if (autres.length) {
+        body += '<tr><th colspan="3">Autres dates</th></tr>' + rows(autres, false, blocLabel);
+      }
     } else {
-      var dated = data.seances.filter(function (s) { return s.date; })
-                    .slice().sort(function (a, c) { return a.date.localeCompare(c.date); });
+      var dated = data.seances.filter(function (s) { return s.date; }).slice().sort(byDate);
       var undated = data.seances.filter(function (s) { return !s.date; });
       body = rows(undated.concat(dated), true, blocLabel);
     }

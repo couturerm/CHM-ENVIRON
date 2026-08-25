@@ -185,3 +185,14 @@ table.sched td.wdate{white-space:nowrap}
 .navpdf{display:block;margin:18px 14px 20px;padding:8px 12px;border-radius:8px;font-size:13.5px;font-weight:700;
   color:#fff;background:var(--accent);text-align:center}
 .navpdf:hover{text-decoration:none;opacity:.92}
+
+/* ---- modules fermés / repères de calendrier (2026-08-25) ---- */
+.navitem.closed{color:var(--muted);cursor:default;opacity:.7}
+.navitem.closed:hover{background:transparent;color:var(--muted)}
+.soon{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 7px;vertical-align:middle}
+table.sched .closedmod{color:var(--soft);font-weight:600}
+table.sched tr.blocdesc td{font-size:13px;line-height:1.55;color:var(--soft);padding:8px 12px 12px;border-bottom:1px solid var(--line)}
+table.sched tr.evtrow td{background:var(--panel)}
+table.sched .evt{font-weight:600;color:var(--soft)}
+.navitem.closed .lock{margin-left:6px;font-size:9px;vertical-align:middle;opacity:.6}

@@ -10,21 +10,20 @@
   var NAV = [
     {t:'link', page:'index',                  href:'index.html',                     label:'Contenu et activités'},
     {t:'link', page:'accueil',                href:'accueil.html',                   label:'Accueil'},
-    {t:'group', label:'Biogéochimie'},
+    {t:'group', label:'Cycles biogéochimiques'},
     {t:'item', page:'cosmochimie',            href:'modules/cosmochimie.html',       label:'Cosmochimie'},
     {t:'item', page:'isotopie',               href:'modules/isotopie.html',          label:'Isotopie'},
     {t:'item', page:'cycle-carbone',          href:'modules/cycle-carbone.html',     label:'Cycle global du carbone'},
     {t:'item', page:'limnologie',             href:'modules/limnologie.html',        label:'Limnologie'},
-    {t:'item', page:'travaux-terrain',        href:'modules/travaux-terrain.html',   label:'Travaux de terrain'},
-    {t:'group', label:'Eau, Atmosphère et Neige'},
     {t:'item', page:'atmosphere',             href:'modules/atmosphere.html',        label:'Atmosphère'},
     {t:'item', page:'neige',                  href:'modules/neige.html',             label:'Neige'},
-    {t:'item', page:'traitement-eau',         href:'modules/traitement-eau.html',    label:"Traitement de l'eau"},
+    {t:'item', page:'travaux-terrain',        href:'modules/travaux-terrain.html',   label:'Travaux de terrain'},
     {t:'group', label:'Contaminants'},
-    {t:'item', page:'nanoparticules',         href:'modules/nanoparticules.html',    label:'Nanoparticules'},
     {t:'item', page:'contaminants-emergents', href:'modules/contaminants-emergents.html', label:'Contaminants émergents'},
-    {t:'item', page:'ecotoxicologie',         href:'modules/ecotoxicologie.html',    label:'Écotoxicologie'},
+    {t:'item', page:'traitement-eau',         href:'modules/traitement-eau.html',    label:"Traitement de l'eau"},
     {t:'item', page:'pfas',                   href:'modules/pfas.html',              label:'Produits persistants (PFAS)'},
+    {t:'item', page:'ecotoxicologie',         href:'modules/ecotoxicologie.html',    label:'Écotoxicologie'},
+    {t:'item', page:'nanoparticules',         href:'modules/nanoparticules.html',    label:'Nanoparticules'},
     {t:'pdf',  page:'plan',                   href:'medias/plan-de-cours-chm-4152.pdf', label:'Plan de cours (PDF)'}
   ];
 
@@ -40,7 +39,7 @@
   document.body.insertBefore(topbar, document.body.firstChild);
 
   // ---- sidebar ----
-  var nav = '<div class="brand"><div class="code">CHM-4152 · NRC 83001</div><div class="ttl">Chimie de l\'environnement</div></div>';
+  var nav = '<div class="brand"><div class="code">CHM-4152 · NRC 83053</div><div class="ttl">Chimie de l\'environnement</div></div>';
   NAV.forEach(function (n) {
     if (n.t === 'group') { nav += '<div class="navgroup">' + n.label + '</div>'; return; }
     if (n.t === 'pdf') {
@@ -49,7 +48,7 @@
       return;
     }
     var cls = (n.t === 'link' ? 'navlink' : 'navitem') + (n.page === current ? ' active' : '');
-    nav += '<a class="' + cls + '" href="' + P + n.href + '">' + n.label + '</a>';
+    nav += '<a class="' + cls + '" data-page="' + n.page + '" href="' + P + n.href + '">' + n.label + '</a>';
   });
   var side = document.createElement('aside');
   side.className = 'side'; side.id = 'side'; side.innerHTML = nav;
@@ -58,6 +57,22 @@
   var app = document.createElement('div'); app.className = 'app';
   content.parentNode.insertBefore(app, content);
   app.appendChild(side); app.appendChild(content);
+
+  // ---- modules fermés (source : data/calendrier.json, champ `ouvert`) ----
+  // Un module fermé reste listé, mais sans lien et marqué « à venir », jusqu'à
+  // l'enregistrement de sa capsule. Ouvrir un module = passer `ouvert` à true dans le JSON.
+  fetch(P + 'data/calendrier.json').then(function (r) { return r.json(); }).then(function (d) {
+    (d.seances || []).forEach(function (s) {
+      if (!s.slug || s.ouvert !== false) return;
+      var a = side.querySelector('.navitem[data-page="' + s.slug + '"]');
+      if (!a) return;
+      var sp = document.createElement('span');
+      sp.className = 'navitem closed';
+      sp.title = 'Module à venir';
+      sp.innerHTML = a.textContent + '<span class="lock">\u25CB</span>';
+      a.parentNode.replaceChild(sp, a);
+    });
+  }).catch(function () {});
 
   // ---- mobile menu ----
   document.getElementById('menubtn').onclick = function () { side.classList.toggle('open'); };
