@@ -3,8 +3,8 @@
      · « Par bloc » — regroupé par bloc thématique (vue par défaut), avec la description du bloc
      · « Par date » — ordre chronologique, plat
    Le choix de vue est mémorisé (localStorage). Un module `ouvert:false` est affiché sans lien
-   (« à venir ») jusqu'à l'enregistrement de sa capsule. Les lignes sans `slug` (premier cours,
-   semaine de lecture, examen, remise) sont des repères de calendrier, sans page.
+   (« à venir ») jusqu'à l'enregistrement de sa capsule. La ligne sans `slug` (premier cours) est un repère
+   de calendrier sans page, affiché en tête du tableau.
    Aucune donnée d'évaluation ici : voir BRIO. */
 
 (function () {
@@ -58,7 +58,8 @@
     var body;
 
     if (mode === 'bloc') {
-      body = data.blocs.map(function (b) {
+      var avant = data.seances.filter(function (s) { return !s.bloc; }).slice().sort(byDate);
+      body = rows(avant, false, blocLabel) + data.blocs.map(function (b) {
         var list = data.seances.filter(function (s) { return s.bloc === b.id; }).slice().sort(byDate);
         if (!list.length) return '';
         var n = list.filter(function (s) { return s.date; }).length;
@@ -67,10 +68,6 @@
                (b.desc ? '<tr class="blocdesc"><td colspan="3">' + esc(b.desc) + '</td></tr>' : '') +
                rows(list, false, blocLabel);
       }).join('');
-      var autres = data.seances.filter(function (s) { return !s.bloc; }).slice().sort(byDate);
-      if (autres.length) {
-        body += '<tr><th colspan="3">Autres dates</th></tr>' + rows(autres, false, blocLabel);
-      }
     } else {
       var dated = data.seances.filter(function (s) { return s.date; }).slice().sort(byDate);
       var undated = data.seances.filter(function (s) { return !s.date; });
