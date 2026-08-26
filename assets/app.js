@@ -61,9 +61,11 @@
   // ---- modules fermés (source : data/calendrier.json, champ `ouvert`) ----
   // Un module fermé reste listé, mais sans lien et marqué « à venir », jusqu'à
   // l'enregistrement de sa capsule. Ouvrir un module = passer `ouvert` à true dans le JSON.
+  var CLOSED = {};   // slug -> true, alimenté par calendrier.json ; filtre aussi la recherche
   fetch(P + 'data/calendrier.json').then(function (r) { return r.json(); }).then(function (d) {
     (d.seances || []).forEach(function (s) {
       if (!s.slug || s.ouvert !== false) return;
+      CLOSED[s.slug] = true;
       var a = side.querySelector('.navitem[data-page="' + s.slug + '"]');
       if (!a) return;
       var sp = document.createElement('span');
@@ -109,6 +111,14 @@
   });
 
   // ---- search over search-index.json ----
+  // Les modules dont `ouvert:false` dans data/calendrier.json sont exclus des résultats :
+  // la fermeture sert au rythme de diffusion, pas au secret (la page reste atteignable
+  // par URL directe, et son texte reste dans search-index.json).
+  function isClosed(url) {
+    var m = /^modules\/(.+)\.html$/.exec(url || '');
+    return !!(m && CLOSED[m[1]]);
+  }
+
   var qel = document.getElementById('q'), rel = document.getElementById('results');
   var INDEX = [];
   fetch(P + 'search-index.json').then(function (r) { return r.json(); })
@@ -120,6 +130,7 @@
     if (raw.length < 2) { rel.classList.remove('show'); rel.innerHTML = ''; return; }
     var q = norm(raw), hits = [];
     INDEX.forEach(function (p) {
+      if (isClosed(p.url)) return;   // un module fermé ne doit pas remonter dans la recherche
       var hay = norm((p.title || '') + ' ' + (p.text || ''));
       var i = hay.indexOf(q);
       if (i >= 0) {
