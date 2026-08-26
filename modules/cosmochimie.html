@@ -51,11 +51,27 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
+      <style>
+        .capsplayer{display:grid;grid-template-columns:1fr;gap:14px}
+        @media(min-width:760px){.capsplayer{grid-template-columns:1.7fr 1fr}}
+        .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+        .capstage>iframe,.capstage>#ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0}
+        .caplist{max-height:430px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:10px}
+        .capitem{display:flex;gap:10px;align-items:center;padding:8px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
+        .capitem:last-child{border-bottom:0}
+        .capitem:hover{background:rgba(0,0,0,.04)}
+        .capitem.active{background:rgba(20,85,155,.12)}
+        .capitem img{width:96px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:#111}
+        .capitem .cnum{font-weight:700;color:#14559b}
+        .capitem .ctitle{font-size:14px;line-height:1.25}
+        .capitem .cdur{font-size:12px;color:#667;margin-top:2px}
+      </style>
       <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
-        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-cosmo">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
-        <div class="cap activecap" data-vp="cosmo" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="cosmo" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="cosmo" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
+        <div class="capsplayer">
+          <div class="capstage"><div id="ytplayer"></div></div>
+          <div class="caplist" id="caplist" aria-label="Liste des capsules"></div>
+        </div>
+        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-COSMO » (6 capsules, 1 h 55). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLLq5orQeQ2VA" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/cosmochimie.quiz.json">
@@ -132,5 +148,35 @@
   <script src="../assets/app.js" defer></script>
   <script src="../assets/pdfviewer.js" defer></script>
   <script src="../assets/quiz.js" defer></script>
+  <script>
+  (function(){
+    var PLAYLIST='PLLq5orQeQ2VA';
+    var META=[['Pt1','Formation des éléments','26:00'],['Pt2','Différenciation planétaire','20:24'],['Pt3','Formation des géosystèmes','14:50'],['Pt4a','Apparition de la vie','21:31'],['Pt4b','Oxygénation de l\'atmosphère','14:36'],['Pt5','Astrochimie','17:31']];
+    var player, ids=[];
+    window.onYouTubeIframeAPIReady=function(){
+      player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',playerVars:{listType:'playlist',list:PLAYLIST,rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
+    };
+    function build(){
+      try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
+      var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
+      var n=Math.max(ids.length,META.length);
+      for(var i=0;i<n;i++){
+        var id=ids[i], m=META[i]||['','Capsule '+(i+1),''];
+        var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',i);
+        var thumb=id?('https://i.ytimg.com/vi/'+id+'/mqdefault.jpg'):'';
+        el.innerHTML='<img loading="lazy" src="'+thumb+'" alt="">'+'<div><div class="ctitle"><span class="cnum">'+m[0]+'</span> '+m[1]+'</div>'+(m[2]?'<div class="cdur">'+m[2]+'</div>':'')+'</div>';
+        el.addEventListener('click',function(){var k=+this.getAttribute('data-i');try{player.playVideoAt(k);}catch(e){}});
+        host.appendChild(el);
+      }
+      sync();
+    }
+    function sync(){
+      var idx=0; try{idx=player.getPlaylistIndex();}catch(e){}
+      var items=document.querySelectorAll('#caplist .capitem');
+      for(var j=0;j<items.length;j++){items[j].classList.toggle('active',(+items[j].getAttribute('data-i'))===idx);}
+    }
+    var s=document.createElement('script'); s.src='https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+  })();
+  </script>
 </body>
 </html>
