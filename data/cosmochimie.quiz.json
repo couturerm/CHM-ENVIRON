@@ -15,19 +15,6 @@
       "verified": true
     },
     {
-      "id": "cos2",
-      "type": "tf",
-      "q": "L’apparition de la respiration anaérobique précède celle de la photosynthèse.",
-      "options": [
-        "Vrai",
-        "Faux"
-      ],
-      "answer": 1,
-      "fb": "Faux. La photosynthèse (anoxygénique) est apparue très tôt dans l’histoire de la vie ; les voies de respiration exploitant les produits de la photosynthèse se sont développées ensuite.",
-      "source": "examen 2024",
-      "verified": true
-    },
-    {
       "id": "cos3",
       "type": "multi",
       "q": "Pourquoi les éléments lourds sont-ils plus rares que les éléments légers dans le système solaire ?",
@@ -79,21 +66,6 @@
         3
       ],
       "fb": "Les marqueurs biologiques reposent sur des déséquilibres redox atmosphériques : couples normalement incompatibles (sulfures/sulfates, CO₂/méthane) ou molécules très réactives à courte durée de vie (phosphine, amines), signes d’une production biologique continue. H₂/eau ne constitue pas un tel déséquilibre.",
-      "source": "examen 2024",
-      "verified": true
-    },
-    {
-      "id": "cos6",
-      "type": "mc",
-      "q": "Pour quel élément le ratio demande biologique/ réserve planétaire est-il le plus élevé ?",
-      "options": [
-        "Le phosphore",
-        "Le sélénium",
-        "L’azote",
-        "Le soufre"
-      ],
-      "answer": 0,
-      "fb": "Le phosphore a le ratio demande biologique/réserve le plus élevé : essentiel à la vie (ADN, ATP, membranes) mais peu abondant et peu mobile géochimiquement (piégé dans les apatites), ce qui en fait le nutriment limitant ultime à l’échelle géologique.",
       "source": "examen 2024",
       "verified": true
     },
@@ -184,6 +156,36 @@
       ],
       "answer": 2,
       "fb": "L’expérience de Miller montre que les « briques de base » (acides aminés) se forment sans enzyme dans des conditions géologiquement plausibles. L’obstacle restant est circulaire : l’ARN est synthétisé par des protéines, mais les protéines sont encodées par l’ARN, de sorte qu’aucune des deux ne peut précéder l’autre. L’hypothèse du « RNA-world » lève l’impasse : l’ARN, à la fois porteur d’information et catalyseur (ribozyme), catalyse les réactions nécessaires à sa propre fabrication. À noter aussi que les acides aminés de Miller sont racémiques, alors que le vivant n’utilise que les formes L.",
+      "source": "deck 2026",
+      "verified": true
+    },
+    {
+      "id": "cos15",
+      "type": "mc",
+      "q": "Sur une planète encore dépourvue d’oxygène, d’où provenaient les accepteurs d’électrons (nitrate, sulfate) qui rendaient possible la respiration anaérobie ?",
+      "options": [
+        "De la respiration d’autres microorganismes déjà établis",
+        "Du dégazage volcanique, qui émettait directement nitrate et sulfate",
+        "De l’oxygène atmosphérique, déjà présent en faible quantité",
+        "De la photolyse de l’eau par le rayonnement ultraviolet"
+      ],
+      "answer": 3,
+      "fb": "2 H₂O + UV → 2 H₂ + O₂. Le dihydrogène, très léger, s’échappe vers l’espace, ce qui laisse derrière lui un excédent net d’oxydant. Cet oxygène ne s’accumule pas pour autant : il réagit aussitôt avec les espèces réduites du milieu, N₂ et NH₃ donnant NO₃⁻, H₂S et SO₂ donnant SO₄²⁻, CH₄ donnant CO₂. La photolyse abiotique a donc constitué le stock d’accepteurs d’électrons dont la respiration anaérobie avait besoin, bien avant toute production biologique d’oxygène; l’atmosphère de l’Archéen restait globalement légèrement réductrice. L’option évoquant l’oxygène atmosphérique est le piège : celui-ci n’apparaît qu’avec la Grande Oxydation, bien plus tard.",
+      "source": "deck 2026",
+      "verified": true
+    },
+    {
+      "id": "cos16",
+      "type": "mc",
+      "q": "Quand la surface de la Terre primitive passe sous le point d’ébullition, la vapeur d’eau condense et les premières pluies lavent l’atmosphère de ses gaz solubles (CO₂, SO₂, HCl). Quel effet cette phase a-t-elle sur l’océan naissant ?",
+      "options": [
+        "L’altération des roches libère des cations basiques qui neutralisent l’acidité",
+        "L’océan reste fortement acide, aucun minéral ne pouvant tamponner les apports",
+        "Les gaz dissous précipitent aussitôt sous forme de sulfures métalliques insolubles",
+        "Les gaz solubles restent dans l’atmosphère, sans effet sur la chimie de l’océan"
+      ],
+      "answer": 0,
+      "fb": "En se dissolvant, les gaz volcaniques donnent des acides : H₂CO₃, H₂SO₄, HNO₃, HCl. Ces pluies acides attaquent les roches, et l’altération libère les cations basiques (Ca²⁺, Na⁺, Mg²⁺, K⁺) qui neutralisent l’acidité et donnent à l’océan sa salinité. L’altération joue donc trois rôles à la fois : puits pour les gaz volcaniques, source de cations basiques pour l’océan, et point de départ des premiers sédiments avec la précipitation du CaCO₃. Vers 4,2 Ga les océans sont stables, et les conditions géochimiques de l’émergence de la vie sont réunies.",
       "source": "deck 2026",
       "verified": true
     }
