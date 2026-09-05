@@ -21,3 +21,10 @@ _authoring/
 banque-examen/
 banque-questions/
 *.quiz-source.*
+
+# Documents de travail internes — vivent sur le disque (banque-questions/), jamais dans le depot.
+PROJECT_STATUS.md
+MODULE_CHAT_SEED.md
+QUIZ_AUDIT_SEED.md
+SEED_*.md
+RAPPORT_*.md

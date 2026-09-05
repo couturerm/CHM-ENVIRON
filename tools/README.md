@@ -1,28 +1,16 @@
-# tools/ — scripts utilitaires
+# tools/
 
-## build_search_index.py  ✅
-Régénère `search-index.json` à partir des `*.html` + `modules/*.html`, en
-incorporant le texte des decks (`pdftotext` sur `data-pdf`). À relancer après
-chaque changement de contenu.
+Scripts du site publie.
 
-    python3 tools/build_search_index.py            # écrit
-    python3 tools/build_search_index.py --check     # échoue si périmé
-    python3 tools/build_search_index.py --stdout    # aperçu
+- `build_search_index.py` — regenere `search-index.json` a partir des pages et des decks.
+- `extract_keywords.py` — extrait les mots-cles d'un deck pour le bloc Enrichissement.
+- `import_quiz.py` — **obsolete**, squelette jamais termine. Ne pas utiliser.
 
-## extract_keywords.py  ✅ (réseau requis pour la vérification)
-Deck PDF → termes français saillants → liens `fr.wikipedia.org` **vérifiés** →
-bloc `<div class="kwcloud">` prêt à coller. Sert à générer le bloc
-« Enrichissement » d'une page module.
+## Ou vivent les questions
 
-    python3 tools/extract_keywords.py medias/<slug>.pdf --max 15
-    python3 tools/extract_keywords.py medias/<slug>.pdf --no-verify   # hors-ligne, peut donner des 404
+Aucune banque de questions n'est dans ce depot. Le depot ne contient que les quiz
+formatifs consommes par les pages de module (`data/<slug>.quiz.json`).
 
-Réviser la liste avant de coller.
-
-## import_quiz.py  ⛔ déprécié
-Remplacé par le flux actuel : les questions vivent dans `banque-questions.html`
-(éditée à la main), et les quiz `data/<slug>.quiz.json` sont générés à partir des
-questions **vérifiées** de la banque. Conservé pour référence seulement.
-
-## Flux par module
-Voir `PROJECT_STATUS.md` (cycle en 5 étapes) et `MODULE_CHAT_SEED.md` (gabarit de page).
+Les questions, le document maitre Word et les scripts qui les produisent vivent sur
+le disque du professeur, hors depot. Les `data/*.quiz.json` sont emis depuis cette
+banque et deposes ici ; ils ne doivent pas etre edites a la main.
