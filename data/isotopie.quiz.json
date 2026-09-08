@@ -115,7 +115,7 @@
         "Toujours égal à celui du standard"
       ],
       "answer": 2,
-      "fb": "L’appauvrissement en isotope lourd donne R_échantillon < R_réf, donc δ < 0. Les précipitations de haute latitude ou altitude, très appauvries par effet Rayleigh, montrent des δ¹⁸O fortement négatifs.",
+      "fb": "L’appauvrissement en isotope lourd donne R_échantillon < R_réf, donc δ < 0. Les précipitations de haute latitude ou d’altitude sont les plus appauvries, la vapeur repartant un peu plus légère après chaque pluie : le δ¹⁸O y descend jusque vers -20 ‰, contre environ -4 ‰ au golfe du Mexique.",
       "source": "nouvel exercice",
       "verified": true
     },
