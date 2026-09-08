@@ -16,15 +16,17 @@
     },
     {
       "id": "iso2",
-      "type": "tf",
-      "q": "Dans le cycle hydrologique, la distillation de Rayleigh réduit progressivement le fractionnement isotopique entre la vapeur d’eau résiduelle et les précipitations.",
+      "type": "mc",
+      "q": "La précipitation est toujours plus lourde que le nuage dont elle provient, et pourtant la pluie devient de plus en plus légère à mesure qu’on remonte vers le nord. Comment concilier ces deux observations ?",
       "options": [
-        "Vrai",
-        "Faux"
+        "À chaque précipitation, la vapeur qui subsiste repart un peu plus appauvrie",
+        "Aux hautes latitudes, la vapeur provient d’une source océanique déjà appauvrie",
+        "Le fractionnement s’inverse quand la température passe sous un certain seuil",
+        "La pluie nordique se forme par fractionnement cinétique, qui retient l’isotope léger"
       ],
-      "answer": 1,
-      "fb": "Faux : la distillation de Rayleigh amplifie le fractionnement, elle ne le réduit pas. À mesure que les masses d’air se déplacent (équateur→pôles, littoral→intérieur, gain d’altitude), la vapeur se condense et les précipitations, enrichies en isotopes lourds (¹⁸O, ²H), sont retirées du système de façon continue et unidirectionnelle. La vapeur résiduelle s’appauvrit donc de plus en plus en isotopes lourds et les δ¹⁸O/δ²H des précipitations successives deviennent de plus en plus négatifs. Cet appauvrissement progressif (effet de Rayleigh) explique les gradients latitudinal et altitudinal des isotopes de l’eau ainsi que la droite météorique mondiale.",
-      "source": "examen 2024",
+      "answer": 0,
+      "fb": "Les deux observations portent sur des choses différentes. À chaque condensation, l’isotope lourd passe préférentiellement dans la phase liquide : la pluie est donc plus lourde que le nuage dont elle sort. Mais cette pluie emporte du ¹⁸O, de sorte que la vapeur qui subsiste repart plus appauvrie qu’elle ne l’était. Le nuage suivant part donc d’une composition plus légère, et ainsi de suite des tropiques vers les pôles. C’est ce qui donne le gradient observé en Amérique du Nord : environ -4 ‰ au golfe du Mexique, -12 ‰ au Québec, -20 ‰ vers les pôles. La source océanique reste la même (option B), le sens du fractionnement ne s’inverse jamais (option C), et la condensation est un fractionnement à l’équilibre, non cinétique (option D).",
+      "source": "deck 2026",
       "verified": true
     },
     {
@@ -32,10 +34,10 @@
       "type": "mc",
       "q": "Lequel de ces éléments démontrera le moins de fractionnement isotopique ?",
       "options": [
-        "Hydrogène (1H,2H)",
-        "Mercure (200Hg, 201Hg)",
-        "Carbone (,13C)",
-        "Nickel (60Ni, 61Ni)"
+        "Hydrogène (¹H, ²H)",
+        "Mercure (²⁰⁰Hg, ²⁰¹Hg)",
+        "Carbone (¹²C, ¹³C)",
+        "Nickel (⁶⁰Ni, ⁶¹Ni)"
       ],
       "answer": 1,
       "fb": "Le mercure est l’élément le plus lourd de la liste (²⁰⁰Hg/²⁰¹Hg) : sa différence de masse relative (Δm/m) entre isotopes est la plus faible, d’où le fractionnement isotopique minimal. Le fractionnement dépendant de la masse diminue quand la masse atomique augmente.",
@@ -45,15 +47,15 @@
     {
       "id": "iso4",
       "type": "mc",
-      "q": "Complétez: La teneur en 15N _______ par rapport à celle en 14N avec le niveau trophique.",
+      "q": "Comment la teneur en ¹⁵N évolue-t-elle par rapport à celle en ¹⁴N le long de la chaîne alimentaire ?",
       "options": [
-        "Diminuera",
-        "Se maintiendra",
-        "Augmentera",
-        "Doublera"
+        "Elle diminue, l’organisme excrétant surtout le ¹⁵N",
+        "Elle se maintient, l’azote étant conservé lors de l’assimilation",
+        "Elle augmente, l’organisme excrétant surtout le ¹⁴N",
+        "Elle varie selon l’espèce, sans tendance systématique"
       ],
       "answer": 2,
-      "fb": "Le δ¹⁵N s’enrichit d’environ +3 à +4 ‰ à chaque niveau trophique. Lors du métabolisme des protéines (transamination et désamination), l’azote léger ¹⁴N est excrété préférentiellement (urée, ammoniac) car les liaisons impliquant ¹⁴N se rompent un peu plus vite — un fractionnement cinétique. Les tissus du consommateur se trouvent donc enrichis en ¹⁵N par rapport à son alimentation, et cet enrichissement se cumule le long de la chaîne alimentaire. Le δ¹⁵N sert ainsi d’indicateur de la position trophique d’un organisme.",
+      "fb": "À chaque niveau trophique, le δ¹⁵N gagne environ 3 à 4 ‰. Lors du métabolisme des protéines, c’est l’azote léger ¹⁴N qui part préférentiellement dans les déchets azotés : l’organisme conserve donc le ¹⁵N et ses tissus s’alourdissent par rapport à son alimentation. L’effet se cumule le long de la chaîne, ce qui fait du δ¹⁵N un indicateur de position trophique. L’option A inverse l’isotope excrété; l’option B suppose un bilan sans fractionnement; la tendance est bien systématique, contrairement à l’option D.",
       "source": "examen 2024",
       "verified": true
     },
@@ -148,21 +150,6 @@
       "verified": true
     },
     {
-      "id": "iso14",
-      "type": "mc",
-      "q": "Le δ⁵⁶Fe du sang humain diffère de façon mesurable entre les hommes et les femmes. Que faut-il en conclure ?",
-      "options": [
-        "Que le fer sanguin provient de sources géologiques distinctes selon le sexe",
-        "Que la mesure du δ⁵⁶Fe manque de reproductibilité entre laboratoires",
-        "Que même un élément lourd peut être fractionné par le métabolisme",
-        "Que le fer se désintègre différemment selon l’organisme considéré"
-      ],
-      "answer": 2,
-      "fb": "La règle « isotopes légers pour les processus, isotopes lourds pour les sources » est une tendance, pas un absolu. La différence relative de masse du couple ⁵⁶Fe/⁵⁴Fe n’est que de 3,7 %, contre 8,3 % pour le carbone, 12,5 % pour l’oxygène et 100 % pour le deutérium; le fractionnement est donc faible, mais la précision des spectromètres modernes (MC-ICP-MS) le rend mesurable. L’absorption, le transport et l’excrétion du fer par l’organisme suffisent à créer un écart détectable entre tissus et entre individus, ce qui ouvre des applications comme l’identification de restes humains à partir des isotopes du fer osseux.",
-      "source": "deck 2026",
-      "verified": true
-    },
-    {
       "id": "iso15",
       "type": "mc",
       "q": "Pourquoi le δ¹³C permet-il de détecter l’ajout de sucre de canne dans du sirop d’érable ?",
@@ -174,6 +161,21 @@
       ],
       "answer": 0,
       "fb": "La canne à sucre suit la voie C4, dont la PEP carboxylase discrimine peu contre le ¹³C: sa signature est lourde (environ -11 à -15 ‰). L’érable suit la voie C3, dont la RuBisCO discrimine fortement: sa signature est légère (environ -24 à -30 ‰). Ajouter du sucre de canne déplace donc le mélange vers des valeurs moins négatives, ce qui se détecte et se quantifie par bilan de masse. Deux limites à connaître: le sucre de betterave, plante en C3 comme l’érable, échappe à cette méthode; et le δ¹³C de l’atmosphère diminue continuellement à cause de la combustion des carbones fossiles, ce qui oblige à réactualiser les valeurs de référence.",
+      "source": "deck 2026",
+      "verified": true
+    },
+    {
+      "id": "iso16",
+      "type": "mc",
+      "q": "Dans un IRMS, l’échantillon est constamment comparé à un gaz de référence. Quel avantage cette configuration procure-t-elle ?",
+      "options": [
+        "Elle augmente la sensibilité de détection des isotopes rares",
+        "Elle permet de mesurer la concentration absolue de l’échantillon",
+        "Elle rend la mesure insensible aux dérives de l’instrument",
+        "Elle élimine les interférences isobariques"
+      ],
+      "answer": 2,
+      "fb": "Un spectromètre dérive : le champ magnétique, le voltage et la réponse des collecteurs varient au fil d’une séance. En admettant en alternance l’échantillon et un gaz de référence, on compare les deux dans les mêmes conditions et au même instant, si bien que toute dérive affecte identiquement les deux et s’annule dans le rapport. C’est aussi la raison pour laquelle on rapporte un δ, c’est-à-dire un écart relatif à une référence, plutôt qu’un rapport absolu. La concentration, elle, se mesure séparément par le détecteur à conductivité thermique (option B), et les interférences isobariques, comme le mercure 204 sur le plomb 204, demandent une correction distincte (option D).",
       "source": "deck 2026",
       "verified": true
     }
