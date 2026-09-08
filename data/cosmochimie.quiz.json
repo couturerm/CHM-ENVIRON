@@ -188,6 +188,21 @@
       "fb": "En se dissolvant, les gaz volcaniques donnent des acides : H₂CO₃, H₂SO₄, HNO₃, HCl. Ces pluies acides attaquent les roches, et l’altération libère les cations basiques (Ca²⁺, Na⁺, Mg²⁺, K⁺) qui neutralisent l’acidité et donnent à l’océan sa salinité. L’altération joue donc trois rôles à la fois : puits pour les gaz volcaniques, source de cations basiques pour l’océan, et point de départ des premiers sédiments avec la précipitation du CaCO₃. Vers 4,2 Ga les océans sont stables, et les conditions géochimiques de l’émergence de la vie sont réunies.",
       "source": "deck 2026",
       "verified": true
+    },
+    {
+      "id": "cos17",
+      "type": "mc",
+      "q": "Classez le phosphore, le carbone, le calcium et le chlore par ordre décroissant du rapport demande biologique sur réserve naturelle.",
+      "options": [
+        "C > P > Ca > Cl",
+        "Cl > Ca > C > P",
+        "P > C > Ca > Cl",
+        "Ca > P > Cl > C"
+      ],
+      "answer": 2,
+      "fb": "Le rapport se calcule avec deux nombres par élément : ce que la biomasse contient (% de la masse sèche) et ce que l'eau de mer met à disposition (mg/L). Phosphore : 1 % contre 0,07 mg/L (2,3 µM), rapport 14. Carbone : 45 % contre 28 mg/L (DIC 2,3 mM), rapport 1,6. Calcium : 1 % contre 410 mg/L, rapport 0,002. Chlore : 0,2 % contre 19 400 mg/L, rapport 0,00001. Le phosphore est 45 fois moins demandé que le carbone mais 400 fois moins disponible : son rapport vaut dix fois celui du carbone et un million de fois celui du chlore, d'où P > C > Ca > Cl. Classer par la demande seule (C > P > Ca > Cl) donne la composition de la biomasse, pas la limitation. Classer par la réserve seule (Cl > Ca > C > P) donne l'eau de mer, à l'envers du problème. Classer par l'abondance crustale (Ca > P > Cl > C) est le piège du module : la croûte contient 1 050 ppm de phosphore, trois fois plus que le soufre et cinquante fois plus que l'azote, mais ce phosphore est dans l'apatite et sur les oxydes de fer, pas dans l'eau. La réserve qui compte est la réserve dissoute ; avec la croûte au dénominateur, le carbone (200 ppm) sortirait premier, ce qui suffit à écarter cette définition. Données : composition Redfield de la matière organique (C 45 %, N 7 %, P 1 %) ; concentrations océaniques moyennes (Pilson, An Introduction to the Chemistry of the Sea) ; croûte, CRC Handbook 97e éd.",
+      "source": "atelier 2026",
+      "verified": true
     }
   ]
 }
