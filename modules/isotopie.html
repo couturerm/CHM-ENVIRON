@@ -25,7 +25,7 @@
       <h2>Objectifs et notions</h2>
       <div class="objcard">
         <h3>Objectifs du module</h3>
-        <p>Les isotopes stables d'un même élément réagissent de façon presque identique, mais leurs différences de masse laissent des signatures mesurables au fil des processus physiques, chimiques et biologiques. En interprétant ces signatures (fractionnements à l'équilibre et cinétique), on remonte aux sources et aux processus : origine de l'eau et des aliments, cycles biogéochimiques, traçage des sources de contamination et enqête environnementale.</p>
+        <p>Les isotopes stables d'un même élément réagissent de façon presque identique, mais leurs différences de masse laissent des signatures mesurables au fil des processus physiques, chimiques et biologiques. En interprétant ces signatures (fractionnements à l'équilibre et cinétique), on remonte aux sources et aux processus : origine de l'eau et des aliments, cycles biogéochimiques, traçage des sources de contamination et enquête environnementale.</p>
         <ul>
           <li>Définir les différentes notations qui expriment la composition isotopique (abondance, différence relative de masse (%), ratio isotopique (R), composition isotopique (notation delta), facteur de fractionnement)</li>
           <li>Expliquer la différence entre les fractionnements à l'équilibre et cinétique</li>
@@ -51,11 +51,27 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
+      <style>
+        .capsplayer{display:grid;grid-template-columns:1fr;gap:14px}
+        @media(min-width:760px){.capsplayer{grid-template-columns:1.7fr 1fr}}
+        .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+        .capstage>iframe,.capstage>#ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0}
+        .caplist{max-height:430px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:10px}
+        .capitem{display:flex;gap:10px;align-items:center;padding:8px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
+        .capitem:last-child{border-bottom:0}
+        .capitem:hover{background:rgba(0,0,0,.04)}
+        .capitem.active{background:rgba(20,85,155,.12)}
+        .capitem img{width:96px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:#111}
+        .capitem .cnum{font-weight:700;color:#14559b}
+        .capitem .ctitle{font-size:14px;line-height:1.25}
+        .capitem .cdur{font-size:12px;color:#667;margin-top:2px}
+      </style>
       <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
-        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-isot">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
-        <div class="cap activecap" data-vp="isot" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="isot" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="isot" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
+        <div class="capsplayer">
+          <div class="capstage"><div id="ytplayer"></div></div>
+          <div class="caplist" id="caplist" aria-label="Liste des capsules"></div>
+        </div>
+        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-ISOTOPES » (7 capsules, 2 h 04). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLRTdclKB7IYU" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/isotopie.quiz.json">
@@ -125,5 +141,34 @@
   <script src="../assets/app.js" defer></script>
   <script src="../assets/pdfviewer.js" defer></script>
   <script src="../assets/quiz.js" defer></script>
+  <script>
+  (function(){
+    var PLAYLIST='PLRTdclKB7IYU';
+    var IDS=['rNywn8xNyTw','HT1ESM6gZ9Y','bIGeM6iz5D4','oBLhDwlchVo','co5rN7Bmh8k','FIpvgBjsTO4','cj8wvg30eCQ'];
+    var META=[['Pt. 1','Nomenclature','18:02'],['Pt. 2','Notation','14:19'],['Pt. 3','Mesure','10:53'],['Pt. 4','Mécanismes','22:30'],['Pt. 5','Cycle de l\'eau','15:18'],['Pt. 6','Isotopes légers','21:48'],['Pt. 7','Isotopes lourds','20:48']];
+    var player, ids=[];
+    window.onYouTubeIframeAPIReady=function(){
+      player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',playerVars:{listType:'playlist',list:PLAYLIST,rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
+    };
+    function build(){
+      try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
+      var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
+      for(var i=0;i<META.length;i++){
+        var m=META[i], id=IDS[i], k=ids.indexOf(id); if(k<0) k=i;
+        var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',k);
+        el.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'+'<div><div class="ctitle"><span class="cnum">'+m[0]+'</span> '+m[1]+'</div><div class="cdur">'+m[2]+'</div></div>';
+        el.addEventListener('click',function(){var j=+this.getAttribute('data-i');try{player.playVideoAt(j);}catch(e){}});
+        host.appendChild(el);
+      }
+      sync();
+    }
+    function sync(){
+      var idx=0; try{idx=player.getPlaylistIndex();}catch(e){}
+      var items=document.querySelectorAll('#caplist .capitem');
+      for(var j=0;j<items.length;j++){items[j].classList.toggle('active',(+items[j].getAttribute('data-i'))===idx);}
+    }
+    var s=document.createElement('script'); s.src='https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+  })();
+  </script>
 </body>
 </html>
