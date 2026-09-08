@@ -143,12 +143,13 @@
   <script src="../assets/quiz.js" defer></script>
   <script>
   (function(){
-    var PLAYLIST='PLRTdclKB7IYU';
+    // Ordre de lecture fixe par IDS, pas repris de la playlist YouTube CHM-ENVIRON-ISOTOPES
+    // (PLRTdclKB7IYU, lien dans la note sous le lecteur) : le lecteur ouvre donc sur Pt. 1.
     var IDS=['rNywn8xNyTw','HT1ESM6gZ9Y','bIGeM6iz5D4','oBLhDwlchVo','co5rN7Bmh8k','FIpvgBjsTO4','cj8wvg30eCQ'];
     var META=[['Pt. 1','Nomenclature','18:02'],['Pt. 2','Notation','14:19'],['Pt. 3','Mesure','10:53'],['Pt. 4','Mécanismes','22:30'],['Pt. 5','Cycle de l\'eau','15:18'],['Pt. 6','Isotopes légers','21:48'],['Pt. 7','Isotopes lourds','20:48']];
     var player, ids=[];
     window.onYouTubeIframeAPIReady=function(){
-      player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',playerVars:{listType:'playlist',list:PLAYLIST,rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
+      player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',videoId:IDS[0],playerVars:{playlist:IDS.join(','),rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
     };
     function build(){
       try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
