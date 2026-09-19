@@ -63,11 +63,27 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
+      <style>
+        .capsplayer{display:grid;grid-template-columns:1fr;gap:14px}
+        @media(min-width:760px){.capsplayer{grid-template-columns:1.7fr 1fr}}
+        .capsplayer .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+        .capsplayer .capstage>iframe,.capsplayer .capstage>#ytcaps{position:absolute;inset:0;width:100%;height:100%;border:0}
+        #capslist{max-height:430px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:10px}
+        #capslist .capitem{display:flex;gap:10px;align-items:center;padding:8px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
+        #capslist .capitem:last-child{border-bottom:0}
+        #capslist .capitem:hover{background:rgba(0,0,0,.04)}
+        #capslist .capitem.active{background:rgba(20,85,155,.12)}
+        #capslist .capitem img{width:96px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:#111}
+        #capslist .cnum{font-weight:700;color:#14559b}
+        #capslist .ctitle{font-size:14px;line-height:1.25}
+        #capslist .cdur{font-size:12px;color:#667;margin-top:2px}
+      </style>
       <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
-        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-limno">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
-        <div class="cap activecap" data-vp="limno" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="limno" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="limno" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
+        <div class="capsplayer">
+          <div class="capstage"><div id="ytcaps"></div></div>
+          <div id="capslist" aria-label="Liste des capsules"></div>
+        </div>
+        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-LIMNO » (6 capsules, 1 h 22). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLBruml3k_FqI" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/limnologie.quiz.json">
@@ -143,9 +159,34 @@
     var META=["Water", "Lakes & Rivers", "Global Water Cycle", "Light & Color", "Heat & Mixing", "Water movement", "Oxygen", "Salinity", "Dissolved inorganic carbon", "Nitrogen", "Phosphorus", "Algae", "Zooplankton", "Benthic animals", "Fish", "Plants", "Ponds", "Sediment", "Wetlands", "Paleo", "Microbes", "Harmful blooms"];
     var player, ids=[];
     function esc(s){return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+    // Capsules du module : ordre fixe par CAPS_IDS, pas repris de la playlist YouTube
+    // CHM-ENVIRON-LIMNO (PLBruml3k_FqI, lien dans la note sous le lecteur).
+    // Ajouter une capsule = ajouter SON ID dans CAPS_IDS *et* sa ligne dans CAPS_META.
+    var CAPS_IDS=['hl5zNz77kOk','fVq44NC5DyM','oOpsJTfZ84w','LnZXTcmN-B8','G-4GMdVBbVo','fO3DlmRpxYc'];
+    var CAPS_META=[['Pt. 1','Stratification et mélange','19:15'],['Pt. 2a','Lumière : spectre','7:22'],['Pt. 2b','Atténuation','17:14'],['Pt. 3','Oxygène dissous','18:44'],['Pt. 4','Nutriments et charge interne','12:39'],['Pt. 5','Classification des lacs','6:43']];
+    var caps, capsIds=[];
+
     window.onYouTubeIframeAPIReady=function(){
       player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',playerVars:{listType:'playlist',list:PLAYLIST,rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
+      caps=new YT.Player('ytcaps',{host:'https://www.youtube-nocookie.com',videoId:CAPS_IDS[0],playerVars:{playlist:CAPS_IDS.join(','),rel:0,modestbranding:1},events:{onReady:buildCaps,onStateChange:syncCaps}});
     };
+    function buildCaps(){
+      try{capsIds=caps.getPlaylist()||[];}catch(e){capsIds=[];}
+      var host=document.getElementById('capslist'); if(!host) return; host.innerHTML='';
+      for(var i=0;i<CAPS_META.length;i++){
+        var m=CAPS_META[i], id=CAPS_IDS[i], k=capsIds.indexOf(id); if(k<0) k=i;
+        var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',k);
+        el.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'+'<div><div class="ctitle"><span class="cnum">'+m[0]+'</span> '+esc(m[1])+'</div><div class="cdur">'+m[2]+'</div></div>';
+        el.addEventListener('click',function(){var k2=+this.getAttribute('data-i');try{caps.playVideoAt(k2);}catch(e){}});
+        host.appendChild(el);
+      }
+      syncCaps();
+    }
+    function syncCaps(){
+      var idx=0; try{idx=caps.getPlaylistIndex();}catch(e){}
+      var items=document.querySelectorAll('#capslist .capitem');
+      for(var j=0;j<items.length;j++){items[j].classList.toggle('active',(+items[j].getAttribute('data-i'))===idx);}
+    }
     function build(){
       try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
       var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
