@@ -71,7 +71,7 @@
           <div class="capstage"><div id="ytplayer"></div></div>
           <div class="caplist" id="caplist" aria-label="Liste des capsules"></div>
         </div>
-        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-ISOTOPES » (7 capsules, 2 h 04). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLRTdclKB7IYU" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
+        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-ISOTOPES » (8 capsules, 2 h 19). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLRTdclKB7IYU" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/isotopie.quiz.json">
@@ -146,7 +146,7 @@
     // Ordre de lecture fixe par IDS, pas repris de la playlist YouTube CHM-ENVIRON-ISOTOPES
     // (PLRTdclKB7IYU, lien dans la note sous le lecteur) : le lecteur ouvre donc sur Pt. 1.
     var IDS=['rNywn8xNyTw','HT1ESM6gZ9Y','bIGeM6iz5D4','oBLhDwlchVo','co5rN7Bmh8k','FIpvgBjsTO4','cj8wvg30eCQ'];
-    var META=[['Pt. 1','Nomenclature','18:02'],['Pt. 2','Notation','14:19'],['Pt. 3','Mesure','10:53'],['Pt. 4','Mécanismes','22:30'],['Pt. 5','Cycle de l\'eau','15:18'],['Pt. 6','Isotopes légers','21:48'],['Pt. 7','Isotopes lourds','20:48']];
+    var META=[['Pt. 1','Nomenclature','18:02'],['Pt. 2','Notation','14:19'],['Pt. 3','Mesure','10:53'],['Pt. 4','Mécanismes','22:30'],['Pt. 5','Cycle de l\'eau','15:18'],['Pt. 6','Isotopes légers','21:48'],['Pt. 7','Isotopes lourds','20:48'],['Pt. 8','Isotopes radioactifs','14:59']];
     var player, ids=[];
     window.onYouTubeIframeAPIReady=function(){
       player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',videoId:IDS[0],playerVars:{playlist:IDS.join(','),rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
