@@ -25,11 +25,11 @@
         "La zone avec la température de l’eau la plus chaude",
         "La zone de fort gradient de température",
         "La zone de fort réchauffement",
-        "La zone de fort gradient de densité",
+        "La zone de plus forte turbulence",
         "La zone de forte énergie cinétique"
       ],
       "answer": 1,
-      "fb": "Thermocline : plan où le gradient vertical de température est maximal, situé dans le métalimnion entre l’épilimnion chaud et l’hypolimnion froid. À ne pas confondre avec la pycnocline (gradient de densité) : les deux coïncident presque dans un lac car la densité dépend surtout de la température, mais la thermocline se définit par la température.",
+      "fb": "Thermocline : zone de fort gradient de température, entre l’épilimnion chaud et l’hypolimnion froid ; comme la densité de l’eau douce dépend de la température, c’est aussi la zone de fort gradient de densité, la barrière qui limite les échanges entre les deux couches. Ce n’est pas une zone de turbulence : le mélange turbulent se fait dans l’épilimnion, sous l’action du vent, et n’atteint la thermocline qu’au printemps et à l’automne.",
       "source": "examen 2024",
       "verified": true
     },
@@ -65,7 +65,7 @@
         "Les latitudes où l’irradiance permet la photosynthèse"
       ],
       "answer": 2,
-      "fb": "Zone photique (ou euphotique) : couche de surface recevant plus de 1 % de l’éclairement incident, seuil sous lequel la photosynthèse nette devient négligeable ; sa profondeur dépend de la transparence de l’eau. La plage 400-700 nm est le rayonnement photosynthétiquement actif (PAR), une gamme spectrale et non un volume.",
+      "fb": "Zone photique : couche de surface qui reçoit plus de 1 % de l’éclairement incident, seuil sous lequel la photosynthèse nette devient négligeable ; en dessous, la zone aphotique. Sa profondeur dépend de la transparence de l’eau (coefficient d’atténuation Kd). La plage 400-700 nm est le rayonnement photosynthétiquement actif (PAR), une gamme spectrale et non un volume.",
       "source": "examen 2024",
       "verified": true
     },
@@ -88,20 +88,19 @@
     {
       "id": "lim6",
       "type": "multi",
-      "q": "Quels processus contrôlent la pénétration de la lumière dans la colonne d’eau ?",
+      "q": "Quels processus constituent l’atténuation de la lumière dans la colonne d’eau ?",
       "options": [
-        "Réflexion à la surface",
         "Absorption",
         "Diffusion",
+        "Réflexion à la surface",
         "Convection thermique",
         "Sédimentation des particules"
       ],
       "answer": [
         0,
-        1,
-        2
+        1
       ],
-      "fb": "Trois processus atténuent la lumière dans l’eau : la réflexion à l’interface air-eau (une part du rayonnement incident est renvoyée, selon l’angle solaire et l’état de la surface), l’absorption (par l’eau elle-même, la matière organique dissoute colorée/CDOM et les pigments du phytoplancton) et la diffusion par les particules en suspension, qui redistribue les photons sans les détruire. Ensemble ils déterminent le coefficient d’atténuation Kd, donc la profondeur de la zone photique. Convection et sédimentation sont des processus de transport, sans effet optique direct. Distracteurs à valider.",
+      "fb": "Atténuation = absorption + diffusion. L’absorption, par l’eau elle-même (rouge et infrarouge), la matière organique dissoute colorée et les pigments du phytoplancton, détruit le photon ; la diffusion par les particules en suspension le renvoie dans une autre direction. Ce sont des propriétés inhérentes de la colonne d’eau, résumées par le coefficient Kd. La réflexion à la surface (albédo, surtout sur la glace) retire des photons avant qu’ils entrent dans la colonne d’eau : elle réduit l’éclairement incident mais ne fait pas partie de l’atténuation. Convection et sédimentation sont des processus de transport, sans effet optique direct.",
       "source": "quiz Lacs",
       "verified": true
     },
@@ -131,7 +130,7 @@
         "Un excès d’oxygène dissous"
       ],
       "answer": 1,
-      "fb": "L’épuisement des nutriments. Dans l’épilimnion éclairé, la production primaire assimile rapidement l’azote et le phosphore biodisponibles. La stratification estivale bloque la remontée des nutriments régénérés dans l’hypolimnion : la couche de surface s’appauvrit et la croissance devient limitée par N ou P (souvent le phosphore en eau douce), non par la lumière. Le brassage d’automne rétablit l’approvisionnement, d’où les floraisons de fin de saison. Distracteurs à valider.",
+      "fb": "L’épuisement des nutriments. Dans l’épilimnion éclairé, la production primaire assimile rapidement l’azote et le phosphore biodisponibles. La stratification estivale bloque la remontée des nutriments régénérés dans l’hypolimnion : la couche de surface s’appauvrit et la croissance devient limitée par N ou P (souvent le phosphore en eau douce), non par la lumière. Le brassage d’automne rétablit l’approvisionnement, d’où les floraisons de fin de saison.",
       "source": "quiz Lacs",
       "verified": true
     },
@@ -146,7 +145,7 @@
         "L’absence d’oxygène"
       ],
       "answer": 2,
-      "fb": "La forte irradiance. L’épilimnion est la couche de surface, incluse dans la zone photique : il reçoit plus de 1 % de la lumière incidente, seuil permettant une photosynthèse nette et donc l’activité autotrophe. La température plus élevée y contribue secondairement (cinétique enzymatique), mais c’est l’accès à la lumière qui est déterminant ; les nutriments y sont au contraire souvent limitants (voir lim8). Distracteurs à valider.",
+      "fb": "La forte irradiance. L’épilimnion est la couche de surface, incluse dans la zone photique : il reçoit plus de 1 % de la lumière incidente, seuil permettant une photosynthèse nette et donc l’activité autotrophe. La température plus élevée y contribue secondairement (cinétique enzymatique), mais c’est l’accès à la lumière qui est déterminant ; les nutriments y sont au contraire souvent limitants (voir lim8).",
       "source": "quiz Lacs",
       "verified": true
     },
@@ -161,7 +160,7 @@
         "Le brassage complet de la colonne d’eau"
       ],
       "answer": 3,
-      "fb": "Le brassage (mélange complet). Un lac dimictique connaît deux brassages par an, au printemps et à l’automne : la colonne atteint alors une densité quasi uniforme (l’eau tend vers 4 °C, sa densité maximale), la stratification s’efface et le vent homogénéise toute la profondeur, réoxygénant le fond et ramenant les nutriments en surface. Entre ces épisodes s’installent la stratification directe estivale (épilimnion chaud sur hypolimnion froid) et la stratification inverse hivernale (eau à 0 °C sous la glace, ~4 °C au fond). Distracteurs à valider.",
+      "fb": "Le brassage (mélange complet). Un lac dimictique connaît deux brassages par an, au printemps et à l’automne : la colonne atteint alors une densité quasi uniforme (l’eau tend vers 4 °C, sa densité maximale), la stratification s’efface et le vent homogénéise toute la profondeur, réoxygénant le fond et ramenant les nutriments en surface. Entre ces épisodes s’installent la stratification directe estivale (épilimnion chaud sur hypolimnion froid) et la stratification inverse hivernale (eau à 0 °C sous la glace, ~4 °C au fond).",
       "source": "quiz Lacs",
       "verified": true
     },
@@ -172,7 +171,7 @@
       "options": [
         "Densité maximale à 4 °C",
         "Forte chaleur spécifique",
-        "Absorption dans l’UV et l’IR mais transparence dans le visible",
+        "Forte absorption dans l’infrarouge et transparence dans le visible",
         "Faible tension superficielle",
         "Conductivité électrique élevée"
       ],
@@ -181,7 +180,7 @@
         1,
         2
       ],
-      "fb": "Trois propriétés anormales de l’eau structurent les lacs. (1) Densité maximale à 4 °C : la glace, moins dense, flotte et isole la colonne, et la convergence vers 4 °C déclenche les brassages. (2) Forte chaleur spécifique : l’eau se réchauffe et se refroidit lentement, ce qui tamponne les variations thermiques et modère le climat régional. (3) Absorption sélective : l’eau absorbe fortement l’UV et l’IR mais transmet le visible, d’où la protection des cellules contre l’UV, l’absorption de chaleur en surface et la pénétration du rayonnement photosynthétique. Distracteurs à valider.",
+      "fb": "Trois propriétés de l’eau structurent les lacs. (1) Densité maximale à 4 °C : la glace, moins dense, flotte, et la convergence vers 4 °C déclenche les brassages. (2) Forte chaleur spécifique (4,1 J par gramme et par degré) : l’eau se réchauffe et se refroidit lentement, et les lacs sont de grands réservoirs de chaleur. (3) Absorption sélective : l’eau absorbe fortement l’infrarouge, qui la réchauffe en surface, et transmet le visible, ce qui permet la photosynthèse aquatique. La faible teneur en solides dissous de l’eau douce compte aussi : les gradients de densité y viennent de la température, non de la salinité.",
       "source": "quiz Lacs",
       "verified": true
     },
