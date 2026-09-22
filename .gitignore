@@ -28,3 +28,9 @@ MODULE_CHAT_SEED.md
 QUIZ_AUDIT_SEED.md
 SEED_*.md
 RAPPORT_*.md
+
+# Outillage: vit sur OneDrive (claude/outils/), jamais dans le depot.
+tools/
+
+# Config d editeur locale : jamais dans le depot (chemins et nom d utilisateur machine).
+.vscode/
