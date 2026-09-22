@@ -196,3 +196,10 @@ table.sched tr.blocdesc td{font-size:13px;line-height:1.55;color:var(--soft);pad
 table.sched tr.evtrow td{background:var(--panel)}
 table.sched .evt{font-weight:600;color:var(--soft)}
 .navitem.closed .lock{margin-left:6px;font-size:9px;vertical-align:middle;opacity:.6}
+
+/* --- bibliographie : reference cle --- */
+.biblio .ref.key{background:var(--gold-soft);border-left:3px solid var(--gold);border-bottom:0;
+  border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.biblio .ref.key a{color:var(--gold);font-weight:700}
+.biblio .ref.key .keytag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:3px}
