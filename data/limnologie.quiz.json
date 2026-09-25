@@ -36,20 +36,19 @@
     {
       "id": "lim3",
       "type": "multi",
-      "q": "Quels sont les facteurs susceptibles de causer un réchauffement de l’épilimnion ?",
+      "q": "Quels sont les facteurs susceptibles de réchauffer l’épilimnion d’un lac ?",
       "options": [
-        "Augmentation de la productivité primaire",
-        "Augmentation de la concentration de matière organique colorée",
-        "Diminution du couvert de glace",
-        "Augmentation de l’oxygène dissous",
-        "Diminution de la vitesse des vents"
+        "Une augmentation de la productivité primaire",
+        "Une augmentation de la matière organique dissoute colorée",
+        "Une saison sans glace plus longue",
+        "Une augmentation de l’oxygène dissous",
+        "Une augmentation de la vitesse des vents"
       ],
       "answer": [
         1,
-        2,
-        4
+        2
       ],
-      "fb": "Trois facteurs réchauffent l’épilimnion : la matière organique colorée (CDOM) absorbe le rayonnement solaire près de la surface ; un couvert de glace réduit prolonge l’insolation ; un vent plus faible diminue le brassage et piège la chaleur en surface. La productivité primaire et l’oxygène dissous n’ont pas d’effet thermique direct.",
+      "fb": "Deux facteurs réchauffent l’épilimnion : la matière organique dissoute colorée absorbe le rayonnement, surtout l’infrarouge, près de la surface, et l’énergie absorbée devient de la chaleur ; une saison sans glace plus longue expose l’eau plus longtemps au rayonnement, alors que la glace le réfléchit (albédo). Le vent mélange la colonne d’eau : il redistribue la chaleur vers le fond et refroidit la surface, il ne la réchauffe pas. La productivité primaire et l’oxygène dissous n’ont pas d’effet thermique direct.",
       "source": "examen 2024",
       "verified": true
     },
