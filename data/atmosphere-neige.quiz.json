@@ -1,0 +1,196 @@
+{
+  "module": "atmosphere-neige",
+  "questions": [
+    {
+      "id": "atm6",
+      "type": "mc",
+      "q": "Quel est le radical moteur de la photochimie atmosphérique en conditions normales ?",
+      "options": [
+        "OH",
+        "NO₃",
+        "BrO",
+        "HO₂",
+        "NO"
+      ],
+      "answer": 0,
+      "fb": "En phase gazeuse, l’oxydant principal est le radical OH. Il se forme par la photolyse de O₃, suivie de O(¹D) + H₂O → 2 OH. HO₂ et NO participent au recyclage de OH (HO₂ + NO → OH + NO₂) ; ils ne sont pas l’oxydant.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm7",
+      "type": "mc",
+      "q": "Quelle est l’espèce dont la photolyse est le moteur de la photochimie de la neige ?",
+      "options": [
+        "Le nitrate NO₃⁻",
+        "H₂O₂",
+        "Le radical OH",
+        "Les NOₓ",
+        "CH₄"
+      ],
+      "answer": 0,
+      "fb": "La photolyse de NO₃⁻ dans la neige produit NO₂, NO, HONO et OH, qui sont émis vers l’atmosphère. Les NOₓ et le radical OH sont donc des produits de cette photolyse, pas son point de départ.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm8",
+      "type": "mc",
+      "q": "De quoi sont formées les particules de nuages vers −10 °C ?",
+      "options": [
+        "D’eau",
+        "De glace",
+        "De glace et d’eau",
+        "De glace et d’eau et d’impuretés",
+        "De glace et d’eau et de vapeur d’eau"
+      ],
+      "answer": 3,
+      "fb": "À cette température, les nuages sont mixtes : eau surfondue et glace coexistent. Chaque gouttelette et chaque cristal se forme sur un noyau (aérosol) et incorpore des gaz traces, d’où les impuretés. La vapeur d’eau est un gaz : elle entoure les particules, elle ne les constitue pas.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm9",
+      "type": "mc",
+      "q": "Quel est le processus par lequel les gaz dissous dans la glace s’équilibrent avec l’atmosphère ?",
+      "options": [
+        "L’adsorption",
+        "La diffusion en phase gazeuse",
+        "La diffusion en phase solide",
+        "La nucléation",
+        "La sublimation"
+      ],
+      "answer": 2,
+      "fb": "Les gaz dissous sont dans le volume du cristal, en solution solide. Ils rejoignent la surface par diffusion dans la glace, comme le montre HCHO dans la neige de Barrow. L’adsorption ne concerne que les molécules à la surface des cristaux.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm10",
+      "type": "mc",
+      "q": "Quel est l’ordre de grandeur du temps de mélange d’une espèce chimique dans l’hémisphère nord ?",
+      "options": [
+        "1 jour",
+        "1 semaine",
+        "1 mois",
+        "1 an",
+        "10 ans"
+      ],
+      "answer": 2,
+      "fb": "Une espèce fait le tour d’une bande de latitude en 2 semaines environ et se mélange en latitude en 1 à 2 mois. L’ordre de grandeur pour l’hémisphère est donc le mois. 1 an est le temps d’échange entre les deux hémisphères.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm11",
+      "type": "mc",
+      "q": "De quels constituants sont formés les nuages stratosphériques polaires les plus courants ?",
+      "options": [
+        "D’eau",
+        "D’acide nitrique",
+        "D’eau et d’acide nitrique",
+        "D’eau et d’acide sulfurique",
+        "D’acide sulfurique"
+      ],
+      "answer": 2,
+      "fb": "Les PSC de type I sont les plus courants. Ils apparaissent sous 195 K, dans le domaine de stabilité du trihydrate d’acide nitrique (NAT, HNO₃·3H₂O). Les PSC de type II, formés de glace seule, demandent T < 188 K et sont plus rares.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm12",
+      "type": "mc",
+      "q": "Quelle est la source de chlore principale dans la stratosphère ?",
+      "options": [
+        "Le chlorure de méthyle",
+        "Les chlorofluorocarbures",
+        "Les polychlorobiphényles",
+        "Le sel de mer",
+        "Les éruptions volcaniques"
+      ],
+      "answer": 1,
+      "fb": "Les CFC sont stables dans la troposphère et atteignent la stratosphère, où leur photolyse libère des atomes de chlore. Le chlorure de méthyle est une source naturelle de chlore, plus faible que les CFC.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm13",
+      "type": "mc",
+      "q": "Les concentrations maximales de NOₓ en Antarctique l’été sont du même ordre que :",
+      "options": [
+        "Dans l’océan Austral",
+        "En milieu rural",
+        "En milieu urbain",
+        "Dans les gaz d’échappement de voitures",
+        "Dans les cheminées de centrale thermique au charbon"
+      ],
+      "answer": 2,
+      "fb": "Au pôle Sud, NO atteint plusieurs milliers de pptv, la gamme du milieu urbain (120 à 5000 pptv). Deux causes : la photolyse du nitrate de la neige et une atmosphère très stable, qui confine NO dans une couche limite très fine. Le milieu rural se situe un ordre de grandeur plus bas (70 à 330 pptv).",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm14",
+      "type": "mc",
+      "q": "Où trouve-t-on les concentrations en impuretés les plus élevées ?",
+      "options": [
+        "Dans la pluie",
+        "Dans la neige fraîche",
+        "Dans la neige âgée au sol",
+        "Dans l’eau minérale"
+      ],
+      "answer": 3,
+      "fb": "Une eau minérale gazeuse contient environ 3700 µmol/L de Ca²⁺ et 650 µmol/L de Cl⁻. La pluie contient des dizaines de µmol/L de chaque ion, et la neige en contient en général moins que la pluie. La neige âgée s’enrichit par le dépôt d’aérosols par le vent, mais elle reste loin de ces valeurs.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm15",
+      "type": "mc",
+      "q": "Quel est le rapport molaire Cl/Na dans le sel de mer ?",
+      "options": [
+        "2",
+        "1",
+        "0,83",
+        "1,8",
+        "1,16"
+      ],
+      "answer": 4,
+      "fb": "Le rapport dépasse 1 parce que le sel de mer contient d’autres chlorures que NaCl, dont celui de magnésium. 1 est le rapport de NaCl pur. Dans les masses d’air âgées, les acides H₂SO₄ et HNO₃ déplacent HCl et le rapport baisse vers 0,95.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm16",
+      "type": "mc",
+      "q": "Jusqu’à quelle période peut-on obtenir des informations par l’analyse des carottes de glace ?",
+      "options": [
+        "100 ans",
+        "1000 ans",
+        "10 000 ans",
+        "100 000 ans",
+        "Plus de 100 000 ans"
+      ],
+      "answer": 4,
+      "fb": "La carotte de Vostok traverse toute la dernière période glaciaire et atteint la période interglaciaire précédente. 10 000 ans ne couvre que la période interglaciaire actuelle.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    },
+    {
+      "id": "atm17",
+      "type": "mc",
+      "q": "Quelle est la source principale de nitrate dans la neige du plateau antarctique ?",
+      "options": [
+        "Les activités anthropiques",
+        "La biosphère continentale",
+        "Les éclairs",
+        "La biosphère marine",
+        "Les nuages stratosphériques polaires"
+      ],
+      "answer": 4,
+      "fb": "Les PSC contiennent de l’acide nitrique. Leur sédimentation dénitrifie la stratosphère et apporte ce nitrate à la neige, d’où les pics au printemps. Le plateau est trop loin des sources anthropiques et biologiques pour qu’elles dominent.",
+      "source": "F. Dominé, auto-évaluation 2026",
+      "verified": true
+    }
+  ]
+}
