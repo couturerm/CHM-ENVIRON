@@ -1,0 +1,153 @@
+{
+  "module": "contaminants-emergents",
+  "questions": [
+    {
+      "id": "con1",
+      "type": "tf",
+      "q": "Un polluant émergent est, par définition, une substance synthétisée récemment.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. Un polluant émergent se définit par l’absence de connaissances sur sa toxicité et ses effets, pas par sa date d’apparition.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con2",
+      "type": "mc",
+      "q": "Laquelle des propriétés suivantes ne fait pas partie des critères définissant un polluant organique persistant ?",
+      "options": [
+        "Persistance dans l’environnement",
+        "Bioaccumulation dans la chaîne alimentaire",
+        "Forte volatilité",
+        "Transport sur de longues distances"
+      ],
+      "answer": 2,
+      "fb": "Les quatre critères sont la persistance, la bioaccumulation, le transport sur de longues distances et la toxicité. Le transport se fait surtout par les poussières, non par une forte volatilité.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con3",
+      "type": "mc",
+      "q": "Les dioxines et les furanes n’ont aucune utilité commerciale. D’où proviennent-ils ?",
+      "options": [
+        "De la dégradation des pesticides organophosphorés",
+        "De la combustion de substances contenant du chlore et du blanchiment de la pâte à papier",
+        "De la combustion d’hydrocarbures non chlorés",
+        "De la fabrication des retardateurs de flamme bromés"
+      ],
+      "answer": 1,
+      "fb": "Ils se forment à l’état de trace, de façon involontaire, dès qu’une substance chlorée brûle; le blanchiment au chlore de la pâte à papier en produit aussi.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con4",
+      "type": "mc",
+      "q": "Pourquoi la toxicité des BPC se manifeste-t-elle surtout à long terme ?",
+      "options": [
+        "Ils se transforment en dioxines dans l’organisme",
+        "Ils sont hydrosolubles et s’éliminent lentement par les reins",
+        "Ils sont volatils et sont inhalés en continu",
+        "Ils sont liposolubles et se concentrent dans les graisses animales"
+      ],
+      "answer": 3,
+      "fb": "Peu toxiques à court terme, les BPC s’accumulent dans les tissus adipeux au fil des expositions, d’où une toxicité chronique.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con5",
+      "type": "mc",
+      "q": "La DL50 de la 2,3,7,8-TCDD est de 3,1 × 10⁻⁹ mol/kg et celle du NaCN de 2,0 × 10⁻⁴ mol/kg. La TCDD est environ combien de fois plus toxique que le cyanure de sodium ?",
+      "options": [
+        "65 000",
+        "650",
+        "65",
+        "6,5 × 10⁶"
+      ],
+      "answer": 0,
+      "fb": "Rapport des DL50 : 2,0 × 10⁻⁴ / 3,1 × 10⁻⁹ ≈ 6,5 × 10⁴. La substance la plus toxique est celle dont la DL50 est la plus petite.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con6",
+      "type": "mc",
+      "q": "Comparez la toxicité des BPC et celle des dioxines.",
+      "options": [
+        "Les deux agissent surtout à court terme",
+        "BPC : toxicité surtout chronique; dioxines : toxicité aiguë très élevée",
+        "BPC : toxicité aiguë très élevée; dioxines : toxicité surtout chronique",
+        "Les deux agissent surtout à long terme"
+      ],
+      "answer": 1,
+      "fb": "Les dioxines sont extrêmement toxiques à court terme, mais une courte exposition sublétale a peu d’effets à long terme; c’est l’inverse pour les BPC.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con7",
+      "type": "mc",
+      "q": "Quel est le principal inconvénient des phéromones comme substituts aux pesticides ?",
+      "options": [
+        "Leur coût et la difficulté de leur production",
+        "Leur toxicité pour les mammifères",
+        "Leur persistance dans l’environnement",
+        "Leur manque de spécificité"
+      ],
+      "answer": 0,
+      "fb": "Spécifiques à une espèce, biodégradables, non toxiques et efficaces à faible concentration, les phéromones sont limitées par leur prix et leur synthèse difficile.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con8",
+      "type": "mc",
+      "q": "Quel est le mode d’action des hormones juvéniles utilisées en lutte contre les insectes ?",
+      "options": [
+        "Elles attirent les insectes vers des pièges",
+        "Elles inhibent la croissance des plantes hôtes",
+        "Elles maintiennent les insectes à un stade immature, empêchant l’accouplement",
+        "Elles tuent les insectes par contact"
+      ],
+      "answer": 2,
+      "fb": "Un analogue comme le méthoprène bloque la métamorphose; 200 ng d’hormone suffisent pour 250 kg d’insectes.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con9",
+      "type": "mc",
+      "q": "Parmi les mécanismes d’action des retardateurs de flamme, lequel est de nature chimique ?",
+      "options": [
+        "Refroidissement",
+        "Formation d’une couche protectrice",
+        "Dilution",
+        "Réaction en phase gazeuse"
+      ],
+      "answer": 3,
+      "fb": "Les mécanismes physiques sont le refroidissement, la couche protectrice et la dilution; les mécanismes chimiques sont les réactions en phase solide ou gazeuse qui interrompent la combustion.",
+      "source": "deck DL2026",
+      "verified": true
+    },
+    {
+      "id": "con10",
+      "type": "mc",
+      "q": "Les nanomatériaux se classent en trois types : naturels, fortuits et manufacturés. Qu’est-ce qu’un nanomatériau fortuit ?",
+      "options": [
+        "Un nanomatériau issu d’éruptions volcaniques ou de l’érosion",
+        "Un nanomatériau synthétisé pour l’assainissement de l’environnement",
+        "Un nanomatériau émis sans intention par une activité humaine (combustion, usure)",
+        "Un agrégat de nanomatériaux manufacturés"
+      ],
+      "answer": 2,
+      "fb": "Le fortuit est anthropique mais non intentionnel; le naturel vient de processus géologiques ou biologiques; le manufacturé est produit délibérément.",
+      "source": "deck DL2026",
+      "verified": true
+    }
+  ]
+}
