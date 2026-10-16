@@ -50,8 +50,8 @@
       <h2>Activités d'apprentissage</h2>
 
       <div class="tabs" id="decktabs" style="margin-top:18px">
-        <a class="tab" data-deck="atmosphere" href="?deck=atmosphere#m-act">Diapositives · Atmosphère</a>
-        <a class="tab" data-deck="neige" href="?deck=neige#m-act">Diapositives · Neige</a>
+        <a class="tab" data-deck="atmosphere" href="?deck=atmosphere#m-act">Atmosphère · 6 oct.</a>
+        <a class="tab" data-deck="neige" href="?deck=neige#m-act">Neige · 20 oct.</a>
       </div>
       <div class="slidecard" data-pdf="../medias/atmosphere.pdf" style="margin-top:0">
         <h3 id="decktitle">Diapositives · Atmosphère — feuilleter sur le site</h3>
@@ -65,26 +65,29 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
-      <script>
-        (function () {
-          var deck = /[?&]deck=neige\b/.test(location.search) ? 'neige' : 'atmosphere';
-          var card = document.querySelector('.slidecard');
-          card.setAttribute('data-pdf', '../medias/' + deck + '.pdf');
-          document.getElementById('decktitle').textContent =
-            'Diapositives · ' + (deck === 'neige' ? 'Neige' : 'Atmosphère') + ' — feuilleter sur le site';
-          document.querySelectorAll('#decktabs .tab').forEach(function (t) {
-            t.classList.toggle('active', t.getAttribute('data-deck') === deck);
-          });
-        })();
-      </script>
-
       <div class="quiz" data-quiz="../data/atmosphere-neige.quiz.json">
-        <div class="quizhead"><h3>Auto-évaluation · Atmosphère et neige</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
+        <div class="quizhead"><h3 id="quiztitle">Auto-évaluation · Atmosphère</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
         <div class="quizbody">
           <div class="qbar"><span id="qc">Question…</span><div class="prog"><i id="qp"></i></div><span id="qs">Score : 0</span></div>
           <div id="qhost"></div>
         </div>
       </div>
+
+      <script>
+        (function () {
+          var deck = /[?&]deck=neige\b/.test(location.search) ? 'neige' : 'atmosphere';
+          var label = deck === 'neige' ? 'Neige' : 'Atmosphère';
+          var card = document.querySelector('.slidecard');
+          card.setAttribute('data-pdf', '../medias/' + deck + '.pdf');
+          document.getElementById('decktitle').textContent = 'Diapositives · ' + label + ' — feuilleter sur le site';
+          var quiz = document.querySelector('.quiz[data-quiz]');
+          quiz.setAttribute('data-quiz', '../data/' + (deck === 'neige' ? 'neige' : 'atmosphere-neige') + '.quiz.json');
+          document.getElementById('quiztitle').textContent = 'Auto-évaluation · ' + label;
+          document.querySelectorAll('#decktabs .tab').forEach(function (t) {
+            t.classList.toggle('active', t.getAttribute('data-deck') === deck);
+          });
+        })();
+      </script>
     </div>
 
     <div class="plansec" id="m-mat">

@@ -1,0 +1,136 @@
+{
+  "module": "neige",
+  "questions": [
+    {
+      "id": "nei1",
+      "type": "mc",
+      "q": "Dans un nuage sursaturé par rapport à la glace, pourquoi une étape de nucléation est-elle nécessaire à la formation des cristaux de neige ?",
+      "options": [
+        "Parce que la vapeur d’eau doit d’abord se condenser en eau liquide",
+        "Parce que l’énergie de surface d’un germe de glace rend sa formation spontanée défavorable",
+        "Parce que la température doit descendre sous −40 °C",
+        "Parce que la pression de vapeur saturante de la glace est supérieure à celle de l’eau"
+      ],
+      "answer": 1,
+      "fb": "La sursaturation ne suffit pas : un germe de glace minuscule a un rapport surface/volume élevé et son énergie de surface crée une barrière; un noyau glaçogène la contourne.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei2",
+      "type": "mc",
+      "q": "Lequel de ces constituants est un noyau glaçogène typique plutôt qu’un noyau de condensation de nuage ?",
+      "options": [
+        "Acide sulfurique",
+        "Sulfate d’ammonium",
+        "Micas et autres silicates",
+        "Acide nitrique"
+      ],
+      "answer": 2,
+      "fb": "Les noyaux de condensation de nuage sont surtout des aérosols solubles (H₂SO₄, sulfate d’ammonium, sel de mer); les noyaux glaçogènes sont des particules solides à structure cristalline (CaCO₃, micas, silicates, fragments végétaux, bactéries).",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei3",
+      "type": "mc",
+      "q": "Lequel de ces processus d’incorporation d’impuretés dans la neige est régi par un équilibre thermodynamique ?",
+      "options": [
+        "Capture d’aérosols pendant la chute",
+        "Nucléation sur un noyau glaçogène",
+        "Dépôt d’aérosols par le vent",
+        "Adsorption de gaz sur la surface du cristal"
+      ],
+      "answer": 3,
+      "fb": "L’adsorption et la dissolution sont des processus chimiques : la quantité fixée dépend de la température et de la pression partielle du gaz. Les captures d’aérosols et la nucléation sont des processus physiques.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei4",
+      "type": "mc",
+      "q": "À pression partielle d’acétone égale, la quantité adsorbée sur une surface de glace est :",
+      "options": [
+        "Plus grande à 213 K qu’à 193 K",
+        "Plus grande à 193 K qu’à 213 K",
+        "Indépendante de la température",
+        "Nulle en dessous de 200 K"
+      ],
+      "answer": 1,
+      "fb": "L’adsorption est exothermique : à pression égale, une surface plus froide retient davantage de molécules. Les isothermes de l’acétone montrent une quantité adsorbée croissante quand T diminue de 213 à 193 K.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei5",
+      "type": "tf",
+      "q": "La neige fraîche est en général plus concentrée en ions que la pluie.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. Les compositions comparées montrent la neige fraîche du Spitsberg 10 à 100 fois moins concentrée que la pluie d’un village rural de l’Inde ou d’une ville côtière de Pologne; c’est la neige âgée au sol qui s’enrichit.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei6",
+      "type": "mc",
+      "q": "Dans la neige du Spitsberg, le rapport molaire Ca²⁺/Na⁺ vaut 0,105 alors qu’il vaut 0,022 dans le sel de mer. Qu’en conclure ?",
+      "options": [
+        "Le sodium a été perdu par dégazage de HCl",
+        "Le calcium est incorporé préférentiellement dans les cristaux",
+        "Une source de calcium autre que le sel de mer, d’origine crustale, contribue à la neige",
+        "Le sel de mer a été fractionné par les acides"
+      ],
+      "answer": 2,
+      "fb": "Normaliser à Na⁺ isole la part marine : Cl⁻, Mg²⁺ et K⁺ suivent le sel de mer, mais le Ca²⁺ est cinq fois en excès, signe d’un apport de poussières minérales.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei7",
+      "type": "mc",
+      "q": "À l’Illimani (Bolivie), quels ions présentent des cycles saisonniers bien marqués, et pourquoi ?",
+      "options": [
+        "Cl⁻, Na⁺, K⁺, Mg²⁺, Ca²⁺ : apportés des salars et des sols par les forts vents d’hiver de la saison sèche",
+        "Formiate, NO₃⁻, NH₄⁺ : émis par les feux de biomasse amazoniens en hiver",
+        "SO₄²⁻ et H⁺ : d’origine volcanique, avec un maximum en saison humide",
+        "Tous les ions, parce que la sublimation concentre la neige en saison sèche"
+      ],
+      "answer": 0,
+      "fb": "Les ions marins et crustaux culminent en saison sèche (vents d’hiver forts, dépôt sec); formiate, nitrate et ammonium, liés à la végétation et aux feux, ont des cycles peu marqués.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei8",
+      "type": "tf",
+      "q": "La composition d’une couche de neige mesurée une semaine après sa chute reflète fidèlement celle de la masse d’air où elle s’est formée.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. À Ny-Ålesund, un vent de 14 m/s a fait passer le Cl⁻ d’une couche de 35 à 450 µmol/L en déposant des aérosols de sel de mer; la signature d’une chute peut être entièrement modifiée après dépôt.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    },
+    {
+      "id": "nei9",
+      "type": "mc",
+      "q": "Pourquoi le nitrate est-il une archive peu fiable dans les carottes à faible accumulation comme le pôle Sud (≈ 8 cm éq. eau/an) ?",
+      "options": [
+        "Il est insoluble dans la glace et reste dans l’air interstitiel",
+        "Il est converti en ammonium par le métabolisme microbien",
+        "Les faibles accumulations diluent le nitrate déposé",
+        "Volatil sous forme HNO₃ dans la neige acide, il diffuse et se photolyse pendant sa longue exposition en surface"
+      ],
+      "answer": 3,
+      "fb": "Plus l’accumulation est faible, plus une couche reste longtemps dans la zone photique et près de la surface; le nitrate y est perdu par dégazage et photolyse, contrairement à Dye 3 (50 cm/an) où il est enfoui vite.",
+      "source": "deck neige 2026 (F. Dominé)",
+      "verified": true
+    }
+  ]
+}
