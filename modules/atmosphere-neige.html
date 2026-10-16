@@ -49,8 +49,12 @@
     <div class="plansec" id="m-act">
       <h2>Activités d'apprentissage</h2>
 
-      <div class="slidecard" data-pdf="../medias/atmosphere.pdf">
-        <h3>Diapositives · Atmosphère — feuilleter sur le site</h3>
+      <div class="tabs" id="decktabs" style="margin-top:18px">
+        <a class="tab" data-deck="atmosphere" href="?deck=atmosphere#m-act">Diapositives · Atmosphère</a>
+        <a class="tab" data-deck="neige" href="?deck=neige#m-act">Diapositives · Neige</a>
+      </div>
+      <div class="slidecard" data-pdf="../medias/atmosphere.pdf" style="margin-top:0">
+        <h3 id="decktitle">Diapositives · Atmosphère — feuilleter sur le site</h3>
         <div class="toolbar">
           <button id="prev">‹</button><button id="next">›</button>
           <span class="pageind">Page <input id="pageNum" type="text" value="1"> / <span id="pageCount">?</span></span>
@@ -61,9 +65,18 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
-      <div class="card" style="margin-top:16px"><h3>Diapositives · Neige</h3><div class="bd">
-        <div class="vnote">Diapositives à venir.</div>
-      </div></div>
+      <script>
+        (function () {
+          var deck = /[?&]deck=neige\b/.test(location.search) ? 'neige' : 'atmosphere';
+          var card = document.querySelector('.slidecard');
+          card.setAttribute('data-pdf', '../medias/' + deck + '.pdf');
+          document.getElementById('decktitle').textContent =
+            'Diapositives · ' + (deck === 'neige' ? 'Neige' : 'Atmosphère') + ' — feuilleter sur le site';
+          document.querySelectorAll('#decktabs .tab').forEach(function (t) {
+            t.classList.toggle('active', t.getAttribute('data-deck') === deck);
+          });
+        })();
+      </script>
 
       <div class="quiz" data-quiz="../data/atmosphere-neige.quiz.json">
         <div class="quizhead"><h3>Auto-évaluation · Atmosphère et neige</h3><div class="s">Rétroaction immédiate · tentatives illimitées · aucune note enregistrée</div></div>
