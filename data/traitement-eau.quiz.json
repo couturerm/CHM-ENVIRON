@@ -1,0 +1,166 @@
+{
+  "module": "traitement-eau",
+  "questions": [
+    {
+      "id": "tra6",
+      "type": "mc",
+      "q": "Les redoux hivernaux plus fréquents se traduisent par une hausse des chlorures dans l’eau brute des prises d’eau. Quelle en est la source ?",
+      "options": [
+        "Les sels de déglaçage lessivés du bassin versant vers les cours d’eau",
+        "La chloration appliquée aux eaux usées rejetées en amont",
+        "La dissolution des conduites en PVC par l’eau de fonte",
+        "La remontée d’eau salée du fleuve Saint-Laurent sous l’effet des marées"
+      ],
+      "answer": 0,
+      "fb": "Les sels de déglaçage (NaCl, CaCl₂) épandus sur les routes sont lessivés par l’eau de fonte lors des redoux et atteignent les rivières et le lac Saint-Charles. La chloration n’ajoute pas de chlorure en quantité mesurable (option B), et les prises d’eau des rivières sont hors de portée des marées (option D).",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra7",
+      "type": "mc",
+      "q": "Pourquoi la chaîne de traitement vise-t-elle à retirer la matière organique naturelle avant l’ajout du désinfectant ?",
+      "options": [
+        "Parce que les substances humiques et fulviques réagissent avec le chlore ou l’ozone pour former des sous-produits de désinfection",
+        "Parce que la matière organique précipite avec l’alun et colmaterait les filtres en aval",
+        "Parce que la matière organique abrite les bactéries et les protège du désinfectant",
+        "Parce que la matière organique fixe le fluorure ajouté à l’eau"
+      ],
+      "answer": 0,
+      "fb": "La matière organique naturelle (acides humiques et fulviques) réagit avec le chlore ou l’ozone pour former trihalométhanes, acides haloacétiques, aldéhydes et cétones. L’option B inverse la logique : c’est précisément la coagulation-floculation qui sert à retirer cette matière organique, en amont de la désinfection.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra8",
+      "type": "mc",
+      "q": "La vitesse de formation des sous-produits de désinfection suit une loi d’ordre 2 par rapport au chlore : d[SPD]/dt ∝ [Cl₂]². Si la concentration de chlore résiduel double, la vitesse de formation :",
+      "options": [
+        "double",
+        "quadruple",
+        "ne change pas",
+        "diminue de moitié"
+      ],
+      "answer": 1,
+      "fb": "Pour une loi d’ordre 2, multiplier la concentration par 2 multiplie la vitesse par 2² = 4. L’option A correspond à une loi d’ordre 1. Conséquence pratique : surdoser le chlore coûte cher en SPD.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra9",
+      "type": "tf",
+      "q": "La formation des trihalométhanes s’arrête à la sortie de l’usine de traitement.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. Les trihalométhanes et les acides haloacétiques continuent de se former dans le réseau de distribution tant que du chlore résiduel et de la matière organique coexistent ; certains acides haloacétiques sont par ailleurs dégradés par le biofilm du réseau. C’est pourquoi le suivi se fait aussi aux points de prélèvement du réseau.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra10",
+      "type": "tf",
+      "q": "L’exposition aux trihalométhanes se fait seulement par ingestion de l’eau du robinet.",
+      "options": [
+        "Vrai",
+        "Faux"
+      ],
+      "answer": 1,
+      "fb": "Faux. Les voies d’exposition sont l’ingestion et l’inhalation : les trihalométhanes sont volatils et passent dans l’air lors de la douche ou du bain.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra11",
+      "type": "mc",
+      "q": "Dans la chaîne dégrillage, clarification à l’alun, ozonation, filtration, chloration, quel procédé assure une désinfection rémanente dans le réseau de distribution ?",
+      "options": [
+        "La chloration",
+        "L’ozonation",
+        "La filtration sable-anthracite",
+        "La clarification à l’alun"
+      ],
+      "answer": 0,
+      "fb": "Le chlore laisse un résiduel qui persiste dans les conduites et protège l’eau contre la recroissance bactérienne jusqu’au robinet. L’ozone est un oxydant plus puissant, mais il se décompose en quelques minutes et n’a aucun effet rémanent (option B) ; c’est pour cela que la post-désinfection au chlore suit l’inter-ozonation.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra12",
+      "type": "mc",
+      "q": "L’eau brute des rivières Saint-Charles et Montmorency est peu minéralisée, ce qui la rend agressive envers les conduites en fonte. Quelle propriété de cette eau explique cette agressivité ?",
+      "options": [
+        "Sa faible alcalinité, qui empêche la formation d’une couche protectrice de carbonate sur la paroi",
+        "Sa forte dureté, qui dépose du tartre et fissure la paroi",
+        "Son pH élevé, qui dissout le fer de la fonte",
+        "Sa faible conductivité, qui accélère le passage du courant de corrosion"
+      ],
+      "answer": 0,
+      "fb": "Une eau peu minéralisée a peu de Ca²⁺ et de HCO₃⁻ : elle est mal tamponnée et ne dépose pas de film de CaCO₃ sur la paroi, qui reste exposée à l’oxydation. L’option B décrit une eau dure, le problème inverse. L’option D inverse le rôle de la conductivité : une eau plus conductrice favorise la corrosion, elle ne la freine pas.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra13",
+      "type": "mc",
+      "q": "Pour réduire la corrosion des conduites, la Ville ajoute de l’hydroxyde de calcium et des polyphosphates à l’eau traitée. Quel est le rôle de ces additifs ?",
+      "options": [
+        "Relever le pH et l’alcalinité et former un film protecteur sur la paroi des conduites",
+        "Précipiter les phosphates et les métaux restés dans l’eau après la filtration",
+        "Compléter la désinfection en consommant le chlore résiduel",
+        "Durcir l’eau pour en améliorer le goût"
+      ],
+      "answer": 0,
+      "fb": "Ca(OH)₂ relève le pH et l’alcalinité d’une eau peu minéralisée, et les polyphosphates forment avec les cations un film passivant sur la paroi. L’option B confond le contrôle de la corrosion avec la coagulation, qui a lieu en amont ; l’option C est contraire au but recherché, le chlore résiduel doit être conservé.",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra14",
+      "type": "mc",
+      "q": "Un branchement de service en plomb est raccordé à une tuyauterie domestique en cuivre. Lequel des deux métaux se dissout préférentiellement, et pourquoi ?",
+      "options": [
+        "Le plomb, parce qu’il est le réducteur le plus fort du couple et joue le rôle d’anode",
+        "Le cuivre, parce qu’il est le métal le plus noble du couple",
+        "Le cuivre, parce que sa surface en contact avec l’eau est la plus grande",
+        "Aucun des deux, parce que le chlore résiduel passive les deux métaux"
+      ],
+      "answer": 0,
+      "fb": "E°(Pb²⁺/Pb) = −0,13 V et E°(Cu²⁺/Cu) = +0,34 V : au contact, le plomb s’oxyde (anode) et le cuivre est protégé (cathode). C’est l’inverse de l’option B, qui prend la noblesse pour une tendance à se dissoudre. Le chlore est un oxydant, il accélère la corrosion plutôt que de passiver les métaux (option D).",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra15",
+      "type": "mc",
+      "q": "En moins de vingt ans, la norme sur le plomb est passée de 50 µg/L pour un échantillon prélevé après 5 minutes d’écoulement à 5 µg/L pour un échantillon prélevé au premier jet après 30 minutes de stagnation. Au-delà de la valeur numérique, qu’est-ce qui rend le nouveau protocole plus sévère ?",
+      "options": [
+        "L’eau stagnante a eu le temps de dissoudre le plomb de la plomberie ; le premier jet capte la concentration maximale",
+        "Après 5 minutes d’écoulement, l’eau provient de la conduite principale, plus riche en plomb que la plomberie domestique",
+        "La stagnation de 30 minutes laisse le temps au chlore résiduel de disparaître, ce qui fausse la mesure",
+        "Le premier jet est plus froid, et le plomb est plus soluble à basse température"
+      ],
+      "answer": 0,
+      "fb": "Le plomb provient du branchement et de la plomberie domestique (soudures, laiton), non de la conduite principale : l’option B inverse la source. Plus l’eau stagne au contact de ces matériaux, plus elle se charge en plomb ; le premier jet après stagnation est donc l’échantillon le plus défavorable, celui qui protège le mieux le consommateur. La solubilité du plomb augmente avec la température, non l’inverse (option D).",
+      "source": "deck CB2026",
+      "verified": true
+    },
+    {
+      "id": "tra16",
+      "type": "mc",
+      "q": "Lequel de ces contaminants est attribuable au réseau de distribution plutôt qu’à l’eau brute ou au traitement ?",
+      "options": [
+        "Le plomb dissous par corrosion des branchements",
+        "Les trihalométhanes",
+        "Les oocystes de Cryptosporidium",
+        "Le radon"
+      ],
+      "answer": 0,
+      "fb": "Le plomb, le cuivre, le fer et la recroissance bactérienne (BHAA) sont les contaminants du réseau de distribution. Les trihalométhanes sont générés par le traitement (option B) ; Cryptosporidium et le radon sont présents dans l’eau brute (options C et D).",
+      "source": "deck CB2026",
+      "verified": true
+    }
+  ]
+}
