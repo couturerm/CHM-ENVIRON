@@ -54,11 +54,27 @@
         <div class="stage" id="stage"><canvas id="pdfcanvas"></canvas></div>
       </div>
 
+      <style>
+        .capsplayer{display:grid;grid-template-columns:1fr;gap:14px}
+        @media(min-width:760px){.capsplayer{grid-template-columns:1.7fr 1fr}}
+        .capstage{position:relative;width:100%;padding-top:56.25%;border-radius:10px;overflow:hidden;background:#000}
+        .capstage>iframe,.capstage>#ytplayer{position:absolute;inset:0;width:100%;height:100%;border:0}
+        .caplist{max-height:430px;overflow:auto;border:1px solid rgba(0,0,0,.10);border-radius:10px}
+        .capitem{display:flex;gap:10px;align-items:center;padding:8px;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.06)}
+        .capitem:last-child{border-bottom:0}
+        .capitem:hover{background:rgba(0,0,0,.04)}
+        .capitem.active{background:rgba(20,85,155,.12)}
+        .capitem img{width:96px;height:54px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:#111}
+        .capitem .cnum{font-weight:700;color:#14559b}
+        .capitem .ctitle{font-size:14px;line-height:1.25}
+        .capitem .cdur{font-size:12px;color:#667;margin-top:2px}
+      </style>
       <div class="card" style="margin-top:16px"><h3>Capsules vidéo</h3><div class="bd">
-        <div class="vplayer"><div class="play">▶</div><div class="vtitle" id="vt-terrain">Chapitre 1</div><div class="vnote">vidéo à venir</div></div>
-        <div class="cap activecap" data-vp="terrain" data-title="Chapitre 1"><div class="thumb">▷</div><div><a href="#">Chapitre 1</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="terrain" data-title="Chapitre 2"><div class="thumb">▷</div><div><a href="#">Chapitre 2</a><div class="dur">à venir</div></div></div>
-        <div class="cap" data-vp="terrain" data-title="Chapitre 3"><div class="thumb">▷</div><div><a href="#">Chapitre 3</a><div class="dur">à venir</div></div></div>
+        <div class="capsplayer">
+          <div class="capstage"><div id="ytplayer"></div></div>
+          <div class="caplist" id="caplist" aria-label="Liste des capsules"></div>
+        </div>
+        <div class="vnote" style="margin-top:8px">Playlist « CHM-ENVIRON-TERRAIN » (7 capsules, 1 h 38). Cliquer une capsule pour la lire. <a href="https://www.youtube.com/playlist?list=PLb6CcMQ6J2Fo" target="_blank" rel="noopener">Ouvrir sur YouTube</a>.</div>
       </div></div>
 
       <div class="quiz" data-quiz="../data/travaux-terrain.quiz.json">
@@ -131,5 +147,37 @@
   <script src="../assets/app.js" defer></script>
   <script src="../assets/pdfviewer.js" defer></script>
   <script src="../assets/quiz.js" defer></script>
+  <script>
+  (function(){
+    // Ordre de lecture fixe par IDS (playlist PLb6CcMQ6J2Fo, lien dans la note sous le lecteur).
+    // Ajouter ou remplacer une capsule = changer SON ID dans IDS *et* sa ligne dans META.
+    // Un ID mort est ecarte en silence par YouTube : la ligne est alors masquee plutot que decalee.
+    var IDS=['iEDmGTobEDU','PmsPOmC2uhs','eFFuHHsbjN0','MM_U0ZCaktc','XOEbZAKaJlQ','oN8JaVqdOSA','5eB9OnHyWEo'];
+    var META=[['Pt. 1','Introduction : où et pourquoi','12:56'],['Pt. 2','Stratégie d\'échantillonnage','9:29'],['Pt. 3','Échantillonnage de l\'eau','21:51'],['Pt. 4','Sédiments','10:48'],['Pt. 5','Eaux interstitielles','17:53'],['Pt. 6','Profils et séries temporelles','17:04'],['Pt. 7','À retenir','7:41']];
+    var player, ids=[];
+    window.onYouTubeIframeAPIReady=function(){
+      player=new YT.Player('ytplayer',{host:'https://www.youtube-nocookie.com',videoId:IDS[0],playerVars:{playlist:IDS.join(','),rel:0,modestbranding:1},events:{onReady:build,onStateChange:sync}});
+    };
+    function build(){
+      try{ids=player.getPlaylist()||[];}catch(e){ids=[];}
+      var host=document.getElementById('caplist'); if(!host) return; host.innerHTML='';
+      for(var i=0;i<META.length;i++){
+        var m=META[i], id=IDS[i], k=ids.length?ids.indexOf(id):i;
+        if(k<0) continue;
+        var el=document.createElement('div'); el.className='capitem'; el.setAttribute('data-i',k);
+        el.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+id+'/mqdefault.jpg" alt="">'+'<div><div class="ctitle"><span class="cnum">'+m[0]+'</span> '+m[1]+'</div><div class="cdur">'+m[2]+'</div></div>';
+        el.addEventListener('click',function(){var k2=+this.getAttribute('data-i');try{player.playVideoAt(k2);}catch(e){}});
+        host.appendChild(el);
+      }
+      sync();
+    }
+    function sync(){
+      var idx=0; try{idx=player.getPlaylistIndex();}catch(e){}
+      var items=document.querySelectorAll('#caplist .capitem');
+      for(var j=0;j<items.length;j++){items[j].classList.toggle('active',(+items[j].getAttribute('data-i'))===idx);}
+    }
+    var s=document.createElement('script'); s.src='https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+  })();
+  </script>
 </body>
 </html>
