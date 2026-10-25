@@ -63,6 +63,13 @@
   var CLOSED = {};   // slug -> true, alimenté par calendrier.json ; filtre aussi la recherche
   fetch(P + 'data/calendrier.json').then(function (r) { return r.json(); }).then(function (d) {
     (d.seances || []).forEach(function (s) {
+      // badge « capsules vidéo » : module doté d'une playlist YouTube (champ `capsules`)
+      if (s.slug && s.capsules && s.ouvert !== false) {
+        var na = side.querySelector('a.navitem[data-page="' + s.slug + '"]');
+        if (na && !na.querySelector('.ytbadge')) {
+          na.insertAdjacentHTML('beforeend', '<span class="ytbadge" title="Capsules vidéo" aria-label="Capsules vidéo"></span>');
+        }
+      }
       if (!s.slug || s.ouvert !== false) return;
       CLOSED[s.slug] = true;
       var a = side.querySelector('.navitem[data-page="' + s.slug + '"]');

@@ -38,7 +38,8 @@
       } else if (s.ouvert === false) {
         title = '<span class="closedmod">' + esc(s.label) + '</span><span class="soon">à venir</span>';
       } else {
-        title = '<a href="' + P + 'modules/' + esc(s.slug) + '.html">' + esc(s.label) + '</a>';
+        title = '<a href="' + P + 'modules/' + esc(s.slug) + '.html">' + esc(s.label) + '</a>' +
+          (s.capsules ? '<a class="ytbadge" href="' + P + 'modules/' + esc(s.slug) + '.html#m-act" title="Capsules vidéo" aria-label="Capsules vidéo"></a>' : '');
       }
       return '<tr' + (s.slug ? '' : ' class="evtrow"') + '>' +
         '<td>' + title + tag +

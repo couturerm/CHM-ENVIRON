@@ -203,3 +203,11 @@ table.sched .evt{font-weight:600;color:var(--soft)}
 .biblio .ref.key a{color:var(--gold);font-weight:700}
 .biblio .ref.key .keytag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.5px;
   text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+
+/* --- badge « capsules vidéo » (menu et calendrier) --- */
+.ytbadge{display:inline-block;position:relative;width:15px;height:15px;border-radius:3px;
+  background:#cc2e2a;vertical-align:-2px;margin-left:7px;flex:0 0 auto}
+.ytbadge::after{content:"";position:absolute;left:5.5px;top:4px;border-style:solid;
+  border-width:3.5px 0 3.5px 5.5px;border-color:transparent transparent transparent #fff}
+a.ytbadge:hover{text-decoration:none;filter:brightness(1.12)}
+.side a.navitem .ytbadge{float:right;margin-top:2px}
