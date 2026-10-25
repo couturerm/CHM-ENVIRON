@@ -2,18 +2,18 @@
   "module": "travaux-terrain",
   "questions": [
     {
-      "id": "ter1",
+      "id": "ter19",
       "type": "mc",
-      "q": "Sur le terrain, la limite entre la phase « dissoute » et la phase « particulaire » est fixée par :",
+      "q": "Une mine de cuivre exploite depuis dix ans le bassin versant d’un lac boréal (3 km², 25 m au bassin profond, stratifié l’été). Aucune mesure n’a été faite avant l’ouverture. Le ministère veut savoir si les teneurs en cuivre et en arsenic du lac ont augmenté depuis l’ouverture, et de combien. Quel prélèvement répond à la question ?",
       "options": [
-        "Filtration (typiquement à 0,2 µm)",
-        "Centrifugation prolongée à haute vitesse",
-        "La conductivité",
-        "La couleur de l'eau"
+        "Un suivi mensuel sur deux ans de l’eau du bassin profond, filtrée à 0,2 µm et acidifiée au HNO₃, pour le cuivre et l’arsenic dissous",
+        "Une trappe à sédiments déployée un an au bassin profond, pour le flux de cuivre et d’arsenic particulaires",
+        "Une carotte de sédiment au bassin profond, datée au ²¹⁰Pb, avec le cuivre et l’arsenic dosés sur la phase solide tranche par tranche",
+        "Un profil d’eau interstitielle au dialyseur, pour le cuivre et l’arsenic dissous sous l’interface"
       ],
-      "answer": 0,
-      "fb": "Distinction opérationnelle, pas physique. En réalité il existe un continuum de tailles; la coupure à 0,2 µm est une convention de filtration.",
-      "source": "deck Terrain A2024",
+      "answer": 2,
+      "fb": "La référence manquante est enfouie dans le sédiment. Une carotte datée donne la série temporelle complète, avant et après l’ouverture, et un pic en phase solide reste en place. Le choix (A) ne décrit que l’état actuel; le choix (D) signale une réaction en cours, pas l’histoire.",
+      "source": "capsules 2026",
       "verified": true
     },
     {
@@ -27,167 +27,158 @@
         "Le congèle dans l'azote liquide"
       ],
       "answer": 1,
-      "fb": "L'acidification (HNO₃ µ-pure) garde les métaux en solution et prévient l'adsorption sur les parois ou la précipitation (p. ex. oxydation Fe²⁺ → Fe(OH)₃). On évite le contact avec le métal; le diagramme de Pourbaix illustre l'effet d'un pH bas.",
-      "source": "deck Terrain A2024",
+      "fb": "L’acide nitrique ultrapur ramène le pH sous 2 : le fer reste en solution et aucun oxyhydroxyde ne se forme pour adsorber l’arséniate ou le phosphate. L’acétate de zinc fixe les sulfures; le verre brûlé à 450 °C sert aux composés organiques.",
+      "source": "capsules Terrain 2026",
       "verified": true
     },
     {
-      "id": "ter3",
+      "id": "ter20",
       "type": "mc",
-      "q": "Comment préserver sur le terrain des espèces réduites sensibles à l'oxydation ?",
+      "q": "Un lac de 12 m a un hypolimnion anoxique de juillet à septembre et des floraisons de cyanobactéries en août, malgré dix ans de réduction des apports agricoles. Hypothèse : le sédiment relâche du phosphate quand les oxyhydroxydes de fer se dissolvent sous l’eau anoxique. Quelle mesure teste directement cette hypothèse ?",
       "options": [
-        "Acidification à l'HNO₃",
-        "Chauffage",
-        "Congélation immédiate dans l'azote liquide",
-        "Exposition prolongée à l'air pour les stabiliser"
+        "Le phosphore total sur les tranches datées d’une carotte de sédiment",
+        "Un profil de phosphate et de Fe²⁺ dans l’eau interstitielle sous l’interface, en août, prélevé au dialyseur ou aux rhizons sans exposition à l’air",
+        "Le phosphate dissous de l’eau de surface au brassage printanier",
+        "Le flux de phosphore particulaire récolté par une trappe à sédiments au bassin profond"
+      ],
+      "answer": 1,
+      "fb": "Un gradient de concentration dans l’eau interstitielle est la signature d’une réaction active; phosphate et Fe²⁺ qui montent ensemble sous l’interface démontrent la dissolution réductrice des oxyhydroxydes. Le choix (A) archive le passé sans dire ce qui réagit maintenant; le choix (D) mesure le flux descendant, pas le relargage.",
+      "source": "capsules 2026",
+      "verified": true
+    },
+    {
+      "id": "ter13",
+      "type": "mc",
+      "q": "Une carotte de lac européen montre deux pics d'activité du ¹³⁷Cs. À quoi correspond le pic le plus profond ?",
+      "options": [
+        "À l’accident du réacteur de Tchernobyl, en 1986",
+        "Au début des essais nucléaires atmosphériques, vers 1954",
+        "À l’accident de la centrale de Fukushima, en 2011",
+        "Au maximum des essais nucléaires atmosphériques, en 1963"
+      ],
+      "answer": 3,
+      "fb": "Les sédiments s’accumulent année après année : plus profond veut dire plus vieux. Le pic profond est le maximum des essais nucléaires atmosphériques de 1963, le pic moins profond Tchernobyl, 1986. Le choix (A) : le bon événement, au mauvais niveau.",
+      "source": "capsules Terrain 2026",
+      "verified": true
+    },
+    {
+      "id": "ter21",
+      "type": "mc",
+      "q": "Un déversement de diesel s’est produit sur une rivière, 15 km en amont de la prise d’eau potable d’une ville de 40 000 habitants. La prise est fermée; le réseau tient trois jours sur ses réserves. Il faut décider au jour le jour du moment de la réouverture, puis documenter le retour à la normale. Quel dispositif répond au besoin ?",
+      "options": [
+        "Une station mobile sur la berge, capteurs en continu et autoéchantillonneur réfrigéré, flacons de verre brûlé pour les hydrocarbures",
+        "Des prélèvements chaque matin à 8 h, en flacons de plastique lavés à l’acide, analysés au laboratoire",
+        "Une carotte de sédiment 2 km en aval de la prise, datée au ²¹⁰Pb, hydrocarbures dosés par tranche",
+        "Des échantillonneurs passifs à gel déployés trois semaines à la prise d’eau, pour le flux intégré d’hydrocarbures"
+      ],
+      "answer": 0,
+      "fb": "Une décision quotidienne exige une mesure quasi en temps réel et des échantillons préservés à toute heure; c’est ce qu’une station mobile a permis dans la région de Montréal en 2024. Les composés organiques vont dans du verre, jamais dans du plastique : le choix (B) est éliminé. Le choix (D) intègre trois semaines : trop tard pour décider.",
+      "source": "capsules 2026",
+      "verified": true
+    },
+    {
+      "id": "ter15",
+      "type": "mc",
+      "q": "Un paramètre suit un cycle régulier, et on l'échantillonne à intervalle fixe, proche de la période du cycle. Quel risque court-on ?",
+      "options": [
+        "Obtenir des valeurs plus bruitées, sans changer la tendance",
+        "Manquer le cycle, tout en obtenant une moyenne juste",
+        "Voir une tendance ou une oscillation lente qui n’existe pas",
+        "Aucun, si chacune des mesures est exacte"
       ],
       "answer": 2,
-      "fb": "Les espèces réduites (sulfures, Fe²⁺) s'oxydent au contact de l'air. On les fige (azote liquide) ou on les traite par un réactif adapté (acétate de zinc pour les sulfures, après purge au N₂). Le découpage de carottes en boîte à gants prévient aussi l'oxydation.",
-      "source": "deck Terrain A2024",
+      "fb": "Chaque prélèvement tombe à un moment différent du cycle et les points dessinent une tendance ou une oscillation lente qui n’existent pas. Les mesures sont vraies, l’interprétation est fausse : c’est l’erreur du choix (D). D’où l’hypothèse sur la dynamique du système, puis une courte séquence à haute fréquence, avant de fixer le programme.",
+      "source": "capsules Terrain 2026",
+      "verified": true
+    },
+    {
+      "id": "ter22",
+      "type": "mc",
+      "q": "Une mare de thermokarst du Nunavik, 1 m de profondeur, eau brune riche en carbone organique dissous, pH 6,5. On veut savoir si son eau de surface est sursaturée en CO₂ par rapport à l’atmosphère, donc si la mare émet du CO₂. Quel prélèvement et quel traitement donnent la concentration de CO₂ dissous ?",
+      "options": [
+        "Injecter l’eau dans un flacon contenant de l’acide phosphorique et doser le CO₂ de l’espace de tête par chromatographie gazeuse",
+        "Prélever l’eau filtrée à 0,2 µm dans un flacon de verre brûlé à 450 °C et doser le carbone organique dissous",
+        "Mesurer le pH et la température à la sonde multiparamètre, sans prélèvement",
+        "Injecter l’eau dans un vial purgé à l’azote en laissant un volume de gaz, attendre l’équilibre, doser le CO₂ de l’espace de tête et recalculer la concentration initiale par la loi de Henry"
+      ],
+      "answer": 3,
+      "fb": "Acidifier, le choix (A), convertit bicarbonate et carbonate en CO₂ et donne le carbone inorganique dissous total, pas le CO₂ seul. Sans acide, le CO₂ dissous s’équilibre avec l’espace de tête selon la loi de Henry, et le bilan de masse (eau + gaz) redonne la concentration initiale.",
+      "source": "capsules 2026",
+      "verified": true
+    },
+    {
+      "id": "ter16",
+      "type": "mc",
+      "q": "Pourquoi un échantillon destiné au dosage du nitrate et du sulfate n'est-il pas acidifié à l'HNO₃ ?",
+      "options": [
+        "L'acide ajouterait du nitrate, un des anions qu'on veut doser",
+        "L'acide réduirait le sulfate en sulfure dans le flacon",
+        "Les anions précipitent avec les métaux en milieu acide",
+        "Les anions s'adsorbent sur le plastique en milieu acide"
+      ],
+      "answer": 0,
+      "fb": "On n’ajoute pas à l’échantillon l’anion qu’on veut doser : l’acide nitrique apporte du nitrate, l’acide chlorhydrique du chlorure. L’échantillon va dans un flacon lavé à l’eau, sans réactif, et on l’analyse par chromatographie ionique le plus rapidement possible.",
+      "source": "capsules Terrain 2026",
+      "verified": true
+    },
+    {
+      "id": "ter23",
+      "type": "mc",
+      "q": "Dans un étang de pisciculture de 1,5 m de profondeur, des poissons morts ont été trouvés à l’aube deux fois en juillet. À chaque visite du technicien, entre 10 h et 15 h, l’oxygène dissous est à saturation. L’étang est chargé en algues. Hypothèse : l’oxygène tombe sous le seuil létal avant le lever du jour. Quel déploiement teste cette hypothèse ?",
+      "options": [
+        "Une optode à enregistreur laissée dans l’étang, une mesure aux 20 minutes pendant plusieurs jours",
+        "Un profil de sonde multiparamètre descendu lentement, chaque jour à midi, pour la structure verticale de l’oxygène",
+        "Une microélectrode de Clark descendue au pas de 250 µm à travers le sédiment, pour le gradient d’oxygène à l’interface",
+        "Une bouteille Van Dorn chaque semaine à 10 h, oxygène dosé au laboratoire"
+      ],
+      "answer": 0,
+      "fb": "Le cycle journalier photosynthèse-respiration ne se voit qu’avec plusieurs mesures par jour, par un capteur laissé sur place; l’optode est faite pour les séries temporelles. Le choix (C) donne la résolution spatiale, pas temporelle; les choix (B) et (D) ratent le minimum nocturne.",
+      "source": "capsules 2026",
+      "verified": true
+    },
+    {
+      "id": "ter18",
+      "type": "mc",
+      "q": "Un dialyseur rempli d'eau ultrapure est laissé trois semaines dans le sédiment. Comment la concentration de Fe²⁺ dans ses cellules finit-elle par égaler celle de l'eau interstitielle ?",
+      "options": [
+        "L’eau interstitielle s’écoule dans la cellule, aspirée à travers la membrane",
+        "Le Fe²⁺ diffuse à travers la membrane, de la cellule vers le sédiment",
+        "La membrane fixe le Fe²⁺, puis le relâche peu à peu dans la cellule",
+        "Le Fe²⁺ diffuse à travers la membrane, du sédiment vers la cellule"
+      ],
+      "answer": 3,
+      "fb": "Échantillonnage par équilibrage : chaque ion diffuse à travers la membrane selon son gradient, du sédiment vers l’eau ultrapure de la cellule, jusqu’à égalité des concentrations après trois semaines. Le choix (B) a le bon mécanisme dans le mauvais sens.",
+      "source": "capsules Terrain 2026",
+      "verified": true
+    },
+    {
+      "id": "ter24",
+      "type": "mc",
+      "q": "Une carotte datée au ²¹⁰Pb, prélevée dans un lac situé à 5 km d’une fonderie ouverte en 1950 et à 1 km d’une autoroute construite en 1965, montre une hausse du plomb dans les tranches postérieures à 1950. Les deux sources sont plausibles. Quelle mesure sur la carotte permet de les départager ?",
+      "options": [
+        "La concentration de plomb par tranche : la valeur la plus élevée désigne la fonderie, source la plus proche",
+        "La composition isotopique du plomb (²⁰⁶Pb/²⁰⁷Pb) des tranches datées, comparée à celle du minerai de la fonderie et à celle de l’essence au plomb",
+        "Le plomb dissous dans l’eau interstitielle sous l’interface, par rhizons",
+        "L’activité du ¹³⁷Cs dans les mêmes tranches"
+      ],
+      "answer": 1,
+      "fb": "Une concentration dit combien, pas d’où; les rapports isotopiques du plomb sont une empreinte de la source, et chaque tranche datée se compare aux signatures connues. Le choix (D) date, il n’identifie pas.",
+      "source": "capsules 2026",
       "verified": true
     },
     {
       "id": "ter4",
       "type": "mc",
-      "q": "Pourquoi de faibles concentrations mesurées peuvent-elles masquer un flux élevé d'un élément ?",
+      "q": "Pendant une crue, la concentration de particules en suspension mesurée dans une rivière diminue. Que fait la charge de particules qui arrive au lac en aval ?",
       "options": [
-        "La concentration mesurée reflète toujours directement l'intensité du flux au point et au moment du prélèvement",
-        "Le flux ne dépend que du volume d'eau échantillonné",
-        "Une faible concentration implique nécessairement un faible flux net",
-        "Un flux élevé peut naître d'un fort gradient ou d'une forte demande biologique, à faible concentration"
-      ],
-      "answer": 3,
-      "fb": "Concentration = mol/volume; flux = quantité transportée par unité de temps. Un fort gradient (transport diffusif) ou une production/consommation active peut produire un flux élevé même à faible concentration.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter5",
-      "type": "multi",
-      "q": "Parmi les outils suivants, lesquels servent à échantillonner ou mesurer l'eau interstitielle des sédiments ?",
-      "options": [
-        "Rhizon",
-        "Bouteille Van Dorn",
-        "DGT (diffusion sur gel)",
-        "Dialyseur (peeper)"
-      ],
-      "answer": [
-        0,
-        2,
-        3
-      ],
-      "fb": "Dialyseurs, DGT et Rhizon (filtration in situ à 0,2 µm) échantillonnent l'eau interstitielle; les microélectrodes et optodes la mesurent in situ. La bouteille Van Dorn sert à la colonne d'eau.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter6",
-      "type": "mc",
-      "q": "Pour prélever l'eau à une profondeur précise dans la colonne d'eau d'un lac, on utilise :",
-      "options": [
-        "Une bouteille Van Dorn ou Kemmerer",
-        "Un carottier à gravité",
-        "Une boîte à gants anoxique de laboratoire",
-        "Un dialyseur"
-      ],
-      "answer": 0,
-      "fb": "Les bouteilles Van Dorn (horizontale) et Kemmerer (verticale) se ferment à la profondeur voulue pour prélever un volume d'eau discret. Le carottier sert aux sédiments, le dialyseur à l'eau interstitielle.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter7",
-      "type": "multi",
-      "q": "Sélectionnez les énoncés exacts sur la mesure de l'oxygène dissous (DO) :",
-      "options": [
-        "L'optode offre une meilleure résolution spatiale que la microélectrode",
-        "L'optode (extinction de luminescence) est robuste et idéale pour les séries temporelles",
-        "L'électrode réduit l'O₂ à une cathode",
-        "La microélectrode offre une résolution spatiale micrométrique mais est fragile"
-      ],
-      "answer": [
-        1,
-        2,
-        3
-      ],
-      "fb": "Optode : extinction de luminescence après collision avec O₂; robuste, idéale pour les séries temporelles, mais faible résolution spatiale et sensible à la turbidité. Électrode (type Clark) : réduction de l'O₂ à une cathode vs une anode Ag/AgCl; résolution micrométrique mais fragile et durée de vie limitée. L'optode n'a pas une meilleure résolution spatiale.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter8",
-      "type": "mc",
-      "q": "Dans une série temporelle d'oxygène dissous en eau de surface, le cycle journalier montre un maximum en fin d'après-midi et un minimum le matin. Ceci reflète :",
-      "options": [
-        "Le réchauffement de l'eau par le rayonnement solaire en journée et son refroidissement nocturne",
-        "La photosynthèse le jour (production) et la respiration la nuit (consommation)",
-        "Le cycle des marées et le brassage par le vent",
-        "L'acidification progressive de l'eau au fil de la journée"
-      ],
-      "answer": 1,
-      "fb": "Le jour, la photosynthèse (P) produit de l'O₂ → maximum l'après-midi. La nuit, seule la respiration (R) agit et consomme l'O₂ → minimum le matin. Le suivi haute fréquence (optodes) capte ces cycles P/R journaliers.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter9",
-      "type": "mc",
-      "q": "Le carottage des sédiments lacustres permet de reconstituer une chronologie. Quels isotopes servent couramment à dater les couches récentes ?",
-      "options": [
-        "¹⁴C et ⁴⁰K",
-        "²³⁵U et ²³⁸U",
-        "²¹⁰Pb et ¹³⁷Cs",
-        "³H seulement"
+        "Elle diminue, dans la même proportion que la concentration mesurée",
+        "Elle reste la même, parce que la dilution ne change pas la masse",
+        "Elle peut augmenter, parce que la hausse du débit l’emporte sur la dilution",
+        "Elle diminue, parce que les particules sédimentent avant le lac"
       ],
       "answer": 2,
-      "fb": "Le ²¹⁰Pb (demi-vie ~22 ans) date les ~150 dernières années; le ¹³⁷Cs marque les retombées nucléaires (pic 1963). On mesure aussi le contenu en eau, C/N, Fe/Mn/Al/S.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter10",
-      "type": "mc",
-      "q": "Dans les sédiments et sols saturés, l'apparition de forts gradients verticaux redox s'explique par :",
-      "options": [
-        "La stratification thermique qui isole les couches et empêche tout mélange vertical de la colonne d'eau",
-        "L'absence d'activité microbienne dans les sédiments profonds",
-        "Un apport homogène d'oxygène par diffusion depuis la surface",
-        "La réduction séquentielle des accepteurs d'électrons en oxydant le carbone organique"
-      ],
-      "answer": 3,
-      "fb": "En descendant, l'O₂ s'épuise puis les micro-organismes utilisent successivement d'autres accepteurs d'électrons (NO₃⁻, oxydes de Fe/Mn, SO₄²⁻…) en oxydant le carbone organique. Cette succession crée les zones réactives et les forts gradients verticaux (Borch et al. 2010).",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter11",
-      "type": "tf",
-      "q": "On échantillonne le milieu naturel uniquement pour caractériser l'impact de l'activité humaine.",
-      "options": [
-        "Vrai",
-        "Faux"
-      ],
-      "answer": 1,
-      "fb": "Faux. On échantillonne à la fois pour mieux comprendre le milieu naturel (processus biogéochimiques) et pour caractériser l'impact humain. Les deux motivations sont complémentaires.",
-      "source": "deck Terrain A2024",
-      "verified": true
-    },
-    {
-      "id": "ter12",
-      "type": "multi",
-      "q": "Pour capturer la variabilité temporelle haute fréquence d'un cours d'eau, quelles approches sont adaptées ?",
-      "options": [
-        "Une seule sortie annuelle",
-        "Autoéchantillonneurs (ISCO)",
-        "Une grille d'échantillonnage spatiale",
-        "Capteurs ou sondes en continu (mouillage multiparamètre)"
-      ],
-      "answer": [
-        1,
-        3
-      ],
-      "fb": "La haute fréquence temporelle s'obtient par autoéchantillonneurs (ISCO) et capteurs/sondes en continu (mouillages, stations automatisées). Une sortie unique ou une grille spatiale ne renseignent pas sur la dynamique temporelle rapide.",
-      "source": "deck Terrain A2024",
+      "fb": "Une concentration est une quantité par volume (mol/L); un flux est une quantité qui traverse une surface par unité de temps (mol m⁻² s⁻¹). La crue dilue les particules, mais il passe tellement d’eau que la quantité transportée peut augmenter. Il faut mesurer la concentration et le débit, et exprimer le résultat en flux.",
+      "source": "capsules Terrain 2026",
       "verified": true
     }
   ]
